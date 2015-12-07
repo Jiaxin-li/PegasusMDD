@@ -1,2 +1,2 @@
 # Hotel Management System
-### Team Pegasus# PegasusMDD
+### Team Pegasus
