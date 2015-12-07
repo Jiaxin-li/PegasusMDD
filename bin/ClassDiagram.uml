@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_UkkqUJz3EeWSk9vNfa4XkQ" name="RootElement"/>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_UkkqUJz3EeWSk9vNfa4XkQ" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_fBEaMJz-EeWhTeq8ShgRSA" name="Booking">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tfbPQJ0AEeWhTeq8ShgRSA" name="bookingID">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__jkxMJ0AEeWhTeq8ShgRSA" name="checkInDate">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0G42AJ0BEeWhTeq8ShgRSA" name="checkOutDate">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_4pe3cJ0BEeWhTeq8ShgRSA" name="bookRoom"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7DZ8MJ0BEeWhTeq8ShgRSA" name="orderBooking"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IVDYcJ0CEeWhTeq8ShgRSA" name="Staff">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NVZs4J0CEeWhTeq8ShgRSA" name="password" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RbeKYJ0CEeWhTeq8ShgRSA" name="sessionToken" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_YPkUYJ0CEeWhTeq8ShgRSA" name="login" concurrency="guarded"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_h4cTIJ0CEeWhTeq8ShgRSA" name="Standard"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iNIJsJ0CEeWhTeq8ShgRSA" name="Deluxe"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ifNYMJ0CEeWhTeq8ShgRSA" name="Suite"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jaD24J0CEeWhTeq8ShgRSA" name="RoomType">
+    <generalization xmi:type="uml:Generalization" xmi:id="_rLRwcJ0CEeWhTeq8ShgRSA" general="_h4cTIJ0CEeWhTeq8ShgRSA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_sTMawJ0CEeWhTeq8ShgRSA" general="_iNIJsJ0CEeWhTeq8ShgRSA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_tEcRgJ0CEeWhTeq8ShgRSA" general="_ifNYMJ0CEeWhTeq8ShgRSA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kMkR4J0CEeWhTeq8ShgRSA" name="Room"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wzOQYJ0CEeWhTeq8ShgRSA" name="RoomBinder"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xUQg4J0CEeWhTeq8ShgRSA" name="TaskManager"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xwaRYJ0CEeWhTeq8ShgRSA" name="Task"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_1cUicJ0CEeWhTeq8ShgRSA" client="_UkkqUJz3EeWSk9vNfa4XkQ" supplier="_xwaRYJ0CEeWhTeq8ShgRSA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_84q_QJ0CEeWhTeq8ShgRSA" name="Service"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__V0XIJ0CEeWhTeq8ShgRSA" name="ServiceType">
+    <generalization xmi:type="uml:Generalization" xmi:id="_MElIwJ0DEeWhTeq8ShgRSA" general="_AMBmYJ0DEeWhTeq8ShgRSA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_M6XhQJ0DEeWhTeq8ShgRSA" general="_Ac4s4J0DEeWhTeq8ShgRSA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_NeXmMJ0DEeWhTeq8ShgRSA" general="_AvCz4J0DEeWhTeq8ShgRSA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AMBmYJ0DEeWhTeq8ShgRSA" name="Hygiene"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ac4s4J0DEeWhTeq8ShgRSA" name="Food"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AvCz4J0DEeWhTeq8ShgRSA" name="Discount"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZhRXYJ0DEeWhTeq8ShgRSA" name="AccessControl"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_b86TYJ0DEeWhTeq8ShgRSA" name="User"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hNOWcJ0DEeWhTeq8ShgRSA" name="Checkout"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jczMYJ0DEeWhTeq8ShgRSA" name="Cart"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_nf5OYJ0DEeWhTeq8ShgRSA" name="Payment"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qIu44J0DEeWhTeq8ShgRSA" name="Invoice"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rDGPYJ0DEeWhTeq8ShgRSA" name="Guest"/>
+</uml:Model>
