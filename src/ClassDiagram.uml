@@ -4,7 +4,7 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_1vXj0J0OEeWhTeq8ShgRSA" client="_IVDYcJ0CEeWhTeq8ShgRSA" supplier="_ZhRXYJ0DEeWhTeq8ShgRSA"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_ZN1mkJ0aEeWUbYw76XS34g" client="_Oya38J0XEeWUbYw76XS34g" supplier="_PayDAJ0YEeWUbYw76XS34g"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_YSG3sJ3WEeWFr_oidmlDRQ" name="PaymentSystem">
-    <packagedElement xmi:type="uml:Interface" xmi:id="_nf5OYJ0DEeWhTeq8ShgRSA" name="Payment">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_nf5OYJ0DEeWhTeq8ShgRSA" name="IPayment">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_iMvuMJ0NEeWhTeq8ShgRSA" name="initiatePayment"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_j4s5sJ0NEeWhTeq8ShgRSA" name="commencePayment"/>
     </packagedElement>
