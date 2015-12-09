@@ -9,7 +9,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_j4s5sJ0NEeWhTeq8ShgRSA" name="commencePayment"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_nOAPQJ3WEeWFr_oidmlDRQ" name="Booking">
+  <packagedElement xmi:type="uml:Package" xmi:id="_nOAPQJ3WEeWFr_oidmlDRQ" name="BookingManagement">
     <packagedElement xmi:type="uml:Class" xmi:id="_jczMYJ0DEeWhTeq8ShgRSA" name="Cart">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_aClloJ0MEeWhTeq8ShgRSA" name="bookings" type="_fBEaMJz-EeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-hPysJ0aEeWUbYw76XS34g"/>
