@@ -231,11 +231,22 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_jg6JEp3vEeWFr_oidmlDRQ" name="roomtype" type="_jaD24J0CEeWhTeq8ShgRSA" association="_jg5iAJ3vEeWFr_oidmlDRQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_u6SyQJ3mEeWFr_oidmlDRQ" name="IRoom">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_sVM-0J8kEeWXa8dgAQ47Zw" name="getRoom" concurrency="concurrent">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sVM-0J8kEeWXa8dgAQ47Zw" name="getAvailiableRoom" concurrency="concurrent">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_8eJYUJ8kEeWXa8dgAQ47Zw" name="RoomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_AddtkJ8lEeWXa8dgAQ47Zw" name="result" type="_kMkR4J0CEeWhTeq8ShgRSA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_D-7PwKCyEeWrRaa7yVr5ew" name="addRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oBvvAKC4EeWrRaa7yVr5ew" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZHEuMKCyEeWrRaa7yVr5ew" name="getRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tWtokKC4EeWrRaa7yVr5ew" name="roomNr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_z822IKC4EeWrRaa7yVr5ew" name="result" type="_kMkR4J0CEeWhTeq8ShgRSA" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_xUc8wJ6EEeWavpVvTui59g" name="IRoomType">
@@ -270,7 +281,12 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_u2uyUJ8iEeWXa8dgAQ47Zw" name="RoomFactory"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u2uyUJ8iEeWXa8dgAQ47Zw" name="RoomManagement">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AVwsgKC5EeWrRaa7yVr5ew" name="rooms" type="_kMkR4J0CEeWhTeq8ShgRSA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HuIoQKC5EeWrRaa7yVr5ew"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HubjMKC5EeWrRaa7yVr5ew" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_y_tZ4J8iEeWXa8dgAQ47Zw" name="RoomTypeManagment">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_OFjl0J8jEeWXa8dgAQ47Zw" name="roomtypes" type="_jaD24J0CEeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tfk-gJ8jEeWXa8dgAQ47Zw"/>
@@ -356,7 +372,7 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_B-YgAJ8gEeWXa8dgAQ47Zw" client="_84q_QJ0CEeWhTeq8ShgRSA" supplier="_aHTJIJ8SEeWXa8dgAQ47Zw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_-wpS0J3ZEeWFr_oidmlDRQ" name="TaskManagement">
-    <packagedElement xmi:type="uml:Class" xmi:id="_xUQg4J0CEeWhTeq8ShgRSA" name="TaskManager">
+    <packagedElement xmi:type="uml:Class" xmi:id="_xUQg4J0CEeWhTeq8ShgRSA" name="TaskManagement">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_-rxG8J3mEeWFr_oidmlDRQ" name="staff" type="_IVDYcJ0CEeWhTeq8ShgRSA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FGbdQJ3nEeWFr_oidmlDRQ" name="taskList" type="_xwaRYJ0CEeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JBtAAJ3nEeWFr_oidmlDRQ"/>
@@ -430,6 +446,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_q_q84KCxEeWrRaa7yVr5ew" name="setRoomAvailability"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hNOWcJ0DEeWhTeq8ShgRSA" name="CheckIO">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Wa3HUJ6IEeW1w6MQXj9WSw" name="roombinder" type="_wzOQYJ0CEeWhTeq8ShgRSA"/>
@@ -484,7 +501,6 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_Ws1gAJ33EeWFr_oidmlDRQ" client="_hNOWcJ0DEeWhTeq8ShgRSA" supplier="_U5aqUJ3mEeWFr_oidmlDRQ"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_X6XqIJ33EeWFr_oidmlDRQ" client="_hNOWcJ0DEeWhTeq8ShgRSA" supplier="_8I-88J3tEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_DW_QMJ34EeWFr_oidmlDRQ" client="_hNOWcJ0DEeWhTeq8ShgRSA" supplier="_nf5OYJ0DEeWhTeq8ShgRSA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_O0Ha0J34EeWFr_oidmlDRQ" client="_hNOWcJ0DEeWhTeq8ShgRSA" supplier="_AfrKAJ3mEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_PpbSMJ34EeWFr_oidmlDRQ" client="_hNOWcJ0DEeWhTeq8ShgRSA" supplier="_IBbrQJ3mEeWFr_oidmlDRQ"/>
