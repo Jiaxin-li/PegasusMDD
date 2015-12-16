@@ -16,6 +16,9 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-hUrMJ0aEeWUbYw76XS34g" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_clJB8J0MEeWhTeq8ShgRSA" name="customer" type="_rDGPYJ0DEeWhTeq8ShgRSA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wQCVIKPkEeWpLJK3L0_1KA" name="CartID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_gwMtIJ0MEeWhTeq8ShgRSA" name="generateSum">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_lIs-cJ0MEeWhTeq8ShgRSA" name="c" type="_hNOWcJ0DEeWhTeq8ShgRSA"/>
       </ownedOperation>
@@ -29,6 +32,9 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0G42AJ0BEeWhTeq8ShgRSA" name="checkOutDate">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gwNKEKPkEeWpLJK3L0_1KA" name="RoomTypeID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_U5aqUJ3mEeWFr_oidmlDRQ" name="IBooking">
