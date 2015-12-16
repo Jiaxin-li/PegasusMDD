@@ -3,13 +3,13 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_1cUicJ0CEeWhTeq8ShgRSA" client="_UkkqUJz3EeWSk9vNfa4XkQ" supplier="_xwaRYJ0CEeWhTeq8ShgRSA"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_1vXj0J0OEeWhTeq8ShgRSA" client="_IVDYcJ0CEeWhTeq8ShgRSA" supplier="_ZhRXYJ0DEeWhTeq8ShgRSA"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_ZN1mkJ0aEeWUbYw76XS34g" client="_Oya38J0XEeWUbYw76XS34g" supplier="_PayDAJ0YEeWUbYw76XS34g"/>
-  <packagedElement xmi:type="uml:Package" xmi:id="_YSG3sJ3WEeWFr_oidmlDRQ" name="PaymentSystem">
+  <packagedElement xmi:type="uml:Package" xmi:id="_YSG3sJ3WEeWFr_oidmlDRQ" name="Payment">
     <packagedElement xmi:type="uml:Interface" xmi:id="_nf5OYJ0DEeWhTeq8ShgRSA" name="IPayment">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_iMvuMJ0NEeWhTeq8ShgRSA" name="initiatePayment"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_j4s5sJ0NEeWhTeq8ShgRSA" name="commencePayment"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_nOAPQJ3WEeWFr_oidmlDRQ" name="BookingManagement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_nOAPQJ3WEeWFr_oidmlDRQ" name="Booking">
     <packagedElement xmi:type="uml:Class" xmi:id="_jczMYJ0DEeWhTeq8ShgRSA" name="Cart">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_aClloJ0MEeWhTeq8ShgRSA" name="bookings" type="_fBEaMJz-EeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-hPysJ0aEeWUbYw76XS34g"/>
@@ -135,6 +135,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_casakJ0OEeWhTeq8ShgRSA" name="ID" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_mGr2AKQlEeWS8diQLQcRGg" name="addAccount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyNoIKQlEeWS8diQLQcRGg" name="deleteAccount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_stACsKQlEeWS8diQLQcRGg" name="modifiedAccount"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IVDYcJ0CEeWhTeq8ShgRSA" name="StaffAccount">
       <generalization xmi:type="uml:Generalization" xmi:id="_uUbcQJ0OEeWhTeq8ShgRSA" general="_b86TYJ0DEeWhTeq8ShgRSA"/>
@@ -400,7 +403,7 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_5WEjMJ8bEeWXa8dgAQ47Zw" client="_pTMxYJ6rEeWnJdV0_aSkJQ" supplier="_84q_QJ0CEeWhTeq8ShgRSA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_B-YgAJ8gEeWXa8dgAQ47Zw" client="_84q_QJ0CEeWhTeq8ShgRSA" supplier="_aHTJIJ8SEeWXa8dgAQ47Zw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_-wpS0J3ZEeWFr_oidmlDRQ" name="TaskManagement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_-wpS0J3ZEeWFr_oidmlDRQ" name="Task">
     <packagedElement xmi:type="uml:Class" xmi:id="_xUQg4J0CEeWhTeq8ShgRSA" name="TaskManagement">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_-rxG8J3mEeWFr_oidmlDRQ" name="staff" type="_IVDYcJ0CEeWhTeq8ShgRSA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FGbdQJ3nEeWFr_oidmlDRQ" name="taskList" type="_xwaRYJ0CEeWhTeq8ShgRSA">
