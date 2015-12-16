@@ -74,6 +74,14 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_XUvn0KBYEeW2lvhfsni2Sw" name="result" type="_fBEaMJz-EeWhTeq8ShgRSA" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZDIOAKQCEeWme6yW6nS8rw" name="validateBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_i34asKQEEeWme6yW6nS8rw" name="BookingID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mCyQcKQEEeWme6yW6nS8rw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_a8qWcJ33EeWFr_oidmlDRQ" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_8I-88J3tEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_98GqwKA6EeW2lvhfsni2Sw" name="CartManagement">
@@ -285,6 +293,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_yJbZgKQBEeWme6yW6nS8rw" name="validateRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-h9ccKQBEeWme6yW6nS8rw" name="RoomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CAYEEKQCEeWme6yW6nS8rw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_u2uyUJ8iEeWXa8dgAQ47Zw" name="RoomManagement">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_AVwsgKC5EeWrRaa7yVr5ew" name="rooms" type="_kMkR4J0CEeWhTeq8ShgRSA">
@@ -359,6 +375,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__uFmcJ8hEeWXa8dgAQ47Zw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IO3moKQCEeWme6yW6nS8rw" name="validateServiceType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_P-e9sKQCEeWme6yW6nS8rw" name="serviceTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Twl9YKQCEeWme6yW6nS8rw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
