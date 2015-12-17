@@ -71,7 +71,7 @@
     <edge xmi:type="uml:ControlFlow" xmi:id="_NRe-oJdOEeWZhPGTylQDKQ" target="_FzqiMJdOEeWZhPGTylQDKQ" source="_dz22sJdMEeWZhPGTylQDKQ"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_dBmBYJdOEeWZhPGTylQDKQ" name="nr !=0 and nr&lt;=nr of available rooms" target="_tlLVkJLGEeW5NbYBxh17cQ" source="_FzqiMJdOEeWZhPGTylQDKQ"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_M7K54KRTEeWg9vb-UvQGSw" target="_fgOfAJLEEeW5NbYBxh17cQ" source="_MBSo0JK-EeW5NbYBxh17cQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_jkNjUKRTEeWg9vb-UvQGSw" target="_9VDHwJLGEeW5NbYBxh17cQ" source="_SfQ4MJLGEeW5NbYBxh17cQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jkNjUKRTEeWg9vb-UvQGSw" name="[valid]" target="_9VDHwJLGEeW5NbYBxh17cQ" source="_SfQ4MJLGEeW5NbYBxh17cQ"/>
     <node xmi:type="uml:InitialNode" xmi:id="_YsCzUJHxEeWklttIESlcdw" name="" outgoing="_Xa2bwJHyEeWklttIESlcdw _0TPckJdGEeWZhPGTylQDKQ"/>
     <node xmi:type="uml:CreateLinkAction" xmi:id="_Ra1aEJHyEeWklttIESlcdw" name="CreateLinkAction1"/>
     <node xmi:type="uml:DecisionNode" xmi:id="_7x7B0JH6EeWklttIESlcdw" name="" outgoing="_Xi3ZMJH7EeWklttIESlcdw"/>
