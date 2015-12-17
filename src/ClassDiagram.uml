@@ -280,14 +280,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_-wNsIJ8lEeWXa8dgAQ47Zw" name="deleteRoomType">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FS-OgJ8mEeWXa8dgAQ47Zw" name="roomTypeID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JgZRMJ8mEeWXa8dgAQ47Zw" name="result" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </ownedParameter>
-      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_D4z2QJ8pEeWXa8dgAQ47Zw" name="editRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_LF-AgJ8pEeWXa8dgAQ47Zw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -301,6 +293,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_CAYEEKQCEeWme6yW6nS8rw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_r38bcKRQEeWS8diQLQcRGg" name="deleteRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xbqisKRQEeWS8diQLQcRGg" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3GcUMKRQEeWS8diQLQcRGg" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>

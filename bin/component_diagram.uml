@@ -49,6 +49,7 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_R5N6UKQpEeWS8diQLQcRGg" name="Room">
       <packagedElement xmi:type="uml:Component" xmi:id="_EFIP8J31EeW6zcgWX7gDFA" name="Room">
         <packagedElement xmi:type="uml:Dependency" xmi:id="_RJ5t0J31EeW6zcgWX7gDFA" client="_EFIP8J31EeW6zcgWX7gDFA" supplier="_GDDVMJ31EeW6zcgWX7gDFA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_3NiuoKQ4EeWS8diQLQcRGg" client="_EFIP8J31EeW6zcgWX7gDFA" supplier="_WZSyQKQ0EeWS8diQLQcRGg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_GDDVMJ31EeW6zcgWX7gDFA" name="IRoom"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_WZSyQKQ0EeWS8diQLQcRGg" name="IRoomType">
@@ -63,6 +64,7 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_x4FDoKQpEeWS8diQLQcRGg" name="Service">
       <packagedElement xmi:type="uml:Component" xmi:id="_LmxEIJ3vEeW6zcgWX7gDFA" name="Service">
         <packagedElement xmi:type="uml:Dependency" xmi:id="_4HpU0J31EeW6zcgWX7gDFA" client="_LmxEIJ3vEeW6zcgWX7gDFA" supplier="_wxrM0J31EeW6zcgWX7gDFA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_4T9kIKQ4EeWS8diQLQcRGg" client="_LmxEIJ3vEeW6zcgWX7gDFA" supplier="_hybNsKQ0EeWS8diQLQcRGg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_wxrM0J31EeW6zcgWX7gDFA" name="IService"/>
       <packagedElement xmi:type="uml:Interface" xmi:id="_hybNsKQ0EeWS8diQLQcRGg" name="IServiceType"/>
