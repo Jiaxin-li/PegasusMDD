@@ -863,7 +863,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_Mdq0EZLEEeW5NbYBxh17cQ"/>
     <element xmi:type="uml:ControlFlow" href="activity_diagram.uml#_MdE-MJLEEeW5NbYBxh17cQ"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Mdq0EpLEEeW5NbYBxh17cQ" points="[0, 0, 515, -624]$[-526, 0, -11, -624]$[-515, 624, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Mdq0EpLEEeW5NbYBxh17cQ" points="[0, 0, 548, -752]$[-539, 0, 9, -752]$[-539, 752, 9, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Men2UJLEEeW5NbYBxh17cQ" id="(0.0,0.8043478260869565)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Men2UZLEEeW5NbYBxh17cQ" id="(0.2631578947368421,0.0)"/>
   </edges>
