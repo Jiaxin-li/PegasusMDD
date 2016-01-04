@@ -35,6 +35,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_gwNKEKPkEeWpLJK3L0_1KA" name="RoomTypeID">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pLmDwLMTEeWHIvMzXHZtXw" name="isPaid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_U5aqUJ3mEeWFr_oidmlDRQ" name="IBooking">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_R-qxEKACEeWP0I_OcFkqgQ" name="addBooking">
@@ -120,11 +123,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_J2mNQJ0OEeWhTeq8ShgRSA" name="getPersonalNumber">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_MldAMJ0OEeWhTeq8ShgRSA" name="personalNumber" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_OJeXsJ0OEeWhTeq8ShgRSA" name="isVIP">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UwzRAJ0OEeWhTeq8ShgRSA" name="status" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -227,6 +225,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="__P738J0KEeWhTeq8ShgRSA" name="numberOfBeds">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QwydYLL1EeWHIvMzXHZtXw" name="roomTypeID">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
     </packagedElement>
@@ -390,7 +391,7 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_pTMxYJ6rEeWnJdV0_aSkJQ" name="ServiceFactory"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pTMxYJ6rEeWnJdV0_aSkJQ" name="ServiceF"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_Fdcv4J7IEeWnJdV0_aSkJQ" client="_pTMxYJ6rEeWnJdV0_aSkJQ" supplier="_nXfIIJ3mEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_aHTJIJ8SEeWXa8dgAQ47Zw" name="ServiceTypeManagment">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0xH0gJ8fEeWXa8dgAQ47Zw" name="serviceTypes" type="__V0XIJ0CEeWhTeq8ShgRSA">
@@ -458,6 +459,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_wzI0EJ6zEeWnJdV0_aSkJQ" name="guests" type="_rDGPYJ0DEeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uMcjYJ8bEeWXa8dgAQ47Zw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uMg00J8bEeWXa8dgAQ47Zw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2CJ78LMSEeWHIvMzXHZtXw" name="bookingID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_f49YkJ0LEeWhTeq8ShgRSA" name="addService" concurrency="concurrent">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_pc1ikJ0LEeWhTeq8ShgRSA" name="serviceTypeID">

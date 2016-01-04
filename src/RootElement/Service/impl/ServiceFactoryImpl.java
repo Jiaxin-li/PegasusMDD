@@ -4,8 +4,6 @@ package RootElement.Service.impl;
 
 import RootElement.Service.ServiceFactory;
 import RootElement.Service.ServicePackage;
-import RootElement.Service.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 

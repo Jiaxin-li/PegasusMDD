@@ -2,6 +2,7 @@
  */
 package RootElement.Service;
 
+import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,5 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ServiceFactory extends EObject {
+
+	EFactory eINSTANCE = null;
 
 } //ServiceFactory
