@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Payment.ecore"
+            class="RootElement.Payment.PaymentPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Booking.ecore"
+            class="RootElement.Booking.BookingPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Account.ecore"
+            class="RootElement.Account.AccountPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Room.ecore"
+            class="RootElement.Room.RoomPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Service.ecore"
+            class="RootElement.Service.ServicePackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Task.ecore"
+            class="RootElement.Task.TaskPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/CheckIO.ecore"
+            class="RootElement.CheckIO.CheckIOPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http:///RootElement/Schedule.ecore"
+            class="RootElement.Schedule.SchedulePackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
+</plugin>
