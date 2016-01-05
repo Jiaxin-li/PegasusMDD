@@ -120,11 +120,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_J2mNQJ0OEeWhTeq8ShgRSA" name="getPersonalNumber">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MldAMJ0OEeWhTeq8ShgRSA" name="personalNumber" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </ownedParameter>
-      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_b86TYJ0DEeWhTeq8ShgRSA" name="UserAccounts" isAbstract="true">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Y8-9kJ0OEeWhTeq8ShgRSA" name="name" visibility="private">
@@ -391,7 +386,12 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_pTMxYJ6rEeWnJdV0_aSkJQ" name="ServiceF"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pTMxYJ6rEeWnJdV0_aSkJQ" name="ServiceManagement">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wKo6QLOnEeWLMYchbvDiAw" name="services" type="_84q_QJ0CEeWhTeq8ShgRSA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_61xnQLOnEeWLMYchbvDiAw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6148ALOnEeWLMYchbvDiAw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
     <packagedElement xmi:type="uml:Realization" xmi:id="_Fdcv4J7IEeWnJdV0_aSkJQ" client="_pTMxYJ6rEeWnJdV0_aSkJQ" supplier="_nXfIIJ3mEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_aHTJIJ8SEeWXa8dgAQ47Zw" name="ServiceTypeManagment">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0xH0gJ8fEeWXa8dgAQ47Zw" name="serviceTypes" type="__V0XIJ0CEeWhTeq8ShgRSA">
@@ -517,13 +517,17 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Aio7QJ3iEeWFr_oidmlDRQ" name="CheckOut">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gE6PMJ3iEeWFr_oidmlDRQ" name="customer" type="_rDGPYJ0DEeWhTeq8ShgRSA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gE6PMJ3iEeWFr_oidmlDRQ" name="bookingId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdWfAJ3jEeWFr_oidmlDRQ" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_FNObEJ3iEeWFr_oidmlDRQ" name="CheckIn">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Lxfj4J3jEeWFr_oidmlDRQ" name="customer" type="_rDGPYJ0DEeWhTeq8ShgRSA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Lxfj4J3jEeWFr_oidmlDRQ" name="bookingID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_PH6tIJ3jEeWFr_oidmlDRQ" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>

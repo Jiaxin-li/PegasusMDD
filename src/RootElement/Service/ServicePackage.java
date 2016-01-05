@@ -530,16 +530,6 @@ public interface ServicePackage extends EPackage {
 	EClass getServiceFactory();
 
 	/**
-	 * Returns the meta object for class '{@link RootElement.Service.ServiceFactory <em>Factory</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Factory</em>'.
-	 * @see RootElement.Service.ServiceFactory
-	 * @generated
-	 */
-	
-
-	/**
 	 * Returns the meta object for class '{@link RootElement.Service.ServiceTypeManagment <em>Type Managment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

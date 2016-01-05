@@ -369,15 +369,6 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceFactory getServiceFactory() {
-		return (ServiceFactory)getEFactoryInstance();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private boolean isCreated = false;
 
 	/**
