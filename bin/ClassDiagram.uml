@@ -57,6 +57,9 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_6r9AELOrEeWLMYchbvDiAw" name="cartID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SThgwLPMEeWpV6Nm8aL7Kw" name="nrOfRooms">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_QATmUKBXEeW2lvhfsni2Sw" name="editBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_cbPdAKBXEeW2lvhfsni2Sw" name="bookingID">
