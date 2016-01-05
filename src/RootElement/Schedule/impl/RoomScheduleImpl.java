@@ -81,21 +81,28 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 	 */
 	public int checkAvailable(int roomTypeID, Date checkInDate, Date checkOutDate) {
 		AvailablityMap mp ;
-		int min =0;
+		
 		EList<AvailablityMap> li = getSchedule();
+		if(li.size()>0){			
+		
+		int min ;
 		for (AvailablityMap tmp : li ){
 			if(tmp.getRoomType().getRoomTypeID()== roomTypeID){
 				Date d = tmp.getDate(); 
 				if (d.compareTo(checkInDate)> 0 && d.compareTo(checkOutDate)<0  ){
 					if (tmp.getAvailable()<min){
-						
+						min = tmp.getAvailable(); 
 					}
 					
 				}
 			}
-			
 		}
-		return 0; 
+		return min;
+		}
+		else{
+			return 0; 
+		}
+		
 		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

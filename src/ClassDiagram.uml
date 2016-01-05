@@ -265,6 +265,14 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_z822IKC4EeWrRaa7yVr5ew" name="result" type="_kMkR4J0CEeWhTeq8ShgRSA" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hVs48LPsEeWpV6Nm8aL7Kw" name="getRoomNr">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qGCGILPsEeWpV6Nm8aL7Kw" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3bRB4LPsEeWpV6Nm8aL7Kw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_xUc8wJ6EEeWavpVvTui59g" name="IRoomType">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_b_bfsJ8jEeWXa8dgAQ47Zw" name="addRoomType" visibility="public">
@@ -631,6 +639,7 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="__1D-YLPsEeWpV6Nm8aL7Kw" client="_PayDAJ0YEeWUbYw76XS34g" supplier="_u6SyQJ3mEeWFr_oidmlDRQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_IbFJsJ_8EeWgGs4bImIp0A" memberEnd="_IbI0EJ_8EeWgGs4bImIp0A _IbJbIJ_8EeWgGs4bImIp0A">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IbGX0J_8EeWgGs4bImIp0A" source="org.eclipse.papyrus">
