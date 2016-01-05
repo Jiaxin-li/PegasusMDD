@@ -41,7 +41,6 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_U5aqUJ3mEeWFr_oidmlDRQ" name="IBooking" isLeaf="true" isAbstract="true">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_R-qxEKACEeWP0I_OcFkqgQ" name="addBooking">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4aE6sKA8EeW2lvhfsni2Sw" name="customer" type="_rDGPYJ0DEeWhTeq8ShgRSA"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_DpI0IKA9EeW2lvhfsni2Sw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
