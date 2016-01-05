@@ -100,12 +100,14 @@ public class AccountSwitch<T> extends Switch<T> {
 			case AccountPackage.STAFF_ACCOUNT_MANAGEMENT: {
 				StaffAccountManagement staffAccountManagement = (StaffAccountManagement)theEObject;
 				T result = caseStaffAccountManagement(staffAccountManagement);
+				if (result == null) result = caseIStaff(staffAccountManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AccountPackage.GUEST_ACCOUNT_MANGEMENT: {
 				GuestAccountMangement guestAccountMangement = (GuestAccountMangement)theEObject;
 				T result = caseGuestAccountMangement(guestAccountMangement);
+				if (result == null) result = caseIGuest(guestAccountMangement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

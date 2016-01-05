@@ -84,8 +84,8 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 				return createIServiceTypeAdapter();
 			}
 			@Override
-			public Adapter caseServiceFactory(ServiceFactory object) {
-				return createServiceFactoryAdapter();
+			public Adapter caseServiceManagement(ServiceManagement object) {
+				return createServiceManagementAdapter();
 			}
 			@Override
 			public Adapter caseServiceTypeManagment(ServiceTypeManagment object) {
@@ -168,16 +168,16 @@ public class ServiceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link RootElement.Service.ServiceFactory <em>Factory</em>}'.
+	 * Creates a new adapter for an object of class '{@link RootElement.Service.ServiceManagement <em>Management</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see RootElement.Service.ServiceFactory
+	 * @see RootElement.Service.ServiceManagement
 	 * @generated
 	 */
-	public Adapter createServiceFactoryAdapter() {
+	public Adapter createServiceManagementAdapter() {
 		return null;
 	}
 

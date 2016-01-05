@@ -1,10 +1,10 @@
 /**
  */
-package RootElement.Room.impl;
+package RootElement.Service.impl;
 
-import RootElement.Room.Room;
-import RootElement.Room.RoomManagement;
-import RootElement.Room.RoomPackage;
+import RootElement.Service.Service;
+import RootElement.Service.ServiceManagement;
+import RootElement.Service.ServicePackage;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -26,28 +26,28 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link RootElement.Room.impl.RoomManagementImpl#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link RootElement.Service.impl.ServiceManagementImpl#getServices <em>Services</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RoomManagementImpl extends MinimalEObjectImpl.Container implements RoomManagement {
+public class ServiceManagementImpl extends MinimalEObjectImpl.Container implements ServiceManagement {
 	/**
-	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' reference list.
+	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRooms()
+	 * @see #getServices()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Room> rooms;
+	protected EList<Service> services;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoomManagementImpl() {
+	protected ServiceManagementImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RoomPackage.Literals.ROOM_MANAGEMENT;
+		return ServicePackage.Literals.SERVICE_MANAGEMENT;
 	}
 
 	/**
@@ -66,11 +66,11 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Room> getRooms() {
-		if (rooms == null) {
-			rooms = new EObjectResolvingEList<Room>(Room.class, this, RoomPackage.ROOM_MANAGEMENT__ROOMS);
+	public EList<Service> getServices() {
+		if (services == null) {
+			services = new EObjectResolvingEList<Service>(Service.class, this, ServicePackage.SERVICE_MANAGEMENT__SERVICES);
 		}
-		return rooms;
+		return services;
 	}
 
 	/**
@@ -78,29 +78,7 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room getAvailiableRoom(int RoomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean addRoom() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Room getRoom(int roomNr) {
+	public Service getService(int ServiceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -114,8 +92,8 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RoomPackage.ROOM_MANAGEMENT__ROOMS:
-				return getRooms();
+			case ServicePackage.SERVICE_MANAGEMENT__SERVICES:
+				return getServices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -129,9 +107,9 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RoomPackage.ROOM_MANAGEMENT__ROOMS:
-				getRooms().clear();
-				getRooms().addAll((Collection<? extends Room>)newValue);
+			case ServicePackage.SERVICE_MANAGEMENT__SERVICES:
+				getServices().clear();
+				getServices().addAll((Collection<? extends Service>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -145,8 +123,8 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RoomPackage.ROOM_MANAGEMENT__ROOMS:
-				getRooms().clear();
+			case ServicePackage.SERVICE_MANAGEMENT__SERVICES:
+				getServices().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -160,8 +138,8 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RoomPackage.ROOM_MANAGEMENT__ROOMS:
-				return rooms != null && !rooms.isEmpty();
+			case ServicePackage.SERVICE_MANAGEMENT__SERVICES:
+				return services != null && !services.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -174,14 +152,10 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RoomPackage.ROOM_MANAGEMENT___GET_AVAILIABLE_ROOM__INT:
-				return getAvailiableRoom((Integer)arguments.get(0));
-			case RoomPackage.ROOM_MANAGEMENT___ADD_ROOM:
-				return addRoom();
-			case RoomPackage.ROOM_MANAGEMENT___GET_ROOM__INT:
-				return getRoom((Integer)arguments.get(0));
+			case ServicePackage.SERVICE_MANAGEMENT___GET_SERVICE__INT:
+				return getService((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //RoomManagementImpl
+} //ServiceManagementImpl

@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link RootElement.CheckIO.impl.RoomBinderImpl#getRoom <em>Room</em>}</li>
  *   <li>{@link RootElement.CheckIO.impl.RoomBinderImpl#getServices <em>Services</em>}</li>
  *   <li>{@link RootElement.CheckIO.impl.RoomBinderImpl#getGuests <em>Guests</em>}</li>
+ *   <li>{@link RootElement.CheckIO.impl.RoomBinderImpl#getBookingID <em>Booking ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,6 +73,26 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 	 * @ordered
 	 */
 	protected EList<GuestAccount> guests;
+
+	/**
+	 * The default value of the '{@link #getBookingID() <em>Booking ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBookingID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int BOOKING_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getBookingID() <em>Booking ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBookingID()
+	 * @generated
+	 * @ordered
+	 */
+	protected int bookingID = BOOKING_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,6 +180,27 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getBookingID() {
+		return bookingID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookingID(int newBookingID) {
+		int oldBookingID = bookingID;
+		bookingID = newBookingID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CheckIOPackage.ROOM_BINDER__BOOKING_ID, oldBookingID, bookingID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void addService(int serviceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -213,6 +255,8 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 				return getServices();
 			case CheckIOPackage.ROOM_BINDER__GUESTS:
 				return getGuests();
+			case CheckIOPackage.ROOM_BINDER__BOOKING_ID:
+				return getBookingID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -237,6 +281,9 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 				getGuests().clear();
 				getGuests().addAll((Collection<? extends GuestAccount>)newValue);
 				return;
+			case CheckIOPackage.ROOM_BINDER__BOOKING_ID:
+				setBookingID((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -258,6 +305,9 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 			case CheckIOPackage.ROOM_BINDER__GUESTS:
 				getGuests().clear();
 				return;
+			case CheckIOPackage.ROOM_BINDER__BOOKING_ID:
+				setBookingID(BOOKING_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -276,6 +326,8 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 				return services != null && !services.isEmpty();
 			case CheckIOPackage.ROOM_BINDER__GUESTS:
 				return guests != null && !guests.isEmpty();
+			case CheckIOPackage.ROOM_BINDER__BOOKING_ID:
+				return bookingID != BOOKING_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -301,6 +353,22 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (bookingID: ");
+		result.append(bookingID);
+		result.append(')');
+		return result.toString();
 	}
 
 } //RoomBinderImpl

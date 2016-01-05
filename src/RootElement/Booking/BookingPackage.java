@@ -177,13 +177,22 @@ public interface BookingPackage extends EPackage {
 	int BOOKING__ROOM_TYPE_ID = 3;
 
 	/**
+	 * The feature id for the '<em><b>Is Paid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__IS_PAID = 4;
+
+	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_FEATURE_COUNT = 4;
+	int BOOKING_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -220,7 +229,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE = 0;
+	int IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
@@ -284,7 +293,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT__CARTS = 0;
+	int CART_MANAGEMENT__CARTS = IBOOKING_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Cart</b></em>' reference list.
@@ -293,7 +302,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT__CART = 1;
+	int CART_MANAGEMENT__CART = IBOOKING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Cart Management</em>' class.
@@ -302,7 +311,52 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_FEATURE_COUNT = 2;
+	int CART_MANAGEMENT_FEATURE_COUNT = IBOOKING_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT = IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT;
+
+	/**
+	 * The operation id for the '<em>Edit Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___EDIT_BOOKING__INT = IBOOKING___EDIT_BOOKING__INT;
+
+	/**
+	 * The operation id for the '<em>Delete Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___DELETE_BOOKING__INT = IBOOKING___DELETE_BOOKING__INT;
+
+	/**
+	 * The operation id for the '<em>Get Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___GET_BOOKING__INT = IBOOKING___GET_BOOKING__INT;
+
+	/**
+	 * The operation id for the '<em>Validate Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___VALIDATE_BOOKING__INT = IBOOKING___VALIDATE_BOOKING__INT;
 
 	/**
 	 * The number of operations of the '<em>Cart Management</em>' class.
@@ -311,7 +365,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_OPERATION_COUNT = 0;
+	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 0;
 
 
 	/**
@@ -432,6 +486,17 @@ public interface BookingPackage extends EPackage {
 	EAttribute getBooking_RoomTypeID();
 
 	/**
+	 * Returns the meta object for the attribute '{@link RootElement.Booking.Booking#isPaid <em>Is Paid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Paid</em>'.
+	 * @see RootElement.Booking.Booking#isPaid()
+	 * @see #getBooking()
+	 * @generated
+	 */
+	EAttribute getBooking_IsPaid();
+
+	/**
 	 * Returns the meta object for class '{@link RootElement.Booking.IBooking <em>IBooking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -442,14 +507,14 @@ public interface BookingPackage extends EPackage {
 	EClass getIBooking();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#addBooking(RootElement.Account.GuestAccount, int, java.util.Date, java.util.Date) <em>Add Booking</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#addBooking(RootElement.Account.GuestAccount, int, java.util.Date, java.util.Date, int) <em>Add Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Booking</em>' operation.
-	 * @see RootElement.Booking.IBooking#addBooking(RootElement.Account.GuestAccount, int, java.util.Date, java.util.Date)
+	 * @see RootElement.Booking.IBooking#addBooking(RootElement.Account.GuestAccount, int, java.util.Date, java.util.Date, int)
 	 * @generated
 	 */
-	EOperation getIBooking__AddBooking__GuestAccount_int_Date_Date();
+	EOperation getIBooking__AddBooking__GuestAccount_int_Date_Date_int();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#editBooking(int) <em>Edit Booking</em>}' operation.
@@ -639,6 +704,14 @@ public interface BookingPackage extends EPackage {
 		EAttribute BOOKING__ROOM_TYPE_ID = eINSTANCE.getBooking_RoomTypeID();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Paid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING__IS_PAID = eINSTANCE.getBooking_IsPaid();
+
+		/**
 		 * The meta object literal for the '{@link RootElement.Booking.IBooking <em>IBooking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -654,7 +727,7 @@ public interface BookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE = eINSTANCE.getIBooking__AddBooking__GuestAccount_int_Date_Date();
+		EOperation IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT = eINSTANCE.getIBooking__AddBooking__GuestAccount_int_Date_Date_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.

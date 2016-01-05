@@ -90,15 +90,17 @@ public class ServiceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ServicePackage.SERVICE_FACTORY: {
-				ServiceFactory serviceFactory = (ServiceFactory)theEObject;
-				T result = caseServiceFactory(serviceFactory);
+			case ServicePackage.SERVICE_MANAGEMENT: {
+				ServiceManagement serviceManagement = (ServiceManagement)theEObject;
+				T result = caseServiceManagement(serviceManagement);
+				if (result == null) result = caseIService(serviceManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ServicePackage.SERVICE_TYPE_MANAGMENT: {
 				ServiceTypeManagment serviceTypeManagment = (ServiceTypeManagment)theEObject;
 				T result = caseServiceTypeManagment(serviceTypeManagment);
+				if (result == null) result = caseIServiceType(serviceTypeManagment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -167,17 +169,17 @@ public class ServiceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Factory</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Management</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Factory</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Management</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceFactory(ServiceFactory object) {
+	public T caseServiceManagement(ServiceManagement object) {
 		return null;
 	}
 

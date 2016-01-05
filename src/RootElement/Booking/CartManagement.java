@@ -4,8 +4,6 @@ package RootElement.Booking;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Cart Management</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CartManagement extends EObject {
+public interface CartManagement extends IBooking {
 	/**
 	 * Returns the value of the '<em><b>Carts</b></em>' reference list.
 	 * The list contents are of type {@link RootElement.Booking.Cart}.

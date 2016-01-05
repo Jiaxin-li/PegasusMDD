@@ -4,8 +4,6 @@ package RootElement.Service;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Type Managment</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ServiceTypeManagment extends EObject {
+public interface ServiceTypeManagment extends IServiceType {
 	/**
 	 * Returns the value of the '<em><b>Service Types</b></em>' reference list.
 	 * The list contents are of type {@link RootElement.Service.ServiceType}.

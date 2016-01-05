@@ -2,6 +2,7 @@
  */
 package RootElement.CheckIO;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -94,13 +95,22 @@ public interface CheckIOPackage extends EPackage {
 	int ROOM_BINDER__GUESTS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Booking ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_BINDER__BOOKING_ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Room Binder</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_BINDER_FEATURE_COUNT = 3;
+	int ROOM_BINDER_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Add Service</em>' operation.
@@ -227,7 +237,7 @@ public interface CheckIOPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_IO___CHECK_OUT__GUESTACCOUNT = 3;
+	int CHECK_IO___CHECK_OUT__INT = 3;
 
 	/**
 	 * The operation id for the '<em>Check In</em>' operation.
@@ -236,7 +246,7 @@ public interface CheckIOPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_IO___CHECK_IN__GUESTACCOUNT = 4;
+	int CHECK_IO___CHECK_IN__INT = 4;
 
 	/**
 	 * The number of operations of the '<em>Check IO</em>' class.
@@ -327,6 +337,17 @@ public interface CheckIOPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoomBinder_Guests();
+
+	/**
+	 * Returns the meta object for the attribute '{@link RootElement.CheckIO.RoomBinder#getBookingID <em>Booking ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Booking ID</em>'.
+	 * @see RootElement.CheckIO.RoomBinder#getBookingID()
+	 * @see #getRoomBinder()
+	 * @generated
+	 */
+	EAttribute getRoomBinder_BookingID();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.CheckIO.RoomBinder#addService(int) <em>Add Service</em>}' operation.
@@ -442,24 +463,24 @@ public interface CheckIOPackage extends EPackage {
 	EOperation getCheckIO__GetPaymentResult__int();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.CheckIO.CheckIO#CheckOut(RootElement.Account.GuestAccount) <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.CheckIO.CheckIO#CheckOut(int) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see RootElement.CheckIO.CheckIO#CheckOut(RootElement.Account.GuestAccount)
+	 * @see RootElement.CheckIO.CheckIO#CheckOut(int)
 	 * @generated
 	 */
-	EOperation getCheckIO__CheckOut__GuestAccount();
+	EOperation getCheckIO__CheckOut__int();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.CheckIO.CheckIO#CheckIn(RootElement.Account.GuestAccount) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.CheckIO.CheckIO#CheckIn(int) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see RootElement.CheckIO.CheckIO#CheckIn(RootElement.Account.GuestAccount)
+	 * @see RootElement.CheckIO.CheckIO#CheckIn(int)
 	 * @generated
 	 */
-	EOperation getCheckIO__CheckIn__GuestAccount();
+	EOperation getCheckIO__CheckIn__int();
 
 	/**
 	 * Returns the meta object for class '{@link RootElement.CheckIO.Invoice <em>Invoice</em>}'.
@@ -537,6 +558,14 @@ public interface CheckIOPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_BINDER__GUESTS = eINSTANCE.getRoomBinder_Guests();
+
+		/**
+		 * The meta object literal for the '<em><b>Booking ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_BINDER__BOOKING_ID = eINSTANCE.getRoomBinder_BookingID();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Service</b></em>' operation.
@@ -634,7 +663,7 @@ public interface CheckIOPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CHECK_IO___CHECK_OUT__GUESTACCOUNT = eINSTANCE.getCheckIO__CheckOut__GuestAccount();
+		EOperation CHECK_IO___CHECK_OUT__INT = eINSTANCE.getCheckIO__CheckOut__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
@@ -642,7 +671,7 @@ public interface CheckIOPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CHECK_IO___CHECK_IN__GUESTACCOUNT = eINSTANCE.getCheckIO__CheckIn__GuestAccount();
+		EOperation CHECK_IO___CHECK_IN__INT = eINSTANCE.getCheckIO__CheckIn__int();
 
 		/**
 		 * The meta object literal for the '{@link RootElement.CheckIO.impl.InvoiceImpl <em>Invoice</em>}' class.

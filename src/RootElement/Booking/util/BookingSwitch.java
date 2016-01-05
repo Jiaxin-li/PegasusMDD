@@ -87,6 +87,7 @@ public class BookingSwitch<T> extends Switch<T> {
 			case BookingPackage.CART_MANAGEMENT: {
 				CartManagement cartManagement = (CartManagement)theEObject;
 				T result = caseCartManagement(cartManagement);
+				if (result == null) result = caseIBooking(cartManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

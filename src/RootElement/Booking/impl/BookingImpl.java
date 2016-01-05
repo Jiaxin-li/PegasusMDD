@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link RootElement.Booking.impl.BookingImpl#getCheckInDate <em>Check In Date</em>}</li>
  *   <li>{@link RootElement.Booking.impl.BookingImpl#getCheckOutDate <em>Check Out Date</em>}</li>
  *   <li>{@link RootElement.Booking.impl.BookingImpl#getRoomTypeID <em>Room Type ID</em>}</li>
+ *   <li>{@link RootElement.Booking.impl.BookingImpl#isPaid <em>Is Paid</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +111,26 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected int roomTypeID = ROOM_TYPE_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPaid() <em>Is Paid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPaid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_PAID_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPaid() <em>Is Paid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPaid()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isPaid = IS_PAID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -219,6 +240,27 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isPaid() {
+		return isPaid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPaid(boolean newIsPaid) {
+		boolean oldIsPaid = isPaid;
+		isPaid = newIsPaid;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.BOOKING__IS_PAID, oldIsPaid, isPaid));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -230,6 +272,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getCheckOutDate();
 			case BookingPackage.BOOKING__ROOM_TYPE_ID:
 				return getRoomTypeID();
+			case BookingPackage.BOOKING__IS_PAID:
+				return isPaid();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,6 +297,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return;
 			case BookingPackage.BOOKING__ROOM_TYPE_ID:
 				setRoomTypeID((Integer)newValue);
+				return;
+			case BookingPackage.BOOKING__IS_PAID:
+				setIsPaid((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -278,6 +325,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingPackage.BOOKING__ROOM_TYPE_ID:
 				setRoomTypeID(ROOM_TYPE_ID_EDEFAULT);
 				return;
+			case BookingPackage.BOOKING__IS_PAID:
+				setIsPaid(IS_PAID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -298,6 +348,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return CHECK_OUT_DATE_EDEFAULT == null ? checkOutDate != null : !CHECK_OUT_DATE_EDEFAULT.equals(checkOutDate);
 			case BookingPackage.BOOKING__ROOM_TYPE_ID:
 				return roomTypeID != ROOM_TYPE_ID_EDEFAULT;
+			case BookingPackage.BOOKING__IS_PAID:
+				return isPaid != IS_PAID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -320,6 +372,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(checkOutDate);
 		result.append(", RoomTypeID: ");
 		result.append(roomTypeID);
+		result.append(", isPaid: ");
+		result.append(isPaid);
 		result.append(')');
 		return result.toString();
 	}

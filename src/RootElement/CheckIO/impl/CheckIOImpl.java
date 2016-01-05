@@ -2,7 +2,6 @@
  */
 package RootElement.CheckIO.impl;
 
-import RootElement.Account.GuestAccount;
 import RootElement.Account.StaffAccount;
 
 import RootElement.CheckIO.CheckIO;
@@ -190,7 +189,7 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean CheckOut(GuestAccount customer) {
+	public boolean CheckOut(int bookingId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -201,7 +200,7 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean CheckIn(GuestAccount customer) {
+	public boolean CheckIn(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -303,10 +302,10 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 				return generateTotal((Integer)arguments.get(0));
 			case CheckIOPackage.CHECK_IO___GET_PAYMENT_RESULT__INT:
 				return getPaymentResult((Integer)arguments.get(0));
-			case CheckIOPackage.CHECK_IO___CHECK_OUT__GUESTACCOUNT:
-				return CheckOut((GuestAccount)arguments.get(0));
-			case CheckIOPackage.CHECK_IO___CHECK_IN__GUESTACCOUNT:
-				return CheckIn((GuestAccount)arguments.get(0));
+			case CheckIOPackage.CHECK_IO___CHECK_OUT__INT:
+				return CheckOut((Integer)arguments.get(0));
+			case CheckIOPackage.CHECK_IO___CHECK_IN__INT:
+				return CheckIn((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

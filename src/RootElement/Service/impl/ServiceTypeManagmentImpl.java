@@ -6,6 +6,8 @@ import RootElement.Service.ServicePackage;
 import RootElement.Service.ServiceType;
 import RootElement.Service.ServiceTypeManagment;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -129,6 +131,50 @@ public class ServiceTypeManagmentImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean addServiceType(String ServiceTypeName, int price) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean deleteServiceType(int serviceTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean editServiceType(int ServiceTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateServiceType(int serviceTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -193,6 +239,26 @@ public class ServiceTypeManagmentImpl extends MinimalEObjectImpl.Container imple
 				return servicetype != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ServicePackage.SERVICE_TYPE_MANAGMENT___ADD_SERVICE_TYPE__STRING_INT:
+				return addServiceType((String)arguments.get(0), (Integer)arguments.get(1));
+			case ServicePackage.SERVICE_TYPE_MANAGMENT___DELETE_SERVICE_TYPE__INT:
+				return deleteServiceType((Integer)arguments.get(0));
+			case ServicePackage.SERVICE_TYPE_MANAGMENT___EDIT_SERVICE_TYPE__INT:
+				return editServiceType((Integer)arguments.get(0));
+			case ServicePackage.SERVICE_TYPE_MANAGMENT___VALIDATE_SERVICE_TYPE__INT:
+				return validateServiceType((Integer)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ServiceTypeManagmentImpl

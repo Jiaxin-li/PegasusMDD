@@ -226,6 +226,15 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoomType_RoomTypeID() {
+		return (EAttribute)roomTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoom() {
 		return roomEClass;
 	}
@@ -442,6 +451,7 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 		createEAttribute(roomTypeEClass, ROOM_TYPE__ROOM_TYPE_NAME);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__PRICE);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NUMBER_OF_BEDS);
+		createEAttribute(roomTypeEClass, ROOM_TYPE__ROOM_TYPE_ID);
 
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__ROOM_NUMBER);
@@ -501,12 +511,15 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		roomManagementEClass.getESuperTypes().add(this.getIRoom());
+		roomTypeManagmentEClass.getESuperTypes().add(this.getIRoomType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(roomTypeEClass, RoomType.class, "RoomType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomType_RoomTypeName(), theTypesPackage.getString(), "roomTypeName", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_Price(), ecorePackage.getEInt(), "price", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_NumberOfBeds(), ecorePackage.getEInt(), "numberOfBeds", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomType_RoomTypeID(), ecorePackage.getEInt(), "roomTypeID", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_RoomNumber(), ecorePackage.getEInt(), "roomNumber", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

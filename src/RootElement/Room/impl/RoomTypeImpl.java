@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link RootElement.Room.impl.RoomTypeImpl#getRoomTypeName <em>Room Type Name</em>}</li>
  *   <li>{@link RootElement.Room.impl.RoomTypeImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link RootElement.Room.impl.RoomTypeImpl#getNumberOfBeds <em>Number Of Beds</em>}</li>
+ *   <li>{@link RootElement.Room.impl.RoomTypeImpl#getRoomTypeID <em>Room Type ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +88,26 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * @ordered
 	 */
 	protected int numberOfBeds = NUMBER_OF_BEDS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRoomTypeID() <em>Room Type ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomTypeID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROOM_TYPE_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getRoomTypeID() <em>Room Type ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomTypeID()
+	 * @generated
+	 * @ordered
+	 */
+	protected int roomTypeID = ROOM_TYPE_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +196,27 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getRoomTypeID() {
+		return roomTypeID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomTypeID(int newRoomTypeID) {
+		int oldRoomTypeID = roomTypeID;
+		roomTypeID = newRoomTypeID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RoomPackage.ROOM_TYPE__ROOM_TYPE_ID, oldRoomTypeID, roomTypeID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +226,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getPrice();
 			case RoomPackage.ROOM_TYPE__NUMBER_OF_BEDS:
 				return getNumberOfBeds();
+			case RoomPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				return getRoomTypeID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +248,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return;
 			case RoomPackage.ROOM_TYPE__NUMBER_OF_BEDS:
 				setNumberOfBeds((Integer)newValue);
+				return;
+			case RoomPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				setRoomTypeID((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +273,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case RoomPackage.ROOM_TYPE__NUMBER_OF_BEDS:
 				setNumberOfBeds(NUMBER_OF_BEDS_EDEFAULT);
 				return;
+			case RoomPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				setRoomTypeID(ROOM_TYPE_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +294,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return price != PRICE_EDEFAULT;
 			case RoomPackage.ROOM_TYPE__NUMBER_OF_BEDS:
 				return numberOfBeds != NUMBER_OF_BEDS_EDEFAULT;
+			case RoomPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				return roomTypeID != ROOM_TYPE_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,6 +316,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		result.append(price);
 		result.append(", numberOfBeds: ");
 		result.append(numberOfBeds);
+		result.append(", roomTypeID: ");
+		result.append(roomTypeID);
 		result.append(')');
 		return result.toString();
 	}

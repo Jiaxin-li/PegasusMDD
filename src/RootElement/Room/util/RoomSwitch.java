@@ -93,12 +93,14 @@ public class RoomSwitch<T> extends Switch<T> {
 			case RoomPackage.ROOM_MANAGEMENT: {
 				RoomManagement roomManagement = (RoomManagement)theEObject;
 				T result = caseRoomManagement(roomManagement);
+				if (result == null) result = caseIRoom(roomManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case RoomPackage.ROOM_TYPE_MANAGMENT: {
 				RoomTypeManagment roomTypeManagment = (RoomTypeManagment)theEObject;
 				T result = caseRoomTypeManagment(roomTypeManagment);
+				if (result == null) result = caseIRoomType(roomTypeManagment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

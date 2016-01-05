@@ -22,10 +22,10 @@ public interface IBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" customerRequired="true" customerOrdered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false"
+	 * @model required="true" ordered="false" customerRequired="true" customerOrdered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" cartIDRequired="true" cartIDOrdered="false"
 	 * @generated
 	 */
-	boolean addBooking(GuestAccount customer, int roomTypeID, Date checkInDate, Date checkOutDate);
+	boolean addBooking(GuestAccount customer, int roomTypeID, Date checkInDate, Date checkOutDate, int cartID);
 
 	/**
 	 * <!-- begin-user-doc -->

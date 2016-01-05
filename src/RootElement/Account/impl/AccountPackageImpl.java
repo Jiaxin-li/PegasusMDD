@@ -530,24 +530,6 @@ public class AccountPackageImpl extends EPackageImpl implements AccountPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuestAccount__GetPersonalNumber() {
-		return guestAccountEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuestAccount__IsVIP() {
-		return guestAccountEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AccountFactory getAccountFactory() {
 		return (AccountFactory)getEFactoryInstance();
 	}
@@ -614,8 +596,6 @@ public class AccountPackageImpl extends EPackageImpl implements AccountPackage {
 		createEAttribute(guestAccountEClass, GUEST_ACCOUNT__EMAIL);
 		createEAttribute(guestAccountEClass, GUEST_ACCOUNT__VIP);
 		createEOperation(guestAccountEClass, GUEST_ACCOUNT___GET_USER_INFO);
-		createEOperation(guestAccountEClass, GUEST_ACCOUNT___GET_PERSONAL_NUMBER);
-		createEOperation(guestAccountEClass, GUEST_ACCOUNT___IS_VIP);
 	}
 
 	/**
@@ -650,6 +630,8 @@ public class AccountPackageImpl extends EPackageImpl implements AccountPackage {
 
 		// Add supertypes to classes
 		staffAccountEClass.getESuperTypes().add(this.getUserAccounts());
+		staffAccountManagementEClass.getESuperTypes().add(this.getIStaff());
+		guestAccountMangementEClass.getESuperTypes().add(this.getIGuest());
 		guestAccountEClass.getESuperTypes().add(this.getUserAccounts());
 
 		// Initialize classes, features, and operations; add parameters
@@ -718,10 +700,6 @@ public class AccountPackageImpl extends EPackageImpl implements AccountPackage {
 		initEAttribute(getGuestAccount_VIP(), ecorePackage.getEBoolean(), "VIP", null, 1, 1, GuestAccount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getGuestAccount__GetUserInfo(), theTypesPackage.getString(), "getUserInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuestAccount__GetPersonalNumber(), ecorePackage.getEInt(), "getPersonalNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getGuestAccount__IsVIP(), ecorePackage.getEBoolean(), "isVIP", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

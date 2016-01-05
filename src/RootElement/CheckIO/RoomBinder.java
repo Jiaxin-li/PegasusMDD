@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link RootElement.CheckIO.RoomBinder#getRoom <em>Room</em>}</li>
  *   <li>{@link RootElement.CheckIO.RoomBinder#getServices <em>Services</em>}</li>
  *   <li>{@link RootElement.CheckIO.RoomBinder#getGuests <em>Guests</em>}</li>
+ *   <li>{@link RootElement.CheckIO.RoomBinder#getBookingID <em>Booking ID</em>}</li>
  * </ul>
  *
  * @see RootElement.CheckIO.CheckIOPackage#getRoomBinder()
@@ -88,6 +89,32 @@ public interface RoomBinder extends EObject {
 	 * @generated
 	 */
 	EList<GuestAccount> getGuests();
+
+	/**
+	 * Returns the value of the '<em><b>Booking ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Booking ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Booking ID</em>' attribute.
+	 * @see #setBookingID(int)
+	 * @see RootElement.CheckIO.CheckIOPackage#getRoomBinder_BookingID()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getBookingID();
+
+	/**
+	 * Sets the value of the '{@link RootElement.CheckIO.RoomBinder#getBookingID <em>Booking ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Booking ID</em>' attribute.
+	 * @see #getBookingID()
+	 * @generated
+	 */
+	void setBookingID(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

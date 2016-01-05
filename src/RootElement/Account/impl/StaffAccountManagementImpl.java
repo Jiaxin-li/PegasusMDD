@@ -6,6 +6,8 @@ import RootElement.Account.AccountPackage;
 import RootElement.Account.StaffAccount;
 import RootElement.Account.StaffAccountManagement;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -129,6 +131,17 @@ public class StaffAccountManagementImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public StaffAccount getStaff(int StaffID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -193,6 +206,20 @@ public class StaffAccountManagementImpl extends MinimalEObjectImpl.Container imp
 				return staffaccount != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case AccountPackage.STAFF_ACCOUNT_MANAGEMENT___GET_STAFF__INT:
+				return getStaff((Integer)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //StaffAccountManagementImpl

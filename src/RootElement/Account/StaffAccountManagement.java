@@ -4,8 +4,6 @@ package RootElement.Account;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Staff Account Management</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface StaffAccountManagement extends EObject {
+public interface StaffAccountManagement extends IStaff {
 	/**
 	 * Returns the value of the '<em><b>Staff Accounts</b></em>' reference list.
 	 * The list contents are of type {@link RootElement.Account.StaffAccount}.

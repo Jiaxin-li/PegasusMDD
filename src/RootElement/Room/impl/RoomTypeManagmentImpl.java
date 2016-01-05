@@ -6,6 +6,8 @@ import RootElement.Room.RoomPackage;
 import RootElement.Room.RoomType;
 import RootElement.Room.RoomTypeManagment;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -129,6 +131,50 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean addRoomType(String RoomTypeName, int price, int nrOfBeds) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean editRoomType(int roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRoomType(int RoomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean deleteRoomType(int roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -193,6 +239,26 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 				return roomtype != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case RoomPackage.ROOM_TYPE_MANAGMENT___ADD_ROOM_TYPE__STRING_INT_INT:
+				return addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
+			case RoomPackage.ROOM_TYPE_MANAGMENT___EDIT_ROOM_TYPE__INT:
+				return editRoomType((Integer)arguments.get(0));
+			case RoomPackage.ROOM_TYPE_MANAGMENT___VALIDATE_ROOM_TYPE__INT:
+				return validateRoomType((Integer)arguments.get(0));
+			case RoomPackage.ROOM_TYPE_MANAGMENT___DELETE_ROOM_TYPE__INT:
+				return deleteRoomType((Integer)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //RoomTypeManagmentImpl

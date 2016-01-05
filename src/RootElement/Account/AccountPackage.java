@@ -430,7 +430,7 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_ACCOUNT_MANAGEMENT__STAFF_ACCOUNTS = 0;
+	int STAFF_ACCOUNT_MANAGEMENT__STAFF_ACCOUNTS = ISTAFF_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Staffaccount</b></em>' reference.
@@ -439,7 +439,7 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_ACCOUNT_MANAGEMENT__STAFFACCOUNT = 1;
+	int STAFF_ACCOUNT_MANAGEMENT__STAFFACCOUNT = ISTAFF_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Staff Account Management</em>' class.
@@ -448,7 +448,16 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_ACCOUNT_MANAGEMENT_FEATURE_COUNT = 2;
+	int STAFF_ACCOUNT_MANAGEMENT_FEATURE_COUNT = ISTAFF_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Staff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_ACCOUNT_MANAGEMENT___GET_STAFF__INT = ISTAFF___GET_STAFF__INT;
 
 	/**
 	 * The number of operations of the '<em>Staff Account Management</em>' class.
@@ -457,7 +466,7 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_ACCOUNT_MANAGEMENT_OPERATION_COUNT = 0;
+	int STAFF_ACCOUNT_MANAGEMENT_OPERATION_COUNT = ISTAFF_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Account.impl.GuestAccountMangementImpl <em>Guest Account Mangement</em>}' class.
@@ -476,7 +485,7 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_ACCOUNT_MANGEMENT__GUEST_ACCOUNTS = 0;
+	int GUEST_ACCOUNT_MANGEMENT__GUEST_ACCOUNTS = IGUEST_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Guestaccount</b></em>' reference.
@@ -485,7 +494,7 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_ACCOUNT_MANGEMENT__GUESTACCOUNT = 1;
+	int GUEST_ACCOUNT_MANGEMENT__GUESTACCOUNT = IGUEST_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Guest Account Mangement</em>' class.
@@ -494,7 +503,16 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_ACCOUNT_MANGEMENT_FEATURE_COUNT = 2;
+	int GUEST_ACCOUNT_MANGEMENT_FEATURE_COUNT = IGUEST_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Guest</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST_ACCOUNT_MANGEMENT___GET_GUEST__INT = IGUEST___GET_GUEST__INT;
 
 	/**
 	 * The number of operations of the '<em>Guest Account Mangement</em>' class.
@@ -503,7 +521,7 @@ public interface AccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_ACCOUNT_MANGEMENT_OPERATION_COUNT = 0;
+	int GUEST_ACCOUNT_MANGEMENT_OPERATION_COUNT = IGUEST_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Account.impl.GuestAccountImpl <em>Guest Account</em>}' class.
@@ -615,31 +633,13 @@ public interface AccountPackage extends EPackage {
 	int GUEST_ACCOUNT___GET_USER_INFO = USER_ACCOUNTS_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Get Personal Number</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_ACCOUNT___GET_PERSONAL_NUMBER = USER_ACCOUNTS_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is VIP</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST_ACCOUNT___IS_VIP = USER_ACCOUNTS_OPERATION_COUNT + 2;
-
-	/**
 	 * The number of operations of the '<em>Guest Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_ACCOUNT_OPERATION_COUNT = USER_ACCOUNTS_OPERATION_COUNT + 3;
+	int GUEST_ACCOUNT_OPERATION_COUNT = USER_ACCOUNTS_OPERATION_COUNT + 1;
 
 
 	/**
@@ -1015,26 +1015,6 @@ public interface AccountPackage extends EPackage {
 	EOperation getGuestAccount__GetUserInfo();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Account.GuestAccount#getPersonalNumber() <em>Get Personal Number</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Personal Number</em>' operation.
-	 * @see RootElement.Account.GuestAccount#getPersonalNumber()
-	 * @generated
-	 */
-	EOperation getGuestAccount__GetPersonalNumber();
-
-	/**
-	 * Returns the meta object for the '{@link RootElement.Account.GuestAccount#isVIP() <em>Is VIP</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is VIP</em>' operation.
-	 * @see RootElement.Account.GuestAccount#isVIP()
-	 * @generated
-	 */
-	EOperation getGuestAccount__IsVIP();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1360,22 +1340,6 @@ public interface AccountPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation GUEST_ACCOUNT___GET_USER_INFO = eINSTANCE.getGuestAccount__GetUserInfo();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Personal Number</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST_ACCOUNT___GET_PERSONAL_NUMBER = eINSTANCE.getGuestAccount__GetPersonalNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Is VIP</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GUEST_ACCOUNT___IS_VIP = eINSTANCE.getGuestAccount__IsVIP();
 
 	}
 

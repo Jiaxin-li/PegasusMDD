@@ -2,7 +2,6 @@
  */
 package RootElement.CheckIO;
 
-import RootElement.Account.GuestAccount;
 import RootElement.Account.StaffAccount;
 
 import org.eclipse.emf.common.util.EList;
@@ -113,17 +112,17 @@ public interface CheckIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" customerRequired="true" customerOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
 	 * @generated
 	 */
-	boolean CheckOut(GuestAccount customer);
+	boolean CheckOut(int bookingId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" customerRequired="true" customerOrdered="false"
+	 * @model required="true" ordered="false" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	boolean CheckIn(GuestAccount customer);
+	boolean CheckIn(int bookingID);
 
 } // CheckIO

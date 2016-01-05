@@ -273,6 +273,15 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBooking_IsPaid() {
+		return (EAttribute)bookingEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIBooking() {
 		return iBookingEClass;
 	}
@@ -282,7 +291,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBooking__AddBooking__GuestAccount_int_Date_Date() {
+	public EOperation getIBooking__AddBooking__GuestAccount_int_Date_Date_int() {
 		return iBookingEClass.getEOperations().get(0);
 	}
 
@@ -389,9 +398,10 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		createEAttribute(bookingEClass, BOOKING__CHECK_IN_DATE);
 		createEAttribute(bookingEClass, BOOKING__CHECK_OUT_DATE);
 		createEAttribute(bookingEClass, BOOKING__ROOM_TYPE_ID);
+		createEAttribute(bookingEClass, BOOKING__IS_PAID);
 
 		iBookingEClass = createEClass(IBOOKING);
-		createEOperation(iBookingEClass, IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE);
+		createEOperation(iBookingEClass, IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT);
 		createEOperation(iBookingEClass, IBOOKING___EDIT_BOOKING__INT);
 		createEOperation(iBookingEClass, IBOOKING___DELETE_BOOKING__INT);
 		createEOperation(iBookingEClass, IBOOKING___GET_BOOKING__INT);
@@ -433,6 +443,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		cartManagementEClass.getESuperTypes().add(this.getIBooking());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cartEClass, Cart.class, "Cart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -449,14 +460,16 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		initEAttribute(getBooking_CheckInDate(), ecorePackage.getEDate(), "checkInDate", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_CheckOutDate(), ecorePackage.getEDate(), "checkOutDate", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_RoomTypeID(), ecorePackage.getEInt(), "RoomTypeID", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBooking_IsPaid(), ecorePackage.getEBoolean(), "isPaid", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iBookingEClass, IBooking.class, "IBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getIBooking__AddBooking__GuestAccount_int_Date_Date(), ecorePackage.getEBoolean(), "addBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getIBooking__AddBooking__GuestAccount_int_Date_Date_int(), ecorePackage.getEBoolean(), "addBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theAccountPackage.getGuestAccount(), "customer", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "checkInDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "checkOutDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "cartID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBooking__EditBooking__int(), ecorePackage.getEBoolean(), "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);

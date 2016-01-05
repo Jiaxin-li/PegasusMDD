@@ -2,11 +2,17 @@
  */
 package RootElement.Booking.impl;
 
+import RootElement.Account.GuestAccount;
+
+import RootElement.Booking.Booking;
 import RootElement.Booking.BookingPackage;
 import RootElement.Booking.Cart;
 import RootElement.Booking.CartManagement;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
+import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -99,6 +105,61 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean addBooking(GuestAccount customer, int roomTypeID, Date checkInDate, Date checkOutDate, int cartID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean editBooking(int bookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean deleteBooking(int bookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booking getBooking(int bookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBooking(int BookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -163,6 +224,28 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return cart != null && !cart.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case BookingPackage.CART_MANAGEMENT___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT:
+				return addBooking((GuestAccount)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3), (Integer)arguments.get(4));
+			case BookingPackage.CART_MANAGEMENT___EDIT_BOOKING__INT:
+				return editBooking((Integer)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___DELETE_BOOKING__INT:
+				return deleteBooking((Integer)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___GET_BOOKING__INT:
+				return getBooking((Integer)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___VALIDATE_BOOKING__INT:
+				return validateBooking((Integer)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //CartManagementImpl

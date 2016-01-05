@@ -6,6 +6,8 @@ import RootElement.Account.AccountPackage;
 import RootElement.Account.GuestAccount;
 import RootElement.Account.GuestAccountMangement;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -129,6 +131,17 @@ public class GuestAccountMangementImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GuestAccount getGuest(int guestID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -193,6 +206,20 @@ public class GuestAccountMangementImpl extends MinimalEObjectImpl.Container impl
 				return guestaccount != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case AccountPackage.GUEST_ACCOUNT_MANGEMENT___GET_GUEST__INT:
+				return getGuest((Integer)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //GuestAccountMangementImpl

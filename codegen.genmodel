@@ -20,7 +20,7 @@
     <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
     <details key="UNION_PROPERTIES" value="REPORT"/>
     <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
-    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="NON_API_INVARIANTS" value="PROCESS"/>
     <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
     <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
     <details key="OPERATION_BODIES" value="IGNORE"/>
@@ -28,7 +28,7 @@
     <details key="UNTYPED_PROPERTIES" value="REPORT"/>
     <details key="REDEFINING_PROPERTIES" value="REPORT"/>
     <details key="INVOCATION_DELEGATES" value="IGNORE"/>
-    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="PROCESS"/>
   </genAnnotations>
   <foreignModel>src/ClassDiagram.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="RootElement" disposableProviderFactory="true"
@@ -56,6 +56,7 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/checkInDate"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/checkOutDate"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/RoomTypeID"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/isPaid"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Booking/IBooking">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/IBooking/addBooking">
@@ -63,6 +64,7 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/roomTypeID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/checkInDate"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/checkOutDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/cartID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/IBooking/editBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/editBooking/bookingID"/>
@@ -144,8 +146,6 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Account/GuestAccount/email"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Account/GuestAccount/VIP"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Account/GuestAccount/getUserInfo"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Account/GuestAccount/getPersonalNumber"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Account/GuestAccount/isVIP"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Room" disposableProviderFactory="true"
@@ -154,6 +154,7 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Room/RoomType/roomTypeName"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Room/RoomType/price"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Room/RoomType/numberOfBeds"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Room/RoomType/roomTypeID"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Room/Room">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Room/Room/roomNumber"/>
@@ -236,7 +237,10 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Service/IServiceType/validateServiceType/serviceTypeID"/>
         </genOperations>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Service/ServiceFactory"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Service/ServiceManagement">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Service/ServiceManagement/services"/>
+      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Service/ServiceTypeManagment">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Service/ServiceTypeManagment/serviceTypes"/>
@@ -276,6 +280,7 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/RoomBinder/services"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/RoomBinder/guests"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//CheckIO/RoomBinder/bookingID"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/addService">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/addService/serviceTypeID"/>
         </genOperations>
@@ -303,10 +308,10 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/getPaymentResult/response"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/CheckIO/CheckOut">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/CheckOut/customer"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/CheckOut/bookingId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/CheckIO/CheckIn">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/CheckIn/customer"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/CheckIn/bookingID"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//CheckIO/Invoice">

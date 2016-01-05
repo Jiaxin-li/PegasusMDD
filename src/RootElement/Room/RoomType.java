@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link RootElement.Room.RoomType#getRoomTypeName <em>Room Type Name</em>}</li>
  *   <li>{@link RootElement.Room.RoomType#getPrice <em>Price</em>}</li>
  *   <li>{@link RootElement.Room.RoomType#getNumberOfBeds <em>Number Of Beds</em>}</li>
+ *   <li>{@link RootElement.Room.RoomType#getRoomTypeID <em>Room Type ID</em>}</li>
  * </ul>
  *
  * @see RootElement.Room.RoomPackage#getRoomType()
@@ -100,5 +101,31 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	void setNumberOfBeds(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Room Type ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Type ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Type ID</em>' attribute.
+	 * @see #setRoomTypeID(int)
+	 * @see RootElement.Room.RoomPackage#getRoomType_RoomTypeID()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getRoomTypeID();
+
+	/**
+	 * Sets the value of the '{@link RootElement.Room.RoomType#getRoomTypeID <em>Room Type ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Type ID</em>' attribute.
+	 * @see #getRoomTypeID()
+	 * @generated
+	 */
+	void setRoomTypeID(int value);
 
 } // RoomType

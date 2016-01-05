@@ -278,32 +278,50 @@ public interface ServicePackage extends EPackage {
 	int ISERVICE_TYPE_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link RootElement.Service.impl.ServiceFactoryImpl <em>Factory</em>}' class.
+	 * The meta object id for the '{@link RootElement.Service.impl.ServiceManagementImpl <em>Management</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see RootElement.Service.impl.ServiceFactoryImpl
-	 * @see RootElement.Service.impl.ServicePackageImpl#getServiceFactory()
+	 * @see RootElement.Service.impl.ServiceManagementImpl
+	 * @see RootElement.Service.impl.ServicePackageImpl#getServiceManagement()
 	 * @generated
 	 */
-	int SERVICE_FACTORY = 4;
+	int SERVICE_MANAGEMENT = 4;
 
 	/**
-	 * The number of structural features of the '<em>Factory</em>' class.
+	 * The feature id for the '<em><b>Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FACTORY_FEATURE_COUNT = 0;
+	int SERVICE_MANAGEMENT__SERVICES = ISERVICE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Factory</em>' class.
+	 * The number of structural features of the '<em>Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FACTORY_OPERATION_COUNT = 0;
+	int SERVICE_MANAGEMENT_FEATURE_COUNT = ISERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_MANAGEMENT___GET_SERVICE__INT = ISERVICE___GET_SERVICE__INT;
+
+	/**
+	 * The number of operations of the '<em>Management</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_MANAGEMENT_OPERATION_COUNT = ISERVICE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Service.impl.ServiceTypeManagmentImpl <em>Type Managment</em>}' class.
@@ -322,7 +340,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TYPE_MANAGMENT__SERVICE_TYPES = 0;
+	int SERVICE_TYPE_MANAGMENT__SERVICE_TYPES = ISERVICE_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Servicetype</b></em>' reference.
@@ -331,7 +349,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TYPE_MANAGMENT__SERVICETYPE = 1;
+	int SERVICE_TYPE_MANAGMENT__SERVICETYPE = ISERVICE_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Type Managment</em>' class.
@@ -340,7 +358,43 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TYPE_MANAGMENT_FEATURE_COUNT = 2;
+	int SERVICE_TYPE_MANAGMENT_FEATURE_COUNT = ISERVICE_TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Service Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TYPE_MANAGMENT___ADD_SERVICE_TYPE__STRING_INT = ISERVICE_TYPE___ADD_SERVICE_TYPE__STRING_INT;
+
+	/**
+	 * The operation id for the '<em>Delete Service Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TYPE_MANAGMENT___DELETE_SERVICE_TYPE__INT = ISERVICE_TYPE___DELETE_SERVICE_TYPE__INT;
+
+	/**
+	 * The operation id for the '<em>Edit Service Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TYPE_MANAGMENT___EDIT_SERVICE_TYPE__INT = ISERVICE_TYPE___EDIT_SERVICE_TYPE__INT;
+
+	/**
+	 * The operation id for the '<em>Validate Service Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_TYPE_MANAGMENT___VALIDATE_SERVICE_TYPE__INT = ISERVICE_TYPE___VALIDATE_SERVICE_TYPE__INT;
 
 	/**
 	 * The number of operations of the '<em>Type Managment</em>' class.
@@ -349,7 +403,7 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TYPE_MANAGMENT_OPERATION_COUNT = 0;
+	int SERVICE_TYPE_MANAGMENT_OPERATION_COUNT = ISERVICE_TYPE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -520,14 +574,25 @@ public interface ServicePackage extends EPackage {
 	EOperation getIServiceType__ValidateServiceType__int();
 
 	/**
-	 * Returns the meta object for class '{@link RootElement.Service.ServiceFactory <em>Factory</em>}'.
+	 * Returns the meta object for class '{@link RootElement.Service.ServiceManagement <em>Management</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Factory</em>'.
-	 * @see RootElement.Service.ServiceFactory
+	 * @return the meta object for class '<em>Management</em>'.
+	 * @see RootElement.Service.ServiceManagement
 	 * @generated
 	 */
-	EClass getServiceFactory();
+	EClass getServiceManagement();
+
+	/**
+	 * Returns the meta object for the reference list '{@link RootElement.Service.ServiceManagement#getServices <em>Services</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Services</em>'.
+	 * @see RootElement.Service.ServiceManagement#getServices()
+	 * @see #getServiceManagement()
+	 * @generated
+	 */
+	EReference getServiceManagement_Services();
 
 	/**
 	 * Returns the meta object for class '{@link RootElement.Service.ServiceTypeManagment <em>Type Managment</em>}'.
@@ -560,6 +625,15 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getServiceTypeManagment_Servicetype();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	ServiceFactory getServiceFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -712,14 +786,22 @@ public interface ServicePackage extends EPackage {
 		EOperation ISERVICE_TYPE___VALIDATE_SERVICE_TYPE__INT = eINSTANCE.getIServiceType__ValidateServiceType__int();
 
 		/**
-		 * The meta object literal for the '{@link RootElement.Service.impl.ServiceFactoryImpl <em>Factory</em>}' class.
+		 * The meta object literal for the '{@link RootElement.Service.impl.ServiceManagementImpl <em>Management</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see RootElement.Service.impl.ServiceFactoryImpl
-		 * @see RootElement.Service.impl.ServicePackageImpl#getServiceFactory()
+		 * @see RootElement.Service.impl.ServiceManagementImpl
+		 * @see RootElement.Service.impl.ServicePackageImpl#getServiceManagement()
 		 * @generated
 		 */
-		EClass SERVICE_FACTORY = eINSTANCE.getServiceFactory();
+		EClass SERVICE_MANAGEMENT = eINSTANCE.getServiceManagement();
+
+		/**
+		 * The meta object literal for the '<em><b>Services</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICE_MANAGEMENT__SERVICES = eINSTANCE.getServiceManagement_Services();
 
 		/**
 		 * The meta object literal for the '{@link RootElement.Service.impl.ServiceTypeManagmentImpl <em>Type Managment</em>}' class.

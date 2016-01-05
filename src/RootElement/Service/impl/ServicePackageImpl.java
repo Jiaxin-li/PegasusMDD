@@ -30,6 +30,7 @@ import RootElement.Service.IService;
 import RootElement.Service.IServiceType;
 import RootElement.Service.Service;
 import RootElement.Service.ServiceFactory;
+import RootElement.Service.ServiceManagement;
 import RootElement.Service.ServicePackage;
 import RootElement.Service.ServiceType;
 import RootElement.Service.ServiceTypeManagment;
@@ -88,7 +89,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass serviceFactoryEClass = null;
+	private EClass serviceManagementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -333,8 +334,17 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getServiceFactory() {
-		return serviceFactoryEClass;
+	public EClass getServiceManagement() {
+		return serviceManagementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getServiceManagement_Services() {
+		return (EReference)serviceManagementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -362,6 +372,15 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 */
 	public EReference getServiceTypeManagment_Servicetype() {
 		return (EReference)serviceTypeManagmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ServiceFactory getServiceFactory() {
+		return (ServiceFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -403,7 +422,8 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		createEOperation(iServiceTypeEClass, ISERVICE_TYPE___EDIT_SERVICE_TYPE__INT);
 		createEOperation(iServiceTypeEClass, ISERVICE_TYPE___VALIDATE_SERVICE_TYPE__INT);
 
-		serviceFactoryEClass = createEClass(SERVICE_FACTORY);
+		serviceManagementEClass = createEClass(SERVICE_MANAGEMENT);
+		createEReference(serviceManagementEClass, SERVICE_MANAGEMENT__SERVICES);
 
 		serviceTypeManagmentEClass = createEClass(SERVICE_TYPE_MANAGMENT);
 		createEReference(serviceTypeManagmentEClass, SERVICE_TYPE_MANAGMENT__SERVICE_TYPES);
@@ -441,6 +461,8 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		serviceManagementEClass.getESuperTypes().add(this.getIService());
+		serviceTypeManagmentEClass.getESuperTypes().add(this.getIServiceType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -474,7 +496,8 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		op = initEOperation(getIServiceType__ValidateServiceType__int(), ecorePackage.getEBoolean(), "validateServiceType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "serviceTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(serviceFactoryEClass, ServiceFactory.class, "ServiceFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(serviceManagementEClass, ServiceManagement.class, "ServiceManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getServiceManagement_Services(), this.getService(), null, "services", null, 0, -1, ServiceManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(serviceTypeManagmentEClass, ServiceTypeManagment.class, "ServiceTypeManagment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getServiceTypeManagment_ServiceTypes(), this.getServiceType(), null, "serviceTypes", null, 0, -1, ServiceTypeManagment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link RootElement.Booking.Booking#getCheckInDate <em>Check In Date</em>}</li>
  *   <li>{@link RootElement.Booking.Booking#getCheckOutDate <em>Check Out Date</em>}</li>
  *   <li>{@link RootElement.Booking.Booking#getRoomTypeID <em>Room Type ID</em>}</li>
+ *   <li>{@link RootElement.Booking.Booking#isPaid <em>Is Paid</em>}</li>
  * </ul>
  *
  * @see RootElement.Booking.BookingPackage#getBooking()
@@ -129,5 +130,31 @@ public interface Booking extends EObject {
 	 * @generated
 	 */
 	void setRoomTypeID(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Paid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Paid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Paid</em>' attribute.
+	 * @see #setIsPaid(boolean)
+	 * @see RootElement.Booking.BookingPackage#getBooking_IsPaid()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isPaid();
+
+	/**
+	 * Sets the value of the '{@link RootElement.Booking.Booking#isPaid <em>Is Paid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Paid</em>' attribute.
+	 * @see #isPaid()
+	 * @generated
+	 */
+	void setIsPaid(boolean value);
 
 } // Booking

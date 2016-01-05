@@ -95,13 +95,22 @@ public interface RoomPackage extends EPackage {
 	int ROOM_TYPE__NUMBER_OF_BEDS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Room Type ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE__ROOM_TYPE_ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 3;
+	int ROOM_TYPE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Type</em>' class.
@@ -330,7 +339,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGEMENT__ROOMS = 0;
+	int ROOM_MANAGEMENT__ROOMS = IROOM_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Management</em>' class.
@@ -339,7 +348,34 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGEMENT_FEATURE_COUNT = 1;
+	int ROOM_MANAGEMENT_FEATURE_COUNT = IROOM_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Availiable Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGEMENT___GET_AVAILIABLE_ROOM__INT = IROOM___GET_AVAILIABLE_ROOM__INT;
+
+	/**
+	 * The operation id for the '<em>Add Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGEMENT___ADD_ROOM = IROOM___ADD_ROOM;
+
+	/**
+	 * The operation id for the '<em>Get Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGEMENT___GET_ROOM__INT = IROOM___GET_ROOM__INT;
 
 	/**
 	 * The number of operations of the '<em>Management</em>' class.
@@ -348,7 +384,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGEMENT_OPERATION_COUNT = 0;
+	int ROOM_MANAGEMENT_OPERATION_COUNT = IROOM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Room.impl.RoomTypeManagmentImpl <em>Type Managment</em>}' class.
@@ -367,7 +403,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGMENT__ROOMTYPES = 0;
+	int ROOM_TYPE_MANAGMENT__ROOMTYPES = IROOM_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
@@ -376,7 +412,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGMENT__ROOMTYPE = 1;
+	int ROOM_TYPE_MANAGMENT__ROOMTYPE = IROOM_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Type Managment</em>' class.
@@ -385,7 +421,43 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGMENT_FEATURE_COUNT = 2;
+	int ROOM_TYPE_MANAGMENT_FEATURE_COUNT = IROOM_TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Add Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGMENT___ADD_ROOM_TYPE__STRING_INT_INT = IROOM_TYPE___ADD_ROOM_TYPE__STRING_INT_INT;
+
+	/**
+	 * The operation id for the '<em>Edit Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGMENT___EDIT_ROOM_TYPE__INT = IROOM_TYPE___EDIT_ROOM_TYPE__INT;
+
+	/**
+	 * The operation id for the '<em>Validate Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGMENT___VALIDATE_ROOM_TYPE__INT = IROOM_TYPE___VALIDATE_ROOM_TYPE__INT;
+
+	/**
+	 * The operation id for the '<em>Delete Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGMENT___DELETE_ROOM_TYPE__INT = IROOM_TYPE___DELETE_ROOM_TYPE__INT;
 
 	/**
 	 * The number of operations of the '<em>Type Managment</em>' class.
@@ -394,7 +466,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGMENT_OPERATION_COUNT = 0;
+	int ROOM_TYPE_MANAGMENT_OPERATION_COUNT = IROOM_TYPE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -439,6 +511,17 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomType_NumberOfBeds();
+
+	/**
+	 * Returns the meta object for the attribute '{@link RootElement.Room.RoomType#getRoomTypeID <em>Room Type ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Room Type ID</em>'.
+	 * @see RootElement.Room.RoomType#getRoomTypeID()
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	EAttribute getRoomType_RoomTypeID();
 
 	/**
 	 * Returns the meta object for class '{@link RootElement.Room.Room <em>Room</em>}'.
@@ -715,6 +798,14 @@ public interface RoomPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_TYPE__NUMBER_OF_BEDS = eINSTANCE.getRoomType_NumberOfBeds();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Type ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE__ROOM_TYPE_ID = eINSTANCE.getRoomType_RoomTypeID();
 
 		/**
 		 * The meta object literal for the '{@link RootElement.Room.impl.RoomImpl <em>Room</em>}' class.

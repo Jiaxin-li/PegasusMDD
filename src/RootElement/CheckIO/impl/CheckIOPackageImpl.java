@@ -36,6 +36,7 @@ import RootElement.Task.TaskPackage;
 
 import RootElement.Task.impl.TaskPackageImpl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -201,6 +202,15 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoomBinder_BookingID() {
+		return (EAttribute)roomBinderEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getRoomBinder__AddService__int() {
 		return roomBinderEClass.getEOperations().get(0);
 	}
@@ -300,7 +310,7 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCheckIO__CheckOut__GuestAccount() {
+	public EOperation getCheckIO__CheckOut__int() {
 		return checkIOEClass.getEOperations().get(3);
 	}
 
@@ -309,7 +319,7 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCheckIO__CheckIn__GuestAccount() {
+	public EOperation getCheckIO__CheckIn__int() {
 		return checkIOEClass.getEOperations().get(4);
 	}
 
@@ -363,6 +373,7 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 		createEReference(roomBinderEClass, ROOM_BINDER__ROOM);
 		createEReference(roomBinderEClass, ROOM_BINDER__SERVICES);
 		createEReference(roomBinderEClass, ROOM_BINDER__GUESTS);
+		createEAttribute(roomBinderEClass, ROOM_BINDER__BOOKING_ID);
 		createEOperation(roomBinderEClass, ROOM_BINDER___ADD_SERVICE__INT);
 		createEOperation(roomBinderEClass, ROOM_BINDER___BIND_ROOM__ROOM);
 		createEOperation(roomBinderEClass, ROOM_BINDER___SET_SERVICE_STATUS__INT_BOOLEAN);
@@ -375,8 +386,8 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 		createEOperation(checkIOEClass, CHECK_IO___PAY_ORDER);
 		createEOperation(checkIOEClass, CHECK_IO___GENERATE_TOTAL__INT);
 		createEOperation(checkIOEClass, CHECK_IO___GET_PAYMENT_RESULT__INT);
-		createEOperation(checkIOEClass, CHECK_IO___CHECK_OUT__GUESTACCOUNT);
-		createEOperation(checkIOEClass, CHECK_IO___CHECK_IN__GUESTACCOUNT);
+		createEOperation(checkIOEClass, CHECK_IO___CHECK_OUT__INT);
+		createEOperation(checkIOEClass, CHECK_IO___CHECK_IN__INT);
 
 		invoiceEClass = createEClass(INVOICE);
 		createEOperation(invoiceEClass, INVOICE___PRINT_USER_DATA__STRING);
@@ -422,6 +433,7 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 		initEReference(getRoomBinder_Room(), theRoomPackage.getRoom(), null, "room", null, 1, 1, RoomBinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomBinder_Services(), theServicePackage.getService(), null, "services", null, 0, -1, RoomBinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomBinder_Guests(), theAccountPackage.getGuestAccount(), null, "guests", null, 0, -1, RoomBinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomBinder_BookingID(), ecorePackage.getEInt(), "bookingID", null, 1, 1, RoomBinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		EOperation op = initEOperation(getRoomBinder__AddService__int(), null, "addService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "serviceTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -448,11 +460,11 @@ public class CheckIOPackageImpl extends EPackageImpl implements CheckIOPackage {
 		op = initEOperation(getCheckIO__GetPaymentResult__int(), theTypesPackage.getString(), "getPaymentResult", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "response", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getCheckIO__CheckOut__GuestAccount(), ecorePackage.getEBoolean(), "CheckOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theAccountPackage.getGuestAccount(), "customer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCheckIO__CheckOut__int(), ecorePackage.getEBoolean(), "CheckOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getCheckIO__CheckIn__GuestAccount(), ecorePackage.getEBoolean(), "CheckIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theAccountPackage.getGuestAccount(), "customer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCheckIO__CheckIn__int(), ecorePackage.getEBoolean(), "CheckIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(invoiceEClass, Invoice.class, "Invoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

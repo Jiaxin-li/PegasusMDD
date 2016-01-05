@@ -4,8 +4,6 @@ package RootElement.Room;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Management</b></em>'.
@@ -22,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface RoomManagement extends EObject {
+public interface RoomManagement extends IRoom {
 	/**
 	 * Returns the value of the '<em><b>Rooms</b></em>' reference list.
 	 * The list contents are of type {@link RootElement.Room.Room}.
