@@ -2,8 +2,6 @@
  */
 package RootElement.Booking;
 
-import RootElement.Account.GuestAccount;
-
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
@@ -22,10 +20,10 @@ public interface IBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" customerRequired="true" customerOrdered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" cartIDRequired="true" cartIDOrdered="false" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
+	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" cartIDRequired="true" cartIDOrdered="false" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
-	boolean addBooking(GuestAccount customer, int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms);
+	boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms);
 
 	/**
 	 * <!-- begin-user-doc -->

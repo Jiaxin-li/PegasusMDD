@@ -203,15 +203,6 @@ public class TaskPackageImpl extends EPackageImpl implements TaskPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTaskManagement__GetTaskList() {
-		return taskManagementEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTask() {
 		return taskEClass;
 	}
@@ -239,7 +230,7 @@ public class TaskPackageImpl extends EPackageImpl implements TaskPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTask__GetDescription() {
+	public EOperation getTask__SetDescription() {
 		return taskEClass.getEOperations().get(0);
 	}
 
@@ -248,17 +239,8 @@ public class TaskPackageImpl extends EPackageImpl implements TaskPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTask__SetDescription() {
-		return taskEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getTask__GetID() {
-		return taskEClass.getEOperations().get(2);
+		return taskEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -294,12 +276,10 @@ public class TaskPackageImpl extends EPackageImpl implements TaskPackage {
 		createEReference(taskManagementEClass, TASK_MANAGEMENT__TASK_LIST);
 		createEOperation(taskManagementEClass, TASK_MANAGEMENT___ADD_TASK__TASK);
 		createEOperation(taskManagementEClass, TASK_MANAGEMENT___REMOVE_TASK__INT);
-		createEOperation(taskManagementEClass, TASK_MANAGEMENT___GET_TASK_LIST);
 
 		taskEClass = createEClass(TASK);
 		createEAttribute(taskEClass, TASK__DESCRIPTION);
 		createEAttribute(taskEClass, TASK__ID);
-		createEOperation(taskEClass, TASK___GET_DESCRIPTION);
 		createEOperation(taskEClass, TASK___SET_DESCRIPTION);
 		createEOperation(taskEClass, TASK___GET_ID);
 	}
@@ -348,13 +328,9 @@ public class TaskPackageImpl extends EPackageImpl implements TaskPackage {
 		op = initEOperation(getTaskManagement__RemoveTask__int(), ecorePackage.getEBoolean(), "removeTask", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "id", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getTaskManagement__GetTaskList(), theTypesPackage.getString(), "getTaskList", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTask_Description(), theTypesPackage.getString(), "description", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getTask_Id(), ecorePackage.getEInt(), "id", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getTask__GetDescription(), theTypesPackage.getString(), "getDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getTask__SetDescription(), null, "setDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

@@ -60,7 +60,6 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Booking/IBooking">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/IBooking/addBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/customer"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/roomTypeID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/checkInDate"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/checkOutDate"/>
@@ -85,6 +84,13 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/carts"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/cart"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/addCart">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/addCart/cart"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/deleteCart">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/deleteCart/CartID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/deleteCart/result"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Account" disposableProviderFactory="true"
@@ -171,9 +177,14 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoom/getAvailiableRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoom/getAvailiableRoom/RoomTypeID"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoom/addRoom"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoom/addRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoom/addRoom/room"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoom/getRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoom/getRoom/roomNr"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoom/getRoomNr">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoom/getRoomNr/roomTypeID"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Room/IRoomType">
@@ -262,12 +273,10 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Task/TaskManagement/removeTask">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Task/TaskManagement/removeTask/id"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Task/TaskManagement/getTaskList"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Task/Task">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Task/Task/description"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Task/Task/id"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Task/Task/getDescription"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Task/Task/setDescription"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Task/Task/getID"/>
       </genClasses>

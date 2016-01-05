@@ -77,10 +77,13 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public int checkAvailable(int roomTypeID, Date checkInDate, Date checkOutDate) {
-		AvailablityMap mp ;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		//throw new UnsupportedOperationException();
+AvailablityMap mp ;
 		
 		EList<AvailablityMap> li = getSchedule();
 		if(li.size()>0){			
@@ -102,18 +105,12 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 		else{
 			return 0; 
 		}
-		
-		
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		
-		//throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public boolean updateAvailable(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRoom) {
 		// TODO: implement this method
@@ -131,6 +128,7 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 		}
 		return true;
 		
+	
 	}
 
 	/**

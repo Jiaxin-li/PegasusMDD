@@ -36,7 +36,6 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBooking" abstract="true" interface="true">
       <eOperations name="addBooking" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eParameters name="customer" ordered="false" lowerBound="1" eType="#//Account/GuestAccount"/>
         <eParameters name="roomTypeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         <eParameters name="checkInDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="checkOutDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -57,6 +56,13 @@
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CartManagement" eSuperTypes="#//Booking/IBooking">
+      <eOperations name="addCart" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="cart" ordered="false" lowerBound="1" eType="#//Booking/Cart"/>
+      </eOperations>
+      <eOperations name="deleteCart" ordered="false" lowerBound="1">
+        <eParameters name="CartID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="result" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
           upperBound="-1" eType="#//Booking/Cart"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="cart" ordered="false"
@@ -161,9 +167,14 @@
       <eOperations name="getAvailiableRoom" ordered="false" lowerBound="1" eType="#//Room/Room">
         <eParameters name="RoomTypeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="addRoom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eOperations name="addRoom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="room" ordered="false" lowerBound="1" eType="#//Room/Room"/>
+      </eOperations>
       <eOperations name="getRoom" ordered="false" lowerBound="1" eType="#//Room/Room">
         <eParameters name="roomNr" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getRoomNr" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eParameters name="roomTypeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IRoomType" abstract="true" interface="true">
@@ -251,14 +262,12 @@
       <eOperations name="removeTask" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="getTaskList" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="staff" ordered="false"
           lowerBound="1" eType="#//Account/StaffAccount"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="taskList" ordered="false"
           upperBound="-1" eType="#//Task/Task"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Task">
-      <eOperations name="getDescription" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
       <eOperations name="setDescription" ordered="false" lowerBound="1"/>
       <eOperations name="getID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"

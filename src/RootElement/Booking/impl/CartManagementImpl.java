@@ -2,8 +2,6 @@
  */
 package RootElement.Booking.impl;
 
-import RootElement.Account.GuestAccount;
-
 import RootElement.Booking.Booking;
 import RootElement.Booking.BookingPackage;
 import RootElement.Booking.Cart;
@@ -105,7 +103,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean addBooking(GuestAccount customer, int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms) {
+	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -150,6 +148,28 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public boolean validateBooking(int BookingID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean addCart(Cart cart) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void deleteCart(int CartID, boolean result) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -234,8 +254,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookingPackage.CART_MANAGEMENT___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT_INT:
-				return addBooking((GuestAccount)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3), (Integer)arguments.get(4), (Integer)arguments.get(5));
+			case BookingPackage.CART_MANAGEMENT___ADD_BOOKING__INT_DATE_DATE_INT_INT:
+				return addBooking((Integer)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 			case BookingPackage.CART_MANAGEMENT___EDIT_BOOKING__INT:
 				return editBooking((Integer)arguments.get(0));
 			case BookingPackage.CART_MANAGEMENT___DELETE_BOOKING__INT:
@@ -244,6 +264,11 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return getBooking((Integer)arguments.get(0));
 			case BookingPackage.CART_MANAGEMENT___VALIDATE_BOOKING__INT:
 				return validateBooking((Integer)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___ADD_CART__CART:
+				return addCart((Cart)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN:
+				deleteCart((Integer)arguments.get(0), (Boolean)arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

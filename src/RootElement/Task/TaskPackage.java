@@ -113,22 +113,13 @@ public interface TaskPackage extends EPackage {
 	int TASK_MANAGEMENT___REMOVE_TASK__INT = 1;
 
 	/**
-	 * The operation id for the '<em>Get Task List</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_MANAGEMENT___GET_TASK_LIST = 2;
-
-	/**
 	 * The number of operations of the '<em>Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_MANAGEMENT_OPERATION_COUNT = 3;
+	int TASK_MANAGEMENT_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Task.impl.TaskImpl <em>Task</em>}' class.
@@ -168,22 +159,13 @@ public interface TaskPackage extends EPackage {
 	int TASK_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Get Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK___GET_DESCRIPTION = 0;
-
-	/**
 	 * The operation id for the '<em>Set Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK___SET_DESCRIPTION = 1;
+	int TASK___SET_DESCRIPTION = 0;
 
 	/**
 	 * The operation id for the '<em>Get ID</em>' operation.
@@ -192,7 +174,7 @@ public interface TaskPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK___GET_ID = 2;
+	int TASK___GET_ID = 1;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -201,7 +183,7 @@ public interface TaskPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = 3;
+	int TASK_OPERATION_COUNT = 2;
 
 
 	/**
@@ -257,16 +239,6 @@ public interface TaskPackage extends EPackage {
 	EOperation getTaskManagement__RemoveTask__int();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Task.TaskManagement#getTaskList() <em>Get Task List</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Task List</em>' operation.
-	 * @see RootElement.Task.TaskManagement#getTaskList()
-	 * @generated
-	 */
-	EOperation getTaskManagement__GetTaskList();
-
-	/**
 	 * Returns the meta object for class '{@link RootElement.Task.Task <em>Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -297,16 +269,6 @@ public interface TaskPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTask_Id();
-
-	/**
-	 * Returns the meta object for the '{@link RootElement.Task.Task#getDescription() <em>Get Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Description</em>' operation.
-	 * @see RootElement.Task.Task#getDescription()
-	 * @generated
-	 */
-	EOperation getTask__GetDescription();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Task.Task#setDescription() <em>Set Description</em>}' operation.
@@ -394,14 +356,6 @@ public interface TaskPackage extends EPackage {
 		EOperation TASK_MANAGEMENT___REMOVE_TASK__INT = eINSTANCE.getTaskManagement__RemoveTask__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Task List</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TASK_MANAGEMENT___GET_TASK_LIST = eINSTANCE.getTaskManagement__GetTaskList();
-
-		/**
 		 * The meta object literal for the '{@link RootElement.Task.impl.TaskImpl <em>Task</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -426,14 +380,6 @@ public interface TaskPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK__ID = eINSTANCE.getTask_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TASK___GET_DESCRIPTION = eINSTANCE.getTask__GetDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Description</b></em>' operation.

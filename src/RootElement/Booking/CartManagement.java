@@ -54,4 +54,20 @@ public interface CartManagement extends IBooking {
 	 */
 	EList<Cart> getCart();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" cartRequired="true" cartOrdered="false"
+	 * @generated
+	 */
+	boolean addCart(Cart cart);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model CartIDRequired="true" CartIDOrdered="false" resultRequired="true" resultOrdered="false"
+	 * @generated
+	 */
+	void deleteCart(int CartID, boolean result);
+
 } // CartManagement

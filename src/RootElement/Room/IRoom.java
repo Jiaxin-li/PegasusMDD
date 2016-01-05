@@ -26,10 +26,10 @@ public interface IRoom extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false"
+	 * @model required="true" ordered="false" roomRequired="true" roomOrdered="false"
 	 * @generated
 	 */
-	boolean addRoom();
+	boolean addRoom(Room room);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -38,5 +38,13 @@ public interface IRoom extends EObject {
 	 * @generated
 	 */
 	Room getRoom(int roomNr);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	int getRoomNr(int roomTypeID);
 
 } // IRoom

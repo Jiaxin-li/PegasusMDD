@@ -102,6 +102,20 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egvfAKBZEeW2lvhfsni2Sw" value="*"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_v4ad0LPTEeWpV6Nm8aL7Kw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_U5aqUJ3mEeWFr_oidmlDRQ" contract="_U5aqUJ3mEeWFr_oidmlDRQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jQuEELQAEeWIGvgV-A9CnQ" name="addCart" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t4qTILQAEeWIGvgV-A9CnQ" name="cart" type="_jczMYJ0DEeWhTeq8ShgRSA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wZssgLQAEeWIGvgV-A9CnQ" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xQ3lELQAEeWIGvgV-A9CnQ" name="deleteCart">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2-E_gLQAEeWIGvgV-A9CnQ" name="CartID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6vDWwLQAEeWIGvgV-A9CnQ" name="result">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_gtT5sKBYEeW2lvhfsni2Sw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_AfrKAJ3mEeWFr_oidmlDRQ"/>
   </packagedElement>
@@ -254,10 +268,11 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_AddtkJ8lEeWXa8dgAQ47Zw" name="result" type="_kMkR4J0CEeWhTeq8ShgRSA" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_D-7PwKCyEeWrRaa7yVr5ew" name="addRoom">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_D-7PwKCyEeWrRaa7yVr5ew" name="addRoom" concurrency="guarded">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_oBvvAKC4EeWrRaa7yVr5ew" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KkZwwLP_EeWIGvgV-A9CnQ" name="room" type="_kMkR4J0CEeWhTeq8ShgRSA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ZHEuMKCyEeWrRaa7yVr5ew" name="getRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_tWtokKC4EeWrRaa7yVr5ew" name="roomNr">
@@ -435,24 +450,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_opqOoJ0KEeWhTeq8ShgRSA" name="getTaskList">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_r7eksJ0KEeWhTeq8ShgRSA" name="result" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_xwaRYJ0CEeWhTeq8ShgRSA" name="Task">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_wwOikJ0JEeWhTeq8ShgRSA" name="description" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wwOikJ0JEeWhTeq8ShgRSA" name="description" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_0UHgEJ0JEeWhTeq8ShgRSA" name="id" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0UHgEJ0JEeWhTeq8ShgRSA" name="id" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZwAIMJ0JEeWhTeq8ShgRSA" name="getDescription">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cCuYwJ0JEeWhTeq8ShgRSA" name="description" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ef3woJ0JEeWhTeq8ShgRSA" name="setDescription"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_lvlfoJ0JEeWhTeq8ShgRSA" name="getID">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_rOszsJ0JEeWhTeq8ShgRSA" name="id" direction="return">

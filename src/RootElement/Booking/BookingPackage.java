@@ -229,7 +229,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT_INT = 0;
+	int IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
@@ -320,7 +320,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT_INT = IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT_INT;
+	int CART_MANAGEMENT___ADD_BOOKING__INT_DATE_DATE_INT_INT = IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT_INT;
 
 	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
@@ -359,13 +359,31 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT___VALIDATE_BOOKING__INT = IBOOKING___VALIDATE_BOOKING__INT;
 
 	/**
+	 * The operation id for the '<em>Add Cart</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___ADD_CART__CART = IBOOKING_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Delete Cart</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN = IBOOKING_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Cart Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 0;
+	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 2;
 
 
 	/**
@@ -507,14 +525,14 @@ public interface BookingPackage extends EPackage {
 	EClass getIBooking();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#addBooking(RootElement.Account.GuestAccount, int, java.util.Date, java.util.Date, int, int) <em>Add Booking</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#addBooking(int, java.util.Date, java.util.Date, int, int) <em>Add Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Booking</em>' operation.
-	 * @see RootElement.Booking.IBooking#addBooking(RootElement.Account.GuestAccount, int, java.util.Date, java.util.Date, int, int)
+	 * @see RootElement.Booking.IBooking#addBooking(int, java.util.Date, java.util.Date, int, int)
 	 * @generated
 	 */
-	EOperation getIBooking__AddBooking__GuestAccount_int_Date_Date_int_int();
+	EOperation getIBooking__AddBooking__int_Date_Date_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#editBooking(int) <em>Edit Booking</em>}' operation.
@@ -587,6 +605,26 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCartManagement_Cart();
+
+	/**
+	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#addCart(RootElement.Booking.Cart) <em>Add Cart</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Cart</em>' operation.
+	 * @see RootElement.Booking.CartManagement#addCart(RootElement.Booking.Cart)
+	 * @generated
+	 */
+	EOperation getCartManagement__AddCart__Cart();
+
+	/**
+	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#deleteCart(int, boolean) <em>Delete Cart</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete Cart</em>' operation.
+	 * @see RootElement.Booking.CartManagement#deleteCart(int, boolean)
+	 * @generated
+	 */
+	EOperation getCartManagement__DeleteCart__int_boolean();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -727,7 +765,7 @@ public interface BookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING___ADD_BOOKING__GUESTACCOUNT_INT_DATE_DATE_INT_INT = eINSTANCE.getIBooking__AddBooking__GuestAccount_int_Date_Date_int_int();
+		EOperation IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT_INT = eINSTANCE.getIBooking__AddBooking__int_Date_Date_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.
@@ -786,6 +824,22 @@ public interface BookingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CART_MANAGEMENT__CART = eINSTANCE.getCartManagement_Cart();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Cart</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CART_MANAGEMENT___ADD_CART__CART = eINSTANCE.getCartManagement__AddCart__Cart();
+
+		/**
+		 * The meta object literal for the '<em><b>Delete Cart</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN = eINSTANCE.getCartManagement__DeleteCart__int_boolean();
 
 	}
 

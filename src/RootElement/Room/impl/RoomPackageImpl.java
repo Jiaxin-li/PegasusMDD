@@ -316,7 +316,7 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoom__AddRoom() {
+	public EOperation getIRoom__AddRoom__Room() {
 		return iRoomEClass.getEOperations().get(1);
 	}
 
@@ -327,6 +327,15 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 */
 	public EOperation getIRoom__GetRoom__int() {
 		return iRoomEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIRoom__GetRoomNr__int() {
+		return iRoomEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -463,8 +472,9 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 
 		iRoomEClass = createEClass(IROOM);
 		createEOperation(iRoomEClass, IROOM___GET_AVAILIABLE_ROOM__INT);
-		createEOperation(iRoomEClass, IROOM___ADD_ROOM);
+		createEOperation(iRoomEClass, IROOM___ADD_ROOM__ROOM);
 		createEOperation(iRoomEClass, IROOM___GET_ROOM__INT);
+		createEOperation(iRoomEClass, IROOM___GET_ROOM_NR__INT);
 
 		iRoomTypeEClass = createEClass(IROOM_TYPE);
 		createEOperation(iRoomTypeEClass, IROOM_TYPE___ADD_ROOM_TYPE__STRING_INT_INT);
@@ -534,10 +544,14 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 		EOperation op = initEOperation(getIRoom__GetAvailiableRoom__int(), this.getRoom(), "getAvailiableRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "RoomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRoom__AddRoom(), ecorePackage.getEBoolean(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRoom__AddRoom__Room(), ecorePackage.getEBoolean(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoom(), "room", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoom__GetRoom__int(), this.getRoom(), "getRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIRoom__GetRoomNr__int(), ecorePackage.getEInt(), "getRoomNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iRoomTypeEClass, IRoomType.class, "IRoomType", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

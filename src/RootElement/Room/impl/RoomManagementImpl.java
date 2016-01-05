@@ -81,7 +81,14 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	public Room getAvailiableRoom(int RoomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		EList<Room> rl = getRooms();
+		for(Room r : rl){
+			if (r.getRoomType().getRoomTypeID()==RoomTypeID && r.isAvailable()){
+				return r;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -89,10 +96,12 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean addRoom() {
+	public boolean addRoom(Room room) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		rooms.add(room);
+		return true;
 	}
 
 	/**
@@ -103,7 +112,33 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	public Room getRoom(int roomNr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		EList<Room> rl = getRooms();
+		for(Room r : rl){
+			if (r.getRoomNumber()==roomNr){
+				return r;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getRoomNr(int roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		//throw new UnsupportedOperationException();
+		int count =0;
+		EList<Room> rl = getRooms();
+		for(Room r : rl){
+			if (r.getRoomType().getRoomTypeID() == roomTypeID){
+				count ++;
+			}
+		}
+		return count;
 	}
 
 	/**
@@ -176,10 +211,12 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case RoomPackage.ROOM_MANAGEMENT___GET_AVAILIABLE_ROOM__INT:
 				return getAvailiableRoom((Integer)arguments.get(0));
-			case RoomPackage.ROOM_MANAGEMENT___ADD_ROOM:
-				return addRoom();
+			case RoomPackage.ROOM_MANAGEMENT___ADD_ROOM__ROOM:
+				return addRoom((Room)arguments.get(0));
 			case RoomPackage.ROOM_MANAGEMENT___GET_ROOM__INT:
 				return getRoom((Integer)arguments.get(0));
+			case RoomPackage.ROOM_MANAGEMENT___GET_ROOM_NR__INT:
+				return getRoomNr((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

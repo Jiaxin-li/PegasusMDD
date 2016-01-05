@@ -238,7 +238,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM___ADD_ROOM = 1;
+	int IROOM___ADD_ROOM__ROOM = 1;
 
 	/**
 	 * The operation id for the '<em>Get Room</em>' operation.
@@ -250,13 +250,22 @@ public interface RoomPackage extends EPackage {
 	int IROOM___GET_ROOM__INT = 2;
 
 	/**
+	 * The operation id for the '<em>Get Room Nr</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM___GET_ROOM_NR__INT = 3;
+
+	/**
 	 * The number of operations of the '<em>IRoom</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_OPERATION_COUNT = 3;
+	int IROOM_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Room.IRoomType <em>IRoom Type</em>}' class.
@@ -366,7 +375,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MANAGEMENT___ADD_ROOM = IROOM___ADD_ROOM;
+	int ROOM_MANAGEMENT___ADD_ROOM__ROOM = IROOM___ADD_ROOM__ROOM;
 
 	/**
 	 * The operation id for the '<em>Get Room</em>' operation.
@@ -376,6 +385,15 @@ public interface RoomPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_MANAGEMENT___GET_ROOM__INT = IROOM___GET_ROOM__INT;
+
+	/**
+	 * The operation id for the '<em>Get Room Nr</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MANAGEMENT___GET_ROOM_NR__INT = IROOM___GET_ROOM_NR__INT;
 
 	/**
 	 * The number of operations of the '<em>Management</em>' class.
@@ -620,14 +638,14 @@ public interface RoomPackage extends EPackage {
 	EOperation getIRoom__GetAvailiableRoom__int();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Room.IRoom#addRoom() <em>Add Room</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Room.IRoom#addRoom(RootElement.Room.Room) <em>Add Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room</em>' operation.
-	 * @see RootElement.Room.IRoom#addRoom()
+	 * @see RootElement.Room.IRoom#addRoom(RootElement.Room.Room)
 	 * @generated
 	 */
-	EOperation getIRoom__AddRoom();
+	EOperation getIRoom__AddRoom__Room();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Room.IRoom#getRoom(int) <em>Get Room</em>}' operation.
@@ -638,6 +656,16 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRoom__GetRoom__int();
+
+	/**
+	 * Returns the meta object for the '{@link RootElement.Room.IRoom#getRoomNr(int) <em>Get Room Nr</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Nr</em>' operation.
+	 * @see RootElement.Room.IRoom#getRoomNr(int)
+	 * @generated
+	 */
+	EOperation getIRoom__GetRoomNr__int();
 
 	/**
 	 * Returns the meta object for class '{@link RootElement.Room.IRoomType <em>IRoom Type</em>}'.
@@ -889,7 +917,7 @@ public interface RoomPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM___ADD_ROOM = eINSTANCE.getIRoom__AddRoom();
+		EOperation IROOM___ADD_ROOM__ROOM = eINSTANCE.getIRoom__AddRoom__Room();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room</b></em>' operation.
@@ -898,6 +926,14 @@ public interface RoomPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM___GET_ROOM__INT = eINSTANCE.getIRoom__GetRoom__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Nr</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM___GET_ROOM_NR__INT = eINSTANCE.getIRoom__GetRoomNr__int();
 
 		/**
 		 * The meta object literal for the '{@link RootElement.Room.IRoomType <em>IRoom Type</em>}' class.
