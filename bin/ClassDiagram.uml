@@ -265,7 +265,7 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_z822IKC4EeWrRaa7yVr5ew" name="result" type="_kMkR4J0CEeWhTeq8ShgRSA" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_hVs48LPsEeWpV6Nm8aL7Kw" name="getRoomNr">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hVs48LPsEeWpV6Nm8aL7Kw" name="getRoomNr" isStatic="true">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_qGCGILPsEeWpV6Nm8aL7Kw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>

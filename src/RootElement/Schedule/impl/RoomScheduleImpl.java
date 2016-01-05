@@ -85,7 +85,7 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 		EList<AvailablityMap> li = getSchedule();
 		if(li.size()>0){			
 		
-		int min ;
+		int min = Integer.MAX_VALUE;
 		for (AvailablityMap tmp : li ){
 			if(tmp.getRoomType().getRoomTypeID()== roomTypeID){
 				Date d = tmp.getDate(); 
@@ -113,12 +113,24 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean updateAvailable(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRoom) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		EList<AvailablityMap> li = getSchedule();
+		for (AvailablityMap tmp : li ){
+			if(tmp.getRoomType().getRoomTypeID()== roomTypeID){
+				Date d = tmp.getDate(); 
+				if (d.compareTo(checkInDate)> 0 && d.compareTo(checkOutDate)<0  ){
+					tmp.setAvailable(tmp.getAvailable()+nrOfRoom);
+					
+				}
+			}
+		}
+		return true;
+		
 	}
 
 	/**
