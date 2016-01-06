@@ -20,18 +20,18 @@ public interface IBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" cartIDRequired="true" cartIDOrdered="false" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
+	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
-	boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms);
+	boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingIDRequired="true" bookingIDOrdered="false"
+	 * @model required="true" ordered="false" bookingIDRequired="true" bookingIDOrdered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
-	boolean editBooking(int bookingID);
+	boolean editBooking(int bookingID, int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms);
 
 	/**
 	 * <!-- begin-user-doc -->
