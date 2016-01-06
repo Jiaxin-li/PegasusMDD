@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
-    modelDirectory="/PegasusMDD/src" modelPluginID="PegasusMDD" modelName="Codegen"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
-    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+    modelDirectory="/ModelDrivenDevelopment/src" modelPluginID="ModelDrivenDevelopment"
+    modelName="Codegen" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../org.eclipse.uml2.types/model/Types.genmodel#//types" operationReflection="true"
+    importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
@@ -34,7 +36,9 @@
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Payment" disposableProviderFactory="true"
         ecorePackage="RootElement.ecore#//Payment">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Payment/IPayment">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Payment/IPayment/initiatePayment"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Payment/IPayment/initiatePayment">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Payment/IPayment/initiatePayment/amount"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Payment/IPayment/commencePayment"/>
       </genClasses>
     </nestedGenPackages>
@@ -81,12 +85,13 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/carts"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/currentCart"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/cart"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/addCart">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/addCart/cart"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/deleteCart">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/deleteCart/CartID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/deleteCart/result"/>
         </genOperations>
       </genClasses>
     </nestedGenPackages>
@@ -230,6 +235,9 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Service/IService/getService">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Service/IService/getService/ServiceTypeID"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Service/IService/addService">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Service/IService/addService/service"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Service/IServiceType">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Service/IServiceType/addServiceType">
@@ -288,8 +296,8 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/RoomBinder/guests"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//CheckIO/RoomBinder/bookingID"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/addService">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/addService/serviceTypeID"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/bindService">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/bindService/service"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/bindRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/bindRoom/room"/>
@@ -298,7 +306,12 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/SetServiceStatus/serviceID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/SetServiceStatus/status"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/setRoomAvailability"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/setRoomAvailability">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/setRoomAvailability/availiability"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/RoomBinder/bindGuest">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/RoomBinder/bindGuest/guest"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//CheckIO/CheckIO">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -307,7 +320,15 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/CheckIO/Staffs"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/CheckIO/BindedRooms"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/CheckIO/payOrder"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/CheckIO/cartManagement"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/CheckIO/roomManagement"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//CheckIO/CheckIO/guestManagement"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/CheckIO/payOrder">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/payOrder/amount"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//CheckIO/CheckIO/generateTotal">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//CheckIO/CheckIO/generateTotal/bookingID"/>
         </genOperations>
@@ -353,13 +374,5 @@
         </genOperations>
       </genClasses>
     </nestedGenPackages>
-  </genPackages>
-  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
-      disposableProviderFactory="true" ecorePackage="types.ecore#/">
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
   </genPackages>
 </genmodel:GenModel>

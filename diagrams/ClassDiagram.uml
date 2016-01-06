@@ -5,7 +5,14 @@
   <packagedElement xmi:type="uml:Dependency" xmi:id="_ZN1mkJ0aEeWUbYw76XS34g" client="_Oya38J0XEeWUbYw76XS34g" supplier="_PayDAJ0YEeWUbYw76XS34g"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_YSG3sJ3WEeWFr_oidmlDRQ" name="Payment">
     <packagedElement xmi:type="uml:Interface" xmi:id="_nf5OYJ0DEeWhTeq8ShgRSA" name="IPayment">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_iMvuMJ0NEeWhTeq8ShgRSA" name="initiatePayment"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_iMvuMJ0NEeWhTeq8ShgRSA" name="initiatePayment" isStatic="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PNGogLRzEeWPBf4Vnsf6Ig" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uEEDsLR1EeWPBf4Vnsf6Ig" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_j4s5sJ0NEeWhTeq8ShgRSA" name="commencePayment"/>
     </packagedElement>
   </packagedElement>
@@ -525,9 +532,14 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_IbI0EJ_8EeWgGs4bImIp0A" name="roombinder" type="_wzOQYJ0CEeWhTeq8ShgRSA" association="_IbFJsJ_8EeWgGs4bImIp0A"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_I0Z3gLRnEeWKZ5XxIn7-9g" name="cartManagement" type="_98GqwKA6EeW2lvhfsni2Sw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OGr2MLR3EeWPBf4Vnsf6Ig" name="roomManagement" type="_u2uyUJ8iEeWXa8dgAQ47Zw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gEW8sLR3EeWPBf4Vnsf6Ig" name="guestManagement" type="_AP68oJ8sEeWXa8dgAQ47Zw"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_piQYoJ0MEeWhTeq8ShgRSA" name="payOrder">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_FKxz0J0NEeWhTeq8ShgRSA" name="res" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t_OuYLRyEeWPBf4Vnsf6Ig" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GL-yIJ0NEeWhTeq8ShgRSA" name="generateTotal" visibility="public">

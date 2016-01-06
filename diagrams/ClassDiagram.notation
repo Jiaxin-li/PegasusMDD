@@ -41,7 +41,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YSYkgp3WEeWFr_oidmlDRQ"/>
     </children>
     <element xmi:type="uml:Package" href="ClassDiagram.uml#_YSG3sJ3WEeWFr_oidmlDRQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YSVhMJ3WEeWFr_oidmlDRQ" x="-161" y="1124" width="303" height="256"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YSVhMJ3WEeWFr_oidmlDRQ" x="-165" y="1122" width="431" height="256"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_nOCEcJ3WEeWFr_oidmlDRQ" type="2007">
     <children xmi:type="notation:DecorationNode" xmi:id="_nOCrgJ3WEeWFr_oidmlDRQ" type="5026"/>
@@ -1187,6 +1187,14 @@
             <element xmi:type="uml:Property" href="ClassDiagram.uml#_I0Z3gLRnEeWKZ5XxIn7-9g"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_I1dncbRnEeWKZ5XxIn7-9g"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_OH4JALR3EeWPBf4Vnsf6Ig" type="3012">
+            <element xmi:type="uml:Property" href="ClassDiagram.uml#_OGr2MLR3EeWPBf4Vnsf6Ig"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_OH4wELR3EeWPBf4Vnsf6Ig"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_gH6nALR3EeWPBf4Vnsf6Ig" type="3012">
+            <element xmi:type="uml:Property" href="ClassDiagram.uml#_gEW8sLR3EeWPBf4Vnsf6Ig"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_gH6nAbR3EeWPBf4Vnsf6Ig"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_hNSn4Z0DEeWhTeq8ShgRSA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_hNSn4p0DEeWhTeq8ShgRSA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_hNSn450DEeWhTeq8ShgRSA"/>
@@ -1225,7 +1233,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hNSn7p0DEeWhTeq8ShgRSA"/>
         </children>
         <element xmi:type="uml:Class" href="ClassDiagram.uml#_hNOWcJ0DEeWhTeq8ShgRSA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hNRZwZ0DEeWhTeq8ShgRSA" x="34" y="208" height="368"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hNRZwZ0DEeWhTeq8ShgRSA" x="34" y="188" height="388"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_qIxVIJ0DEeWhTeq8ShgRSA" type="2008">
         <children xmi:type="notation:DecorationNode" xmi:id="_qIx8MJ0DEeWhTeq8ShgRSA" type="5029"/>
@@ -1255,7 +1263,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qIyjRJ0DEeWhTeq8ShgRSA"/>
         </children>
         <element xmi:type="uml:Class" href="ClassDiagram.uml#_qIu44J0DEeWhTeq8ShgRSA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qIxVIZ0DEeWhTeq8ShgRSA" x="77" y="28"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qIxVIZ0DEeWhTeq8ShgRSA" x="73" y="6"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_SbZmMp3aEeWFr_oidmlDRQ"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SbZmM53aEeWFr_oidmlDRQ"/>
@@ -1515,8 +1523,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_y12SwZ3vEeWFr_oidmlDRQ"/>
     <element xmi:type="uml:Association" href="ClassDiagram.uml#_y1Qc4J3vEeWFr_oidmlDRQ"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y12Swp3vEeWFr_oidmlDRQ" points="[0, 0, 132, 52]$[-132, -52, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y3kKAJ3vEeWFr_oidmlDRQ" id="(0.4072790294627383,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y3kKAZ3vEeWFr_oidmlDRQ" id="(0.5039370078740157,1.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y3kKAJ3vEeWFr_oidmlDRQ" id="(0.4050387596899225,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y3kKAZ3vEeWFr_oidmlDRQ" id="(0.49868766404199477,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_kCpuwJ3wEeWFr_oidmlDRQ" type="4001" source="_jc1ooJ0DEeWhTeq8ShgRSA" target="_fEik8Jz-EeWhTeq8ShgRSA">
     <children xmi:type="notation:DecorationNode" xmi:id="_kCpuw53wEeWFr_oidmlDRQ" type="6001">

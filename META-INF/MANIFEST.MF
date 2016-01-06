@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: PegasusMDD;singleton:=true
+Bundle-SymbolicName: ModelDrivenDevelopment;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -30,9 +30,7 @@ Export-Package: RootElement.Account,
  RootElement.Service.util,
  RootElement.Task,
  RootElement.Task.impl,
- RootElement.Task.util,
- org.eclipse.uml2.types,
- org.eclipse.uml2.types.impl
+ RootElement.Task.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.uml2.types;visibility:=reexport
