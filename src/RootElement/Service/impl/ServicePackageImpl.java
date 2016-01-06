@@ -48,7 +48,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -145,15 +144,17 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		TypesPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		PaymentPackageImpl thePaymentPackage = (PaymentPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) instanceof PaymentPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) : PaymentPackage.eINSTANCE);
 		BookingPackageImpl theBookingPackage = (BookingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookingPackage.eNS_URI) instanceof BookingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookingPackage.eNS_URI) : BookingPackage.eINSTANCE);
 		AccountPackageImpl theAccountPackage = (AccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) instanceof AccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) : AccountPackage.eINSTANCE);
 		RoomPackageImpl theRoomPackage = (RoomPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI) instanceof RoomPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI) : RoomPackage.eINSTANCE);
+		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
 		TaskPackageImpl theTaskPackage = (TaskPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) instanceof TaskPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) : TaskPackage.eINSTANCE);
 		CheckIOPackageImpl theCheckIOPackage = (CheckIOPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) instanceof CheckIOPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) : CheckIOPackage.eINSTANCE);
-		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theServicePackage.createPackageContents();
@@ -161,10 +162,9 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		theBookingPackage.createPackageContents();
 		theAccountPackage.createPackageContents();
 		theRoomPackage.createPackageContents();
+		theSchedulePackage.createPackageContents();
 		theTaskPackage.createPackageContents();
 		theCheckIOPackage.createPackageContents();
-		theSchedulePackage.createPackageContents();
-		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theServicePackage.initializePackageContents();
@@ -172,10 +172,9 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		theBookingPackage.initializePackageContents();
 		theAccountPackage.initializePackageContents();
 		theRoomPackage.initializePackageContents();
+		theSchedulePackage.initializePackageContents();
 		theTaskPackage.initializePackageContents();
 		theCheckIOPackage.initializePackageContents();
-		theSchedulePackage.initializePackageContents();
-		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theServicePackage.freeze();

@@ -72,12 +72,12 @@ public class ScheduleAdapterFactory extends AdapterFactoryImpl {
 				return createAvailablityMapAdapter();
 			}
 			@Override
-			public Adapter caseRoomSchedule(RoomSchedule object) {
-				return createRoomScheduleAdapter();
-			}
-			@Override
 			public Adapter caseISchedule(ISchedule object) {
 				return createIScheduleAdapter();
+			}
+			@Override
+			public Adapter caseRoomSchedule(RoomSchedule object) {
+				return createRoomScheduleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

@@ -113,10 +113,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O0wC4KA7EeW2lvhfsni2Sw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O03-sKA7EeW2lvhfsni2Sw" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_voApUKBWEeW2lvhfsni2Sw" name="currentCart" type="_jczMYJ0DEeWhTeq8ShgRSA" association="_vn8-8KBWEeW2lvhfsni2Sw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egsbsKBZEeW2lvhfsni2Sw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egvfAKBZEeW2lvhfsni2Sw" value="1"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_l54m0LSREeWiCuMiyiarcA" name="roomTypeManagement" type="_y_tZ4J8iEeWXa8dgAQ47Zw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DKTM4LSSEeWiCuMiyiarcA" name="roomSchedule" type="_Oya38J0XEeWUbYw76XS34g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QXiDMLSSEeWiCuMiyiarcA" name="currentCart" type="_jczMYJ0DEeWhTeq8ShgRSA"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_v4ad0LPTEeWpV6Nm8aL7Kw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_U5aqUJ3mEeWFr_oidmlDRQ" contract="_U5aqUJ3mEeWFr_oidmlDRQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_jQuEELQAEeWIGvgV-A9CnQ" name="addCart" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_t4qTILQAEeWIGvgV-A9CnQ" name="cart" type="_jczMYJ0DEeWhTeq8ShgRSA"/>
@@ -684,12 +683,6 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IbG-4J_8EeWgGs4bImIp0A" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_IbJbIJ_8EeWgGs4bImIp0A" name="checkio" type="_hNOWcJ0DEeWhTeq8ShgRSA" association="_IbFJsJ_8EeWgGs4bImIp0A"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_vn8-8KBWEeW2lvhfsni2Sw" memberEnd="_voApUKBWEeW2lvhfsni2Sw _voBQYKBWEeW2lvhfsni2Sw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vn-NEKBWEeW2lvhfsni2Sw" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vn-NEaBWEeW2lvhfsni2Sw" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_voBQYKBWEeW2lvhfsni2Sw" name="cartmanagement" type="_98GqwKA6EeW2lvhfsni2Sw" association="_vn8-8KBWEeW2lvhfsni2Sw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_YQ3fkKBdEeW2lvhfsni2Sw" memberEnd="_YQ4GoqBdEeW2lvhfsni2Sw _YQ4tsKBdEeW2lvhfsni2Sw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YQ4GoKBdEeW2lvhfsni2Sw" source="org.eclipse.papyrus">

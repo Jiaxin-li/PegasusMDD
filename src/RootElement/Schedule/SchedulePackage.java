@@ -120,7 +120,7 @@ public interface SchedulePackage extends EPackage {
 	 * @see RootElement.Schedule.impl.SchedulePackageImpl#getISchedule()
 	 * @generated
 	 */
-	int ISCHEDULE = 2;
+	int ISCHEDULE = 1;
 
 	/**
 	 * The number of structural features of the '<em>ISchedule</em>' class.
@@ -166,7 +166,7 @@ public interface SchedulePackage extends EPackage {
 	 * @see RootElement.Schedule.impl.SchedulePackageImpl#getRoomSchedule()
 	 * @generated
 	 */
-	int ROOM_SCHEDULE = 1;
+	int ROOM_SCHEDULE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Schedule</b></em>' reference list.

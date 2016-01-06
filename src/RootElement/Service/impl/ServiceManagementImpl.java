@@ -98,8 +98,7 @@ public class ServiceManagementImpl extends MinimalEObjectImpl.Container implemen
 	public boolean addService(Service service) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		this.services.add(service);
-		return true;
+		throw new UnsupportedOperationException();
 	}
 
 	/**

@@ -7,6 +7,8 @@ import RootElement.Booking.BookingPackage;
 import RootElement.Booking.Cart;
 import RootElement.Booking.CartManagement;
 
+import RootElement.Room.RoomTypeManagment;
+import RootElement.Schedule.RoomSchedule;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -32,6 +34,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getCarts <em>Carts</em>}</li>
+ *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getRoomTypeManagement <em>Room Type Management</em>}</li>
+ *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getRoomSchedule <em>Room Schedule</em>}</li>
  *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getCurrentCart <em>Current Cart</em>}</li>
  * </ul>
  *
@@ -47,6 +51,26 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Cart> carts;
+
+	/**
+	 * The cached value of the '{@link #getRoomTypeManagement() <em>Room Type Management</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomTypeManagement()
+	 * @generated
+	 * @ordered
+	 */
+	protected RoomTypeManagment roomTypeManagement;
+
+	/**
+	 * The cached value of the '{@link #getRoomSchedule() <em>Room Schedule</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomSchedule()
+	 * @generated
+	 * @ordered
+	 */
+	protected RoomSchedule roomSchedule;
 
 	/**
 	 * The cached value of the '{@link #getCurrentCart() <em>Current Cart</em>}' reference.
@@ -87,6 +111,82 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			carts = new EObjectResolvingEList<Cart>(Cart.class, this, BookingPackage.CART_MANAGEMENT__CARTS);
 		}
 		return carts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomTypeManagment getRoomTypeManagement() {
+		if (roomTypeManagement != null && roomTypeManagement.eIsProxy()) {
+			InternalEObject oldRoomTypeManagement = (InternalEObject)roomTypeManagement;
+			roomTypeManagement = (RoomTypeManagment)eResolveProxy(oldRoomTypeManagement);
+			if (roomTypeManagement != oldRoomTypeManagement) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingPackage.CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT, oldRoomTypeManagement, roomTypeManagement));
+			}
+		}
+		return roomTypeManagement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomTypeManagment basicGetRoomTypeManagement() {
+		return roomTypeManagement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomTypeManagement(RoomTypeManagment newRoomTypeManagement) {
+		RoomTypeManagment oldRoomTypeManagement = roomTypeManagement;
+		roomTypeManagement = newRoomTypeManagement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT, oldRoomTypeManagement, roomTypeManagement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomSchedule getRoomSchedule() {
+		if (roomSchedule != null && roomSchedule.eIsProxy()) {
+			InternalEObject oldRoomSchedule = (InternalEObject)roomSchedule;
+			roomSchedule = (RoomSchedule)eResolveProxy(oldRoomSchedule);
+			if (roomSchedule != oldRoomSchedule) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingPackage.CART_MANAGEMENT__ROOM_SCHEDULE, oldRoomSchedule, roomSchedule));
+			}
+		}
+		return roomSchedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomSchedule basicGetRoomSchedule() {
+		return roomSchedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomSchedule(RoomSchedule newRoomSchedule) {
+		RoomSchedule oldRoomSchedule = roomSchedule;
+		roomSchedule = newRoomSchedule;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.CART_MANAGEMENT__ROOM_SCHEDULE, oldRoomSchedule, roomSchedule));
 	}
 
 	/**
@@ -251,6 +351,12 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingPackage.CART_MANAGEMENT__CARTS:
 				return getCarts();
+			case BookingPackage.CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT:
+				if (resolve) return getRoomTypeManagement();
+				return basicGetRoomTypeManagement();
+			case BookingPackage.CART_MANAGEMENT__ROOM_SCHEDULE:
+				if (resolve) return getRoomSchedule();
+				return basicGetRoomSchedule();
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				if (resolve) return getCurrentCart();
 				return basicGetCurrentCart();
@@ -271,6 +377,12 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				getCarts().clear();
 				getCarts().addAll((Collection<? extends Cart>)newValue);
 				return;
+			case BookingPackage.CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT:
+				setRoomTypeManagement((RoomTypeManagment)newValue);
+				return;
+			case BookingPackage.CART_MANAGEMENT__ROOM_SCHEDULE:
+				setRoomSchedule((RoomSchedule)newValue);
+				return;
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				setCurrentCart((Cart)newValue);
 				return;
@@ -289,6 +401,12 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			case BookingPackage.CART_MANAGEMENT__CARTS:
 				getCarts().clear();
 				return;
+			case BookingPackage.CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT:
+				setRoomTypeManagement((RoomTypeManagment)null);
+				return;
+			case BookingPackage.CART_MANAGEMENT__ROOM_SCHEDULE:
+				setRoomSchedule((RoomSchedule)null);
+				return;
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				setCurrentCart((Cart)null);
 				return;
@@ -306,6 +424,10 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingPackage.CART_MANAGEMENT__CARTS:
 				return carts != null && !carts.isEmpty();
+			case BookingPackage.CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT:
+				return roomTypeManagement != null;
+			case BookingPackage.CART_MANAGEMENT__ROOM_SCHEDULE:
+				return roomSchedule != null;
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				return currentCart != null;
 		}

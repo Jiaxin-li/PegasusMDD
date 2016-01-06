@@ -46,7 +46,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -129,37 +128,37 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		TypesPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		PaymentPackageImpl thePaymentPackage = (PaymentPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) instanceof PaymentPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) : PaymentPackage.eINSTANCE);
 		AccountPackageImpl theAccountPackage = (AccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) instanceof AccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) : AccountPackage.eINSTANCE);
 		RoomPackageImpl theRoomPackage = (RoomPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI) instanceof RoomPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI) : RoomPackage.eINSTANCE);
+		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
 		ServicePackageImpl theServicePackage = (ServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicePackage.eNS_URI) instanceof ServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicePackage.eNS_URI) : ServicePackage.eINSTANCE);
 		TaskPackageImpl theTaskPackage = (TaskPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) instanceof TaskPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) : TaskPackage.eINSTANCE);
 		CheckIOPackageImpl theCheckIOPackage = (CheckIOPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) instanceof CheckIOPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) : CheckIOPackage.eINSTANCE);
-		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBookingPackage.createPackageContents();
 		thePaymentPackage.createPackageContents();
 		theAccountPackage.createPackageContents();
 		theRoomPackage.createPackageContents();
+		theSchedulePackage.createPackageContents();
 		theServicePackage.createPackageContents();
 		theTaskPackage.createPackageContents();
 		theCheckIOPackage.createPackageContents();
-		theSchedulePackage.createPackageContents();
-		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBookingPackage.initializePackageContents();
 		thePaymentPackage.initializePackageContents();
 		theAccountPackage.initializePackageContents();
 		theRoomPackage.initializePackageContents();
+		theSchedulePackage.initializePackageContents();
 		theServicePackage.initializePackageContents();
 		theTaskPackage.initializePackageContents();
 		theCheckIOPackage.initializePackageContents();
-		theSchedulePackage.initializePackageContents();
-		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theBookingPackage.freeze();
@@ -355,8 +354,26 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCartManagement_CurrentCart() {
+	public EReference getCartManagement_RoomTypeManagement() {
 		return (EReference)cartManagementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCartManagement_RoomSchedule() {
+		return (EReference)cartManagementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCartManagement_CurrentCart() {
+		return (EReference)cartManagementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -428,6 +445,8 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		cartManagementEClass = createEClass(CART_MANAGEMENT);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CARTS);
+		createEReference(cartManagementEClass, CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT);
+		createEReference(cartManagementEClass, CART_MANAGEMENT__ROOM_SCHEDULE);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CURRENT_CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___ADD_CART__CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT);
@@ -458,6 +477,8 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		// Obtain other dependent packages
 		AccountPackage theAccountPackage = (AccountPackage)EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI);
+		RoomPackage theRoomPackage = (RoomPackage)EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI);
+		SchedulePackage theSchedulePackage = (SchedulePackage)EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -509,6 +530,8 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		initEClass(cartManagementEClass, CartManagement.class, "CartManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCartManagement_Carts(), this.getCart(), null, "carts", null, 0, -1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCartManagement_RoomTypeManagement(), theRoomPackage.getRoomTypeManagment(), null, "roomTypeManagement", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCartManagement_RoomSchedule(), theSchedulePackage.getRoomSchedule(), null, "roomSchedule", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCartManagement_CurrentCart(), this.getCart(), null, "currentCart", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getCartManagement__AddCart__Cart(), ecorePackage.getEBoolean(), "addCart", 1, 1, IS_UNIQUE, !IS_ORDERED);

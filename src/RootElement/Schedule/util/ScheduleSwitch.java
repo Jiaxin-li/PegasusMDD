@@ -72,16 +72,16 @@ public class ScheduleSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SchedulePackage.ISCHEDULE: {
+				ISchedule iSchedule = (ISchedule)theEObject;
+				T result = caseISchedule(iSchedule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SchedulePackage.ROOM_SCHEDULE: {
 				RoomSchedule roomSchedule = (RoomSchedule)theEObject;
 				T result = caseRoomSchedule(roomSchedule);
 				if (result == null) result = caseISchedule(roomSchedule);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulePackage.ISCHEDULE: {
-				ISchedule iSchedule = (ISchedule)theEObject;
-				T result = caseISchedule(iSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -3,7 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
     modelDirectory="/PegasusMDD/src" modelPluginID="PegasusMDD" modelName="Codegen"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
-    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../org.eclipse.uml2.types/model/Types.genmodel#//types"
+    operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
@@ -85,6 +86,10 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Booking/CartManagement">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/carts"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/roomTypeManagement"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/roomSchedule"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/currentCart"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/addCart">
@@ -214,6 +219,32 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Room/RoomTypeManagment/roomtypes"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Room/RoomTypeManagment/roomtype"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Schedule" disposableProviderFactory="true"
+        ecorePackage="RootElement.ecore#//Schedule">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Schedule/AvailablityMap">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Schedule/AvailablityMap/roomType"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Schedule/AvailablityMap/available"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Schedule/AvailablityMap/Date"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Schedule/ISchedule">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Schedule/ISchedule/checkAvailable">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/checkAvailable/roomTypeID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/checkAvailable/checkInDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/checkAvailable/checkOutDate"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Schedule/ISchedule/updateAvailable">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/roomTypeID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/checkInDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/checkOutDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/nrOfRoom"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Schedule/RoomSchedule">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Schedule/RoomSchedule/schedule"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Service" disposableProviderFactory="true"
@@ -348,39 +379,5 @@
         </genOperations>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Schedule" disposableProviderFactory="true"
-        ecorePackage="RootElement.ecore#//Schedule">
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Schedule/AvailablityMap">
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Schedule/AvailablityMap/roomType"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Schedule/AvailablityMap/available"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Schedule/AvailablityMap/Date"/>
-      </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Schedule/RoomSchedule">
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Schedule/RoomSchedule/schedule"/>
-      </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Schedule/ISchedule">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Schedule/ISchedule/checkAvailable">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/checkAvailable/roomTypeID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/checkAvailable/checkInDate"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/checkAvailable/checkOutDate"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Schedule/ISchedule/updateAvailable">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/roomTypeID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/checkInDate"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/checkOutDate"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Schedule/ISchedule/updateAvailable/nrOfRoom"/>
-        </genOperations>
-      </genClasses>
-    </nestedGenPackages>
-  </genPackages>
-  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
-      disposableProviderFactory="true" ecorePackage="types.ecore#/">
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
   </genPackages>
 </genmodel:GenModel>

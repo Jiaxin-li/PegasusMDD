@@ -296,13 +296,31 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT__CARTS = IBOOKING_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Room Type Management</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT = IBOOKING_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Room Schedule</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT__ROOM_SCHEDULE = IBOOKING_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Current Cart</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT__CURRENT_CART = IBOOKING_FEATURE_COUNT + 1;
+	int CART_MANAGEMENT__CURRENT_CART = IBOOKING_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Cart Management</em>' class.
@@ -311,7 +329,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_FEATURE_COUNT = IBOOKING_FEATURE_COUNT + 2;
+	int CART_MANAGEMENT_FEATURE_COUNT = IBOOKING_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Add Booking</em>' operation.
@@ -596,6 +614,28 @@ public interface BookingPackage extends EPackage {
 	EReference getCartManagement_Carts();
 
 	/**
+	 * Returns the meta object for the reference '{@link RootElement.Booking.CartManagement#getRoomTypeManagement <em>Room Type Management</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Room Type Management</em>'.
+	 * @see RootElement.Booking.CartManagement#getRoomTypeManagement()
+	 * @see #getCartManagement()
+	 * @generated
+	 */
+	EReference getCartManagement_RoomTypeManagement();
+
+	/**
+	 * Returns the meta object for the reference '{@link RootElement.Booking.CartManagement#getRoomSchedule <em>Room Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Room Schedule</em>'.
+	 * @see RootElement.Booking.CartManagement#getRoomSchedule()
+	 * @see #getCartManagement()
+	 * @generated
+	 */
+	EReference getCartManagement_RoomSchedule();
+
+	/**
 	 * Returns the meta object for the reference '{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -816,6 +856,22 @@ public interface BookingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CART_MANAGEMENT__CARTS = eINSTANCE.getCartManagement_Carts();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Type Management</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT = eINSTANCE.getCartManagement_RoomTypeManagement();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Schedule</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CART_MANAGEMENT__ROOM_SCHEDULE = eINSTANCE.getCartManagement_RoomSchedule();
 
 		/**
 		 * The meta object literal for the '<em><b>Current Cart</b></em>' reference feature.

@@ -2,6 +2,8 @@
  */
 package RootElement.Booking;
 
+import RootElement.Room.RoomTypeManagment;
+import RootElement.Schedule.RoomSchedule;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -14,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link RootElement.Booking.CartManagement#getCarts <em>Carts</em>}</li>
+ *   <li>{@link RootElement.Booking.CartManagement#getRoomTypeManagement <em>Room Type Management</em>}</li>
+ *   <li>{@link RootElement.Booking.CartManagement#getRoomSchedule <em>Room Schedule</em>}</li>
  *   <li>{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}</li>
  * </ul>
  *
@@ -37,6 +41,58 @@ public interface CartManagement extends IBooking {
 	 * @generated
 	 */
 	EList<Cart> getCarts();
+
+	/**
+	 * Returns the value of the '<em><b>Room Type Management</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Type Management</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Type Management</em>' reference.
+	 * @see #setRoomTypeManagement(RoomTypeManagment)
+	 * @see RootElement.Booking.BookingPackage#getCartManagement_RoomTypeManagement()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	RoomTypeManagment getRoomTypeManagement();
+
+	/**
+	 * Sets the value of the '{@link RootElement.Booking.CartManagement#getRoomTypeManagement <em>Room Type Management</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Type Management</em>' reference.
+	 * @see #getRoomTypeManagement()
+	 * @generated
+	 */
+	void setRoomTypeManagement(RoomTypeManagment value);
+
+	/**
+	 * Returns the value of the '<em><b>Room Schedule</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Schedule</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Schedule</em>' reference.
+	 * @see #setRoomSchedule(RoomSchedule)
+	 * @see RootElement.Booking.BookingPackage#getCartManagement_RoomSchedule()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	RoomSchedule getRoomSchedule();
+
+	/**
+	 * Sets the value of the '{@link RootElement.Booking.CartManagement#getRoomSchedule <em>Room Schedule</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Schedule</em>' reference.
+	 * @see #getRoomSchedule()
+	 * @generated
+	 */
+	void setRoomSchedule(RoomSchedule value);
 
 	/**
 	 * Returns the value of the '<em><b>Current Cart</b></em>' reference.
