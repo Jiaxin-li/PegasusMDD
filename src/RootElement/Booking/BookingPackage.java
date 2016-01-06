@@ -377,13 +377,22 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT___DELETE_CART__INT = IBOOKING_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Set Current Cart</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT___SET_CURRENT_CART__CART = IBOOKING_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Cart Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 2;
+	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 3;
 
 
 	/**
@@ -627,6 +636,16 @@ public interface BookingPackage extends EPackage {
 	EOperation getCartManagement__DeleteCart__int();
 
 	/**
+	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#setCurrentCart(RootElement.Booking.Cart) <em>Set Current Cart</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Current Cart</em>' operation.
+	 * @see RootElement.Booking.CartManagement#setCurrentCart(RootElement.Booking.Cart)
+	 * @generated
+	 */
+	EOperation getCartManagement__SetCurrentCart__Cart();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -840,6 +859,14 @@ public interface BookingPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CART_MANAGEMENT___DELETE_CART__INT = eINSTANCE.getCartManagement__DeleteCart__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Current Cart</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CART_MANAGEMENT___SET_CURRENT_CART__CART = eINSTANCE.getCartManagement__SetCurrentCart__Cart();
 
 	}
 

@@ -208,6 +208,10 @@
             <element xmi:type="uml:Operation" href="ClassDiagram.uml#_xQ3lELQAEeWIGvgV-A9CnQ"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_xR8jIbQAEeWIGvgV-A9CnQ"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_IKc-YLQhEeWzl6-waFLT7Q" type="3013">
+            <element xmi:type="uml:Operation" href="ClassDiagram.uml#_IHkCcLQhEeWzl6-waFLT7Q"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IKc-YbQhEeWzl6-waFLT7Q"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_9-P_0aA6EeW2lvhfsni2Sw"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_9-P_0qA6EeW2lvhfsni2Sw"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_9-P_06A6EeW2lvhfsni2Sw"/>

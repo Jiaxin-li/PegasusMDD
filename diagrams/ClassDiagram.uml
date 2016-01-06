@@ -116,6 +116,9 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IHkCcLQhEeWzl6-waFLT7Q" name="setCurrentCart">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q-bVcLQhEeWzl6-waFLT7Q" name="cart" type="_jczMYJ0DEeWhTeq8ShgRSA"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_gtT5sKBYEeW2lvhfsni2Sw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_AfrKAJ3mEeWFr_oidmlDRQ"/>
   </packagedElement>

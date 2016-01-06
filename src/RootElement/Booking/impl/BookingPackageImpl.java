@@ -382,6 +382,15 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getCartManagement__SetCurrentCart__Cart() {
+		return cartManagementEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BookingFactory getBookingFactory() {
 		return (BookingFactory)getEFactoryInstance();
 	}
@@ -431,6 +440,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___ADD_CART__CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT);
+		createEOperation(cartManagementEClass, CART_MANAGEMENT___SET_CURRENT_CART__CART);
 	}
 
 	/**
@@ -513,6 +523,9 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		op = initEOperation(getCartManagement__DeleteCart__int(), ecorePackage.getEBoolean(), "deleteCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "CartID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getCartManagement__SetCurrentCart__Cart(), null, "setCurrentCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getCart(), "cart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

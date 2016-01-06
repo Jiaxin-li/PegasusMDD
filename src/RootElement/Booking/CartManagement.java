@@ -70,4 +70,12 @@ public interface CartManagement extends IBooking {
 	 */
 	boolean deleteCart(int CartID);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model cartRequired="true" cartOrdered="false"
+	 * @generated
+	 */
+	void setCurrentCart(Cart cart);
+
 } // CartManagement

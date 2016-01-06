@@ -187,6 +187,17 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setCurrentCart(Cart cart) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -275,6 +286,9 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return addCart((Cart)arguments.get(0));
 			case BookingPackage.CART_MANAGEMENT___DELETE_CART__INT:
 				return deleteCart((Integer)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___SET_CURRENT_CART__CART:
+				setCurrentCart((Cart)arguments.get(0));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
