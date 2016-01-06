@@ -163,12 +163,15 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public boolean validateBooking(int BookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		try{
+			getBooking(BookingID);
+		} catch (Exception e) {
+			return false;
+		}
+		
+		return true;
 	}
 
 	/**
