@@ -129,45 +129,67 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean addRoomType(String RoomTypeName, int price, int nrOfBeds) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		RoomType rt = new RoomTypeImpl();
+		rt.setRoomTypeName(RoomTypeName);
+		rt.setPrice(price);
+		rt.setNumberOfBeds(nrOfBeds);
+		rt.setRoomTypeID(roomtypes.size());
+		roomtypes.add(rt);
+		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean editRoomType(int roomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean validateRoomType(int RoomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<RoomType> rtl = getRoomtypes();
+		for (RoomType rt : rtl){
+			if(rt.getRoomTypeID() == RoomTypeID){
+				return true;
+			}
+			
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean deleteRoomType(int roomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<RoomType> rtl = getRoomtypes();
+		int index =0;
+		for (RoomType rt : rtl){
+			if(rt.getRoomTypeID() == roomTypeID){
+				rtl.remove(index);
+				return true;
+			}
+			index ++;
+		}
+		return false;
 	}
 
 	/**

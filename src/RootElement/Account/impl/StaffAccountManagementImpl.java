@@ -129,12 +129,18 @@ public class StaffAccountManagementImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public StaffAccount getStaff(int StaffID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<StaffAccount> gl = getStaffAccounts();
+		for (StaffAccount g : gl){
+			if (g.getID() == StaffID){
+				return g;
+			}
+		}
+		return null;
 	}
 
 	/**

@@ -218,12 +218,12 @@ public class GuestAccountImpl extends UserAccountsImpl implements GuestAccount {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public String getUserInfo() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.toString();
 	}
 
 	/**
