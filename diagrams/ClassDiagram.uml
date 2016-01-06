@@ -119,7 +119,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_2-E_gLQAEeWIGvgV-A9CnQ" name="CartID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6vDWwLQAEeWIGvgV-A9CnQ" name="result">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6vDWwLQAEeWIGvgV-A9CnQ" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>

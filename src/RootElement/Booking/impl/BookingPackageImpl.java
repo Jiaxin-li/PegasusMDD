@@ -373,7 +373,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCartManagement__DeleteCart__int_boolean() {
+	public EOperation getCartManagement__DeleteCart__int() {
 		return cartManagementEClass.getEOperations().get(1);
 	}
 
@@ -430,7 +430,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CARTS);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CURRENT_CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___ADD_CART__CART);
-		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN);
+		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT);
 	}
 
 	/**
@@ -511,9 +511,8 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		op = initEOperation(getCartManagement__AddCart__Cart(), ecorePackage.getEBoolean(), "addCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getCart(), "cart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getCartManagement__DeleteCart__int_boolean(), null, "deleteCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCartManagement__DeleteCart__int(), ecorePackage.getEBoolean(), "deleteCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "CartID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "result", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

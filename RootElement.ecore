@@ -61,9 +61,8 @@
       <eOperations name="addCart" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="cart" ordered="false" lowerBound="1" eType="#//Booking/Cart"/>
       </eOperations>
-      <eOperations name="deleteCart" ordered="false" lowerBound="1">
+      <eOperations name="deleteCart" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="CartID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eParameters name="result" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
           upperBound="-1" eType="#//Booking/Cart"/>

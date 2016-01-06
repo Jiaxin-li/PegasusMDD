@@ -89,7 +89,6 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/deleteCart">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/deleteCart/CartID"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/deleteCart/result"/>
         </genOperations>
       </genClasses>
     </nestedGenPackages>
