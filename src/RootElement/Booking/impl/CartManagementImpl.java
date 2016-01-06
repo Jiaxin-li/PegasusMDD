@@ -56,7 +56,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected Cart currentCart;
+	protected Cart currentCart = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,18 +120,6 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentCart(Cart newCurrentCart) {
-		Cart oldCurrentCart = currentCart;
-		currentCart = newCurrentCart;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.CART_MANAGEMENT__CURRENT_CART, oldCurrentCart, currentCart));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -163,34 +151,56 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public Booking getBooking(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(currentCart == null){
+			throw new RuntimeException();
+		}
+		EList<Booking> bookings = currentCart.getBookings();
+		return bookings.get(bookingID);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public boolean validateBooking(int BookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		try{
+			getBooking(BookingID);
+		} catch (Exception e) {
+			return false;
+		}
+		
+		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public boolean addCart(Cart cart) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int numberOfCarts = carts.size();
+		int cartID = numberOfCarts - 1;
+		cart.setCartID(cartID);
+		try {
+			carts.add(cart);	
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public boolean deleteCart(int CartID) {
+		try{
+			carts.remove(CartID);
+		}catch (Exception e){
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -198,10 +208,11 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean deleteCart(int CartID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void setCurrentCart(Cart newCurrentCart) {
+		Cart oldCurrentCart = currentCart;
+		currentCart = newCurrentCart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.CART_MANAGEMENT__CURRENT_CART, oldCurrentCart, currentCart));
 	}
 
 	/**
