@@ -357,30 +357,31 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 */
 	public boolean editBooking(int bookingID, int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
-		/*
 		if (nrOfRooms <= 0) return false;
 		
-		if (checkInDate > checkOutDate || checkOutDate < checkInDate) return false;
+		if (checkInDate.compareTo(checkOutDate) > 0  || checkOutDate.compareTo(checkInDate) < 0) return false;
 		
-		if (checkInDate < now() || checkOutDate < now()) return false;
+		Date now = new Date();
+		
+		if (checkInDate.compareTo(now) > 0 || checkOutDate.compareTo(now) < 0) return false;
 		
 		if(! validateBooking(bookingID)) return false;
 		
-		if (! roomTypeID.exists()) return false;
+		if (! roomTypeManagement.validateRoomType(roomTypeID)) return false;
 		
 		Booking booking = getBooking(bookingID);
-		int nrOfRoomsOld = booking.getRooms();
-		AvailablityMap.updateAvailablity(roomTypeID, checkIn, checkOut, -1 * nrOfRoomsOld);
 		
-	
-		if (! AvailablityMap.checkAvailability(roomTypeID, checkIn, checkOut, nrOfRooms)) return false;
+		int nrOfRoomsOld = booking.getNrOfRooms();
 		
-		if (! AvailablityMap.updateAvailablity(roomTypeID, checkIn, checkOut, -1 * nrOfRooms)) return false;
+		if (! roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, -1 * nrOfRoomsOld)) return false;
+		
+		int roomsAvailable = roomSchedule.checkAvailable(roomTypeID, checkInDate, checkOutDate);
+		
+		if(roomsAvailable < nrOfRooms) return false;
+			
+		if (! roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, nrOfRooms)) return false;
+		
 		return true;
-		
-		*/
-		
-		return false;
 	}
 
 	/**
