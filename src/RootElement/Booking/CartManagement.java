@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link RootElement.Booking.CartManagement#getRoomTypeManagement <em>Room Type Management</em>}</li>
  *   <li>{@link RootElement.Booking.CartManagement#getRoomSchedule <em>Room Schedule</em>}</li>
  *   <li>{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}</li>
+ *   <li>{@link RootElement.Booking.CartManagement#getNrOfBookings <em>Nr Of Bookings</em>}</li>
  * </ul>
  *
  * @see RootElement.Booking.BookingPackage#getCartManagement()
@@ -119,6 +120,32 @@ public interface CartManagement extends IBooking {
 	 * @generated
 	 */
 	void setCurrentCart(Cart value);
+
+	/**
+	 * Returns the value of the '<em><b>Nr Of Bookings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Of Bookings</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Of Bookings</em>' attribute.
+	 * @see #setNrOfBookings(int)
+	 * @see RootElement.Booking.BookingPackage#getCartManagement_NrOfBookings()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getNrOfBookings();
+
+	/**
+	 * Sets the value of the '{@link RootElement.Booking.CartManagement#getNrOfBookings <em>Nr Of Bookings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Of Bookings</em>' attribute.
+	 * @see #getNrOfBookings()
+	 * @generated
+	 */
+	void setNrOfBookings(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

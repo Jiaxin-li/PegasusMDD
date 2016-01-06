@@ -186,13 +186,22 @@ public interface BookingPackage extends EPackage {
 	int BOOKING__IS_PAID = 4;
 
 	/**
+	 * The feature id for the '<em><b>Nr Of Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__NR_OF_ROOMS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_FEATURE_COUNT = 5;
+	int BOOKING_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -323,13 +332,22 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT__CURRENT_CART = IBOOKING_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Nr Of Bookings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_MANAGEMENT__NR_OF_BOOKINGS = IBOOKING_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Cart Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_FEATURE_COUNT = IBOOKING_FEATURE_COUNT + 4;
+	int CART_MANAGEMENT_FEATURE_COUNT = IBOOKING_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Add Booking</em>' operation.
@@ -533,6 +551,17 @@ public interface BookingPackage extends EPackage {
 	EAttribute getBooking_IsPaid();
 
 	/**
+	 * Returns the meta object for the attribute '{@link RootElement.Booking.Booking#getNrOfRooms <em>Nr Of Rooms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Of Rooms</em>'.
+	 * @see RootElement.Booking.Booking#getNrOfRooms()
+	 * @see #getBooking()
+	 * @generated
+	 */
+	EAttribute getBooking_NrOfRooms();
+
+	/**
 	 * Returns the meta object for class '{@link RootElement.Booking.IBooking <em>IBooking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -645,6 +674,17 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCartManagement_CurrentCart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link RootElement.Booking.CartManagement#getNrOfBookings <em>Nr Of Bookings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Of Bookings</em>'.
+	 * @see RootElement.Booking.CartManagement#getNrOfBookings()
+	 * @see #getCartManagement()
+	 * @generated
+	 */
+	EAttribute getCartManagement_NrOfBookings();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#addCart(RootElement.Booking.Cart) <em>Add Cart</em>}' operation.
@@ -790,6 +830,14 @@ public interface BookingPackage extends EPackage {
 		EAttribute BOOKING__IS_PAID = eINSTANCE.getBooking_IsPaid();
 
 		/**
+		 * The meta object literal for the '<em><b>Nr Of Rooms</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING__NR_OF_ROOMS = eINSTANCE.getBooking_NrOfRooms();
+
+		/**
 		 * The meta object literal for the '{@link RootElement.Booking.IBooking <em>IBooking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -880,6 +928,14 @@ public interface BookingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CART_MANAGEMENT__CURRENT_CART = eINSTANCE.getCartManagement_CurrentCart();
+
+		/**
+		 * The meta object literal for the '<em><b>Nr Of Bookings</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CART_MANAGEMENT__NR_OF_BOOKINGS = eINSTANCE.getCartManagement_NrOfBookings();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Cart</b></em>' operation.

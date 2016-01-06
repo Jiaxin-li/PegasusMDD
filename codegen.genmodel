@@ -58,6 +58,7 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/checkOutDate"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/RoomTypeID"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/isPaid"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/Booking/nrOfRooms"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="RootElement.ecore#//Booking/IBooking">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/IBooking/addBooking">
@@ -92,6 +93,7 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/roomSchedule"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Booking/CartManagement/currentCart"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//Booking/CartManagement/nrOfBookings"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/CartManagement/addCart">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/CartManagement/addCart/cart"/>
         </genOperations>

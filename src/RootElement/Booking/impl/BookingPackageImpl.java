@@ -282,6 +282,15 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBooking_NrOfRooms() {
+		return (EAttribute)bookingEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIBooking() {
 		return iBookingEClass;
 	}
@@ -381,6 +390,15 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCartManagement_NrOfBookings() {
+		return (EAttribute)cartManagementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getCartManagement__AddCart__Cart() {
 		return cartManagementEClass.getEOperations().get(0);
 	}
@@ -435,6 +453,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		createEAttribute(bookingEClass, BOOKING__CHECK_OUT_DATE);
 		createEAttribute(bookingEClass, BOOKING__ROOM_TYPE_ID);
 		createEAttribute(bookingEClass, BOOKING__IS_PAID);
+		createEAttribute(bookingEClass, BOOKING__NR_OF_ROOMS);
 
 		iBookingEClass = createEClass(IBOOKING);
 		createEOperation(iBookingEClass, IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT);
@@ -448,6 +467,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		createEReference(cartManagementEClass, CART_MANAGEMENT__ROOM_TYPE_MANAGEMENT);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__ROOM_SCHEDULE);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CURRENT_CART);
+		createEAttribute(cartManagementEClass, CART_MANAGEMENT__NR_OF_BOOKINGS);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___ADD_CART__CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT);
 	}
@@ -503,6 +523,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		initEAttribute(getBooking_CheckOutDate(), ecorePackage.getEDate(), "checkOutDate", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_RoomTypeID(), ecorePackage.getEInt(), "RoomTypeID", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_IsPaid(), ecorePackage.getEBoolean(), "isPaid", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBooking_NrOfRooms(), ecorePackage.getEInt(), "nrOfRooms", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iBookingEClass, IBooking.class, "IBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -533,6 +554,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		initEReference(getCartManagement_RoomTypeManagement(), theRoomPackage.getRoomTypeManagment(), null, "roomTypeManagement", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCartManagement_RoomSchedule(), theSchedulePackage.getRoomSchedule(), null, "roomSchedule", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCartManagement_CurrentCart(), this.getCart(), null, "currentCart", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCartManagement_NrOfBookings(), ecorePackage.getEInt(), "nrOfBookings", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getCartManagement__AddCart__Cart(), ecorePackage.getEBoolean(), "addCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getCart(), "cart", 1, 1, IS_UNIQUE, !IS_ORDERED);

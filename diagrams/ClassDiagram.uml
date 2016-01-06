@@ -45,6 +45,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pLmDwLMTEeWHIvMzXHZtXw" name="isPaid">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vzVGQLSTEeWiCuMiyiarcA" name="nrOfRooms">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_U5aqUJ3mEeWFr_oidmlDRQ" name="IBooking" isLeaf="true" isAbstract="true">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_R-qxEKACEeWP0I_OcFkqgQ" name="addBooking">
@@ -116,6 +119,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_l54m0LSREeWiCuMiyiarcA" name="roomTypeManagement" type="_y_tZ4J8iEeWXa8dgAQ47Zw"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_DKTM4LSSEeWiCuMiyiarcA" name="roomSchedule" type="_Oya38J0XEeWUbYw76XS34g"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_QXiDMLSSEeWiCuMiyiarcA" name="currentCart" type="_jczMYJ0DEeWhTeq8ShgRSA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_G12msLSUEeWiCuMiyiarcA" name="nrOfBookings" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_v4ad0LPTEeWpV6Nm8aL7Kw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_U5aqUJ3mEeWFr_oidmlDRQ" contract="_U5aqUJ3mEeWFr_oidmlDRQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_jQuEELQAEeWIGvgV-A9CnQ" name="addCart" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_t4qTILQAEeWIGvgV-A9CnQ" name="cart" type="_jczMYJ0DEeWhTeq8ShgRSA"/>

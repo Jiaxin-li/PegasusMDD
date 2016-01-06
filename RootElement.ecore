@@ -35,6 +35,8 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPaid" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrOfRooms" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IBooking" abstract="true" interface="true">
       <eOperations name="addBooking" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -75,6 +77,8 @@
           lowerBound="1" eType="#//Schedule/RoomSchedule"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="currentCart" ordered="false"
           lowerBound="1" eType="#//Booking/Cart"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrOfBookings" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Account" nsURI="http:///RootElement/Account.ecore" nsPrefix="RootElement.Account">

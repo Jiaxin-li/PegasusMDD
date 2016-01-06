@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getRoomTypeManagement <em>Room Type Management</em>}</li>
  *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getRoomSchedule <em>Room Schedule</em>}</li>
  *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getCurrentCart <em>Current Cart</em>}</li>
+ *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getNrOfBookings <em>Nr Of Bookings</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,6 +82,26 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected Cart currentCart;
+
+	/**
+	 * The default value of the '{@link #getNrOfBookings() <em>Nr Of Bookings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrOfBookings()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_OF_BOOKINGS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNrOfBookings() <em>Nr Of Bookings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrOfBookings()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nrOfBookings = NR_OF_BOOKINGS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -304,6 +325,27 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNrOfBookings() {
+		return nrOfBookings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNrOfBookings(int newNrOfBookings) {
+		int oldNrOfBookings = nrOfBookings;
+		nrOfBookings = newNrOfBookings;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.CART_MANAGEMENT__NR_OF_BOOKINGS, oldNrOfBookings, nrOfBookings));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -360,6 +402,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				if (resolve) return getCurrentCart();
 				return basicGetCurrentCart();
+			case BookingPackage.CART_MANAGEMENT__NR_OF_BOOKINGS:
+				return getNrOfBookings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -386,6 +430,9 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				setCurrentCart((Cart)newValue);
 				return;
+			case BookingPackage.CART_MANAGEMENT__NR_OF_BOOKINGS:
+				setNrOfBookings((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -410,6 +457,9 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				setCurrentCart((Cart)null);
 				return;
+			case BookingPackage.CART_MANAGEMENT__NR_OF_BOOKINGS:
+				setNrOfBookings(NR_OF_BOOKINGS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -430,6 +480,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return roomSchedule != null;
 			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
 				return currentCart != null;
+			case BookingPackage.CART_MANAGEMENT__NR_OF_BOOKINGS:
+				return nrOfBookings != NR_OF_BOOKINGS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -458,6 +510,22 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return deleteCart((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nrOfBookings: ");
+		result.append(nrOfBookings);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CartManagementImpl

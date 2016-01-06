@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link RootElement.Booking.impl.BookingImpl#getCheckOutDate <em>Check Out Date</em>}</li>
  *   <li>{@link RootElement.Booking.impl.BookingImpl#getRoomTypeID <em>Room Type ID</em>}</li>
  *   <li>{@link RootElement.Booking.impl.BookingImpl#isPaid <em>Is Paid</em>}</li>
+ *   <li>{@link RootElement.Booking.impl.BookingImpl#getNrOfRooms <em>Nr Of Rooms</em>}</li>
  * </ul>
  *
  * @generated
@@ -131,6 +132,26 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected boolean isPaid = IS_PAID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNrOfRooms() <em>Nr Of Rooms</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrOfRooms()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_OF_ROOMS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNrOfRooms() <em>Nr Of Rooms</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrOfRooms()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nrOfRooms = NR_OF_ROOMS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -261,6 +282,27 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNrOfRooms() {
+		return nrOfRooms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNrOfRooms(int newNrOfRooms) {
+		int oldNrOfRooms = nrOfRooms;
+		nrOfRooms = newNrOfRooms;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.BOOKING__NR_OF_ROOMS, oldNrOfRooms, nrOfRooms));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -274,6 +316,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getRoomTypeID();
 			case BookingPackage.BOOKING__IS_PAID:
 				return isPaid();
+			case BookingPackage.BOOKING__NR_OF_ROOMS:
+				return getNrOfRooms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -300,6 +344,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return;
 			case BookingPackage.BOOKING__IS_PAID:
 				setIsPaid((Boolean)newValue);
+				return;
+			case BookingPackage.BOOKING__NR_OF_ROOMS:
+				setNrOfRooms((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -328,6 +375,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingPackage.BOOKING__IS_PAID:
 				setIsPaid(IS_PAID_EDEFAULT);
 				return;
+			case BookingPackage.BOOKING__NR_OF_ROOMS:
+				setNrOfRooms(NR_OF_ROOMS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -350,6 +400,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return roomTypeID != ROOM_TYPE_ID_EDEFAULT;
 			case BookingPackage.BOOKING__IS_PAID:
 				return isPaid != IS_PAID_EDEFAULT;
+			case BookingPackage.BOOKING__NR_OF_ROOMS:
+				return nrOfRooms != NR_OF_ROOMS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -374,6 +426,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(roomTypeID);
 		result.append(", isPaid: ");
 		result.append(isPaid);
+		result.append(", nrOfRooms: ");
+		result.append(nrOfRooms);
 		result.append(')');
 		return result.toString();
 	}
