@@ -56,7 +56,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected Cart currentCart = null;
+	protected Cart currentCart;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,28 +113,6 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Cart basicGetCurrentCart() {
 		return currentCart;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int cartID, int nrOfRooms) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean editBooking(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -220,6 +198,28 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean editBooking(int bookingID, int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -294,10 +294,10 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookingPackage.CART_MANAGEMENT___ADD_BOOKING__INT_DATE_DATE_INT_INT:
-				return addBooking((Integer)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
-			case BookingPackage.CART_MANAGEMENT___EDIT_BOOKING__INT:
-				return editBooking((Integer)arguments.get(0));
+			case BookingPackage.CART_MANAGEMENT___ADD_BOOKING__INT_DATE_DATE_INT:
+				return addBooking((Integer)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (Integer)arguments.get(3));
+			case BookingPackage.CART_MANAGEMENT___EDIT_BOOKING__INT_INT_DATE_DATE_INT:
+				return editBooking((Integer)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3), (Integer)arguments.get(4));
 			case BookingPackage.CART_MANAGEMENT___DELETE_BOOKING__INT:
 				return deleteBooking((Integer)arguments.get(0));
 			case BookingPackage.CART_MANAGEMENT___GET_BOOKING__INT:

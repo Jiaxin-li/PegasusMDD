@@ -63,11 +63,14 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/roomTypeID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/checkInDate"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/checkOutDate"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/cartID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/addBooking/nrOfRooms"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/IBooking/editBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/editBooking/bookingID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/editBooking/roomTypeID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/editBooking/checkInDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/editBooking/checkOutDate"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/editBooking/nrOfRooms"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Booking/IBooking/deleteBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Booking/IBooking/deleteBooking/bookingID"/>

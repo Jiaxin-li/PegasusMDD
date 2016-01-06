@@ -60,9 +60,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_X8lV0KBWEeW2lvhfsni2Sw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6r9AELOrEeWLMYchbvDiAw" name="cartID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_SThgwLPMEeWpV6Nm8aL7Kw" name="nrOfRooms">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
@@ -73,6 +70,18 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_IexSEKBYEeW2lvhfsni2Sw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XqVdELR_EeWJZvxeW-mhBA" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bfw2gLR_EeWJZvxeW-mhBA" name="checkInDate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iE6lkLR_EeWJZvxeW-mhBA" name="checkOutDate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kWJBULR_EeWJZvxeW-mhBA" name="nrOfRooms">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_kpWG4KBXEeW2lvhfsni2Sw" name="deleteBooking">

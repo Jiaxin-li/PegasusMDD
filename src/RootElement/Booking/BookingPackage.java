@@ -229,7 +229,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT_INT = 0;
+	int IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
@@ -238,7 +238,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING___EDIT_BOOKING__INT = 1;
+	int IBOOKING___EDIT_BOOKING__INT_INT_DATE_DATE_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -320,7 +320,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT___ADD_BOOKING__INT_DATE_DATE_INT_INT = IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT_INT;
+	int CART_MANAGEMENT___ADD_BOOKING__INT_DATE_DATE_INT = IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT;
 
 	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
@@ -329,7 +329,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT___EDIT_BOOKING__INT = IBOOKING___EDIT_BOOKING__INT;
+	int CART_MANAGEMENT___EDIT_BOOKING__INT_INT_DATE_DATE_INT = IBOOKING___EDIT_BOOKING__INT_INT_DATE_DATE_INT;
 
 	/**
 	 * The operation id for the '<em>Delete Booking</em>' operation.
@@ -525,24 +525,24 @@ public interface BookingPackage extends EPackage {
 	EClass getIBooking();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#addBooking(int, java.util.Date, java.util.Date, int, int) <em>Add Booking</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#addBooking(int, java.util.Date, java.util.Date, int) <em>Add Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Booking</em>' operation.
-	 * @see RootElement.Booking.IBooking#addBooking(int, java.util.Date, java.util.Date, int, int)
+	 * @see RootElement.Booking.IBooking#addBooking(int, java.util.Date, java.util.Date, int)
 	 * @generated
 	 */
-	EOperation getIBooking__AddBooking__int_Date_Date_int_int();
+	EOperation getIBooking__AddBooking__int_Date_Date_int();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#editBooking(int) <em>Edit Booking</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#editBooking(int, int, java.util.Date, java.util.Date, int) <em>Edit Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Booking</em>' operation.
-	 * @see RootElement.Booking.IBooking#editBooking(int)
+	 * @see RootElement.Booking.IBooking#editBooking(int, int, java.util.Date, java.util.Date, int)
 	 * @generated
 	 */
-	EOperation getIBooking__EditBooking__int();
+	EOperation getIBooking__EditBooking__int_int_Date_Date_int();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Booking.IBooking#deleteBooking(int) <em>Delete Booking</em>}' operation.
@@ -765,7 +765,7 @@ public interface BookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT_INT = eINSTANCE.getIBooking__AddBooking__int_Date_Date_int_int();
+		EOperation IBOOKING___ADD_BOOKING__INT_DATE_DATE_INT = eINSTANCE.getIBooking__AddBooking__int_Date_Date_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.
@@ -773,7 +773,7 @@ public interface BookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING___EDIT_BOOKING__INT = eINSTANCE.getIBooking__EditBooking__int();
+		EOperation IBOOKING___EDIT_BOOKING__INT_INT_DATE_DATE_INT = eINSTANCE.getIBooking__EditBooking__int_int_Date_Date_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Delete Booking</b></em>' operation.
