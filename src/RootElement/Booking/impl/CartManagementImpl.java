@@ -368,6 +368,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				booking.setCheckInDate(checkInDate);
 				booking.setCheckOutDate(checkOutDate);
 				booking.setIsPaid(false);
+				booking.setNrOfRooms(nrOfRooms);
 				booking.setRoomTypeID(roomTypeID);
 				booking.setBookingID(getNrOfBookings());
 				roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, nrOfRooms);
