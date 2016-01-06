@@ -169,7 +169,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void deleteCart(int CartID, boolean result) {
+	public boolean deleteCart(int CartID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -266,9 +266,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return validateBooking((Integer)arguments.get(0));
 			case BookingPackage.CART_MANAGEMENT___ADD_CART__CART:
 				return addCart((Cart)arguments.get(0));
-			case BookingPackage.CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN:
-				deleteCart((Integer)arguments.get(0), (Boolean)arguments.get(1));
-				return null;
+			case BookingPackage.CART_MANAGEMENT___DELETE_CART__INT:
+				return deleteCart((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

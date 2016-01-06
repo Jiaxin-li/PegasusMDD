@@ -70,4 +70,12 @@
             genModel="codegen.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codegen -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="org.eclipse.uml2.types.TypesPackage"
+            genModel="codegen.genmodel"/>
+   </extension>
+
 </plugin>

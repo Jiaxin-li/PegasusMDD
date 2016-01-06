@@ -3,7 +3,6 @@
 package RootElement.Account.impl;
 
 import RootElement.Account.AccountPackage;
-import RootElement.Account.GuestAccount;
 import RootElement.Account.StaffAccount;
 import RootElement.Account.StaffAccountManagement;
 

@@ -81,14 +81,7 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	public Room getAvailiableRoom(int RoomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		//throw new UnsupportedOperationException();
-		EList<Room> rl = getRooms();
-		for(Room r : rl){
-			if (r.getRoomType().getRoomTypeID()==RoomTypeID && r.isAvailable()){
-				return r;
-			}
-		}
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -99,9 +92,7 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	public boolean addRoom(Room room) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		//throw new UnsupportedOperationException();
-		rooms.add(room);
-		return true;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -112,14 +103,7 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	public Room getRoom(int roomNr) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		//throw new UnsupportedOperationException();
-		EList<Room> rl = getRooms();
-		for(Room r : rl){
-			if (r.getRoomNumber()==roomNr){
-				return r;
-			}
-		}
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -130,15 +114,7 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	public int getRoomNr(int roomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		//throw new UnsupportedOperationException();
-		int count =0;
-		EList<Room> rl = getRooms();
-		for(Room r : rl){
-			if (r.getRoomType().getRoomTypeID() == roomTypeID){
-				count ++;
-			}
-		}
-		return count;
+		throw new UnsupportedOperationException();
 	}
 
 	/**

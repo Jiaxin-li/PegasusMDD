@@ -2,7 +2,6 @@
  */
 package RootElement.Service.impl;
 
-import RootElement.Room.RoomType;
 import RootElement.Service.ServicePackage;
 import RootElement.Service.ServiceType;
 import RootElement.Service.ServiceTypeManagment;

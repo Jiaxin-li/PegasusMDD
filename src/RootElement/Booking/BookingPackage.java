@@ -374,7 +374,7 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN = IBOOKING_OPERATION_COUNT + 1;
+	int CART_MANAGEMENT___DELETE_CART__INT = IBOOKING_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Cart Management</em>' class.
@@ -617,14 +617,14 @@ public interface BookingPackage extends EPackage {
 	EOperation getCartManagement__AddCart__Cart();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#deleteCart(int, boolean) <em>Delete Cart</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#deleteCart(int) <em>Delete Cart</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Delete Cart</em>' operation.
-	 * @see RootElement.Booking.CartManagement#deleteCart(int, boolean)
+	 * @see RootElement.Booking.CartManagement#deleteCart(int)
 	 * @generated
 	 */
-	EOperation getCartManagement__DeleteCart__int_boolean();
+	EOperation getCartManagement__DeleteCart__int();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -839,7 +839,7 @@ public interface BookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN = eINSTANCE.getCartManagement__DeleteCart__int_boolean();
+		EOperation CART_MANAGEMENT___DELETE_CART__INT = eINSTANCE.getCartManagement__DeleteCart__int();
 
 	}
 

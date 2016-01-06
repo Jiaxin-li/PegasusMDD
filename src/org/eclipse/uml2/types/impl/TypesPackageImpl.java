@@ -1,6 +1,6 @@
 /**
  */
-package RootElement.Payment.impl;
+package org.eclipse.uml2.types.impl;
 
 import RootElement.Account.AccountPackage;
 
@@ -14,9 +14,9 @@ import RootElement.CheckIO.CheckIOPackage;
 
 import RootElement.CheckIO.impl.CheckIOPackageImpl;
 
-import RootElement.Payment.IPayment;
-import RootElement.Payment.PaymentFactory;
 import RootElement.Payment.PaymentPackage;
+
+import RootElement.Payment.impl.PaymentPackageImpl;
 
 import RootElement.Room.RoomPackage;
 
@@ -34,14 +34,13 @@ import RootElement.Task.TaskPackage;
 
 import RootElement.Task.impl.TaskPackageImpl;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,13 +48,41 @@ import org.eclipse.uml2.types.impl.TypesPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
+public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iPaymentEClass = null;
+	private EDataType booleanEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType integerEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType realEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType unlimitedNaturalEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType stringEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -68,12 +95,12 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see RootElement.Payment.PaymentPackage#eNS_URI
+	 * @see org.eclipse.uml2.types.TypesPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private PaymentPackageImpl() {
-		super(eNS_URI, PaymentFactory.eINSTANCE);
+	private TypesPackageImpl() {
+		super(eNS_URI, TypesFactory.eINSTANCE);
 	}
 
 	/**
@@ -86,7 +113,7 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link PaymentPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link TypesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,15 +122,16 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static PaymentPackage init() {
-		if (isInited) return (PaymentPackage)EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI);
+	public static TypesPackage init() {
+		if (isInited) return (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		PaymentPackageImpl thePaymentPackage = (PaymentPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof PaymentPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new PaymentPackageImpl());
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TypesPackageImpl());
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
+		PaymentPackageImpl thePaymentPackage = (PaymentPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) instanceof PaymentPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) : PaymentPackage.eINSTANCE);
 		BookingPackageImpl theBookingPackage = (BookingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BookingPackage.eNS_URI) instanceof BookingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BookingPackage.eNS_URI) : BookingPackage.eINSTANCE);
 		AccountPackageImpl theAccountPackage = (AccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) instanceof AccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) : AccountPackage.eINSTANCE);
 		RoomPackageImpl theRoomPackage = (RoomPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI) instanceof RoomPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI) : RoomPackage.eINSTANCE);
@@ -111,9 +139,9 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 		TaskPackageImpl theTaskPackage = (TaskPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) instanceof TaskPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) : TaskPackage.eINSTANCE);
 		CheckIOPackageImpl theCheckIOPackage = (CheckIOPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) instanceof CheckIOPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) : CheckIOPackage.eINSTANCE);
 		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
+		theTypesPackage.createPackageContents();
 		thePaymentPackage.createPackageContents();
 		theBookingPackage.createPackageContents();
 		theAccountPackage.createPackageContents();
@@ -122,9 +150,9 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 		theTaskPackage.createPackageContents();
 		theCheckIOPackage.createPackageContents();
 		theSchedulePackage.createPackageContents();
-		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
+		theTypesPackage.initializePackageContents();
 		thePaymentPackage.initializePackageContents();
 		theBookingPackage.initializePackageContents();
 		theAccountPackage.initializePackageContents();
@@ -133,15 +161,14 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 		theTaskPackage.initializePackageContents();
 		theCheckIOPackage.initializePackageContents();
 		theSchedulePackage.initializePackageContents();
-		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		thePaymentPackage.freeze();
+		theTypesPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(PaymentPackage.eNS_URI, thePaymentPackage);
-		return thePaymentPackage;
+		EPackage.Registry.INSTANCE.put(TypesPackage.eNS_URI, theTypesPackage);
+		return theTypesPackage;
 	}
 
 	/**
@@ -149,8 +176,8 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIPayment() {
-		return iPaymentEClass;
+	public EDataType getBoolean() {
+		return booleanEDataType;
 	}
 
 	/**
@@ -158,8 +185,8 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIPayment__InitiatePayment() {
-		return iPaymentEClass.getEOperations().get(0);
+	public EDataType getInteger() {
+		return integerEDataType;
 	}
 
 	/**
@@ -167,8 +194,8 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIPayment__CommencePayment() {
-		return iPaymentEClass.getEOperations().get(1);
+	public EDataType getReal() {
+		return realEDataType;
 	}
 
 	/**
@@ -176,8 +203,26 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PaymentFactory getPaymentFactory() {
-		return (PaymentFactory)getEFactoryInstance();
+	public EDataType getUnlimitedNatural() {
+		return unlimitedNaturalEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getString() {
+		return stringEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypesFactory getTypesFactory() {
+		return (TypesFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -198,10 +243,12 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 		if (isCreated) return;
 		isCreated = true;
 
-		// Create classes and their features
-		iPaymentEClass = createEClass(IPAYMENT);
-		createEOperation(iPaymentEClass, IPAYMENT___INITIATE_PAYMENT);
-		createEOperation(iPaymentEClass, IPAYMENT___COMMENCE_PAYMENT);
+		// Create data types
+		booleanEDataType = createEDataType(BOOLEAN);
+		integerEDataType = createEDataType(INTEGER);
+		realEDataType = createEDataType(REAL);
+		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
+		stringEDataType = createEDataType(STRING);
 	}
 
 	/**
@@ -227,21 +274,35 @@ public class PaymentPackageImpl extends EPackageImpl implements PaymentPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Create type parameters
-
-		// Set bounds for type parameters
-
-		// Add supertypes to classes
-
-		// Initialize classes, features, and operations; add parameters
-		initEClass(iPaymentEClass, IPayment.class, "IPayment", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getIPayment__InitiatePayment(), null, "initiatePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIPayment__CommencePayment(), null, "commencePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		// Initialize data types
+		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/uml2/2.0.0/UML
+		createUMLAnnotations();
 	}
 
-} //PaymentPackageImpl
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "originalName", "PrimitiveTypes"
+		   });
+	}
+
+} //TypesPackageImpl
