@@ -2,6 +2,7 @@
  */
 package RootElement.Booking.impl;
 
+import RootElement.Account.StaffAccount;
 import RootElement.Booking.Booking;
 import RootElement.Booking.BookingPackage;
 import RootElement.Booking.Cart;
@@ -15,6 +16,7 @@ import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -48,10 +50,9 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCarts()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<Cart> carts;
+	protected EList<Cart> carts = new BasicEList<Cart>();
 
 	/**
 	 * The cached value of the '{@link #getRoomTypeManagement() <em>Room Type Management</em>}' reference.
@@ -370,6 +371,11 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				booking.setNrOfRooms(nrOfRooms);
 				booking.setRoomTypeID(roomTypeID);
 				booking.setBookingID(getNrOfBookings());
+				
+				EList<Booking> bookings = currentCart.getBookings();
+				bookings.add(booking);
+				//currentCart
+				
 				roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, nrOfRooms);
 				nrOfBookings++;
 			} catch (Exception e) {

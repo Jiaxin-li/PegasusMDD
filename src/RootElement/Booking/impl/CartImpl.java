@@ -3,7 +3,7 @@
 package RootElement.Booking.impl;
 
 import RootElement.Account.GuestAccount;
-
+import RootElement.Account.StaffAccount;
 import RootElement.Booking.Booking;
 import RootElement.Booking.BookingPackage;
 import RootElement.Booking.Cart;
@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -45,10 +45,9 @@ public class CartImpl extends MinimalEObjectImpl.Container implements Cart {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBookings()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<Booking> bookings;
+	protected EList<Booking> bookings = new BasicEList<Booking>();
 
 	/**
 	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' reference.

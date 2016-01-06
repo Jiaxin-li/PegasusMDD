@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -62,20 +62,18 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStaffs()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<StaffAccount> staffs;
+	protected EList<StaffAccount> staffs = new BasicEList<StaffAccount>();
 
 	/**
 	 * The cached value of the '{@link #getBindedRooms() <em>Binded Rooms</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBindedRooms()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomBinder> bindedRooms;
+	protected EList<RoomBinder> bindedRooms = new BasicEList<RoomBinder>();
 
 	/**
 	 * The cached value of the '{@link #getCartManagement() <em>Cart Management</em>}' reference.
@@ -374,9 +372,15 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 			roombinder = new RoomBinderImpl();
 			roombinder.setBookingID(bookingID);
 			roombinder.setRoom(r);
-			this.bindedRooms.add(roombinder);
+			
+			try {
+				this.bindedRooms.add(roombinder);	
+			} catch(Exception e) {
+				return false;
+			}	
 		}
-		return false;
+		
+		return true;
 	}
 
 	/**

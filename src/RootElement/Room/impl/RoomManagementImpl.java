@@ -10,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -37,10 +38,9 @@ public class RoomManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRooms()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<Room> rooms;
+	protected EList<Room> rooms = new BasicEList<Room>();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -2,6 +2,7 @@
  */
 package RootElement.Room.impl;
 
+import RootElement.Account.StaffAccount;
 import RootElement.Room.RoomPackage;
 import RootElement.Room.RoomType;
 import RootElement.Room.RoomTypeManagment;
@@ -11,7 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -42,10 +43,9 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomtypes()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomType> roomtypes;
+	protected EList<RoomType> roomtypes = new BasicEList<RoomType>();
 
 	/**
 	 * The cached value of the '{@link #getRoomtype() <em>Roomtype</em>}' reference.

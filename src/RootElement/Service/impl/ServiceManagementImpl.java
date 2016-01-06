@@ -2,6 +2,7 @@
  */
 package RootElement.Service.impl;
 
+import RootElement.Account.StaffAccount;
 import RootElement.Service.Service;
 import RootElement.Service.ServiceManagement;
 import RootElement.Service.ServicePackage;
@@ -10,6 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -40,7 +42,7 @@ public class ServiceManagementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Service> services;
+	protected EList<Service> services = new BasicEList<Service>();
 
 	/**
 	 * <!-- begin-user-doc -->

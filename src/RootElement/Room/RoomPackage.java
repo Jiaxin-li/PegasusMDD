@@ -177,22 +177,13 @@ public interface RoomPackage extends EPackage {
 	int ROOM__GUEST_HAS_CHECKED_IN = 4;
 
 	/**
-	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM__ROOMTYPE = 5;
-
-	/**
 	 * The number of structural features of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_FEATURE_COUNT = 6;
+	int ROOM_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Room</em>' class.
@@ -607,17 +598,6 @@ public interface RoomPackage extends EPackage {
 	EAttribute getRoom_GuestHasCheckedIn();
 
 	/**
-	 * Returns the meta object for the reference '{@link RootElement.Room.Room#getRoomtype <em>Roomtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roomtype</em>'.
-	 * @see RootElement.Room.Room#getRoomtype()
-	 * @see #getRoom()
-	 * @generated
-	 */
-	EReference getRoom_Roomtype();
-
-	/**
 	 * Returns the meta object for class '{@link RootElement.Room.IRoom <em>IRoom</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -884,14 +864,6 @@ public interface RoomPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM__GUEST_HAS_CHECKED_IN = eINSTANCE.getRoom_GuestHasCheckedIn();
-
-		/**
-		 * The meta object literal for the '<em><b>Roomtype</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM__ROOMTYPE = eINSTANCE.getRoom_Roomtype();
 
 		/**
 		 * The meta object literal for the '{@link RootElement.Room.IRoom <em>IRoom</em>}' class.

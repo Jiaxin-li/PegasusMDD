@@ -3,7 +3,7 @@
 package RootElement.CheckIO.impl;
 
 import RootElement.Account.GuestAccount;
-
+import RootElement.Account.StaffAccount;
 import RootElement.CheckIO.CheckIOPackage;
 import RootElement.CheckIO.RoomBinder;
 
@@ -16,7 +16,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -59,20 +59,18 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getServices()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<Service> services;
+	protected EList<Service> services  = new BasicEList<Service>();
 
 	/**
 	 * The cached value of the '{@link #getGuests() <em>Guests</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGuests()
-	 * @generated
 	 * @ordered
 	 */
-	protected EList<GuestAccount> guests;
+	protected EList<GuestAccount> guests  = new BasicEList<GuestAccount>();
 
 	/**
 	 * The default value of the '{@link #getBookingID() <em>Booking ID</em>}' attribute.

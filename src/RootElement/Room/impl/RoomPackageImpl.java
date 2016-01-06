@@ -289,15 +289,6 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoom_Roomtype() {
-		return (EReference)roomEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIRoom() {
 		return iRoomEClass;
 	}
@@ -468,7 +459,6 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 		createEAttribute(roomEClass, ROOM__FLOOR_NUMBER);
 		createEReference(roomEClass, ROOM__ROOM_TYPE);
 		createEAttribute(roomEClass, ROOM__GUEST_HAS_CHECKED_IN);
-		createEReference(roomEClass, ROOM__ROOMTYPE);
 
 		iRoomEClass = createEClass(IROOM);
 		createEOperation(iRoomEClass, IROOM___GET_AVAILIABLE_ROOM__INT);
@@ -537,7 +527,6 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 		initEAttribute(getRoom_FloorNumber(), ecorePackage.getEInt(), "floorNumber", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoom_GuestHasCheckedIn(), ecorePackage.getEBoolean(), "guestHasCheckedIn", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoom_Roomtype(), this.getRoomType(), null, "roomtype", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iRoomEClass, IRoom.class, "IRoom", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

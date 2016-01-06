@@ -266,7 +266,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_kMkR4J0CEeWhTeq8ShgRSA" name="Room">
+    <packagedElement xmi:type="uml:Class" xmi:id="_kMkR4J0CEeWhTeq8ShgRSA" name="Room" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Cep2sJ0LEeWhTeq8ShgRSA" name="roomNumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
@@ -280,7 +280,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_QVQaIJ0LEeWhTeq8ShgRSA" name="guestHasCheckedIn">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_jg6JEp3vEeWFr_oidmlDRQ" name="roomtype" type="_jaD24J0CEeWhTeq8ShgRSA" association="_jg5iAJ3vEeWFr_oidmlDRQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_u6SyQJ3mEeWFr_oidmlDRQ" name="IRoom">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_sVM-0J8kEeWXa8dgAQ47Zw" name="getAvailiableRoom" concurrency="concurrent">
@@ -602,12 +601,6 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_PpbSMJ34EeWFr_oidmlDRQ" client="_hNOWcJ0DEeWhTeq8ShgRSA" supplier="_IBbrQJ3mEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_iURnwJ34EeWFr_oidmlDRQ" client="_wzOQYJ0CEeWhTeq8ShgRSA" supplier="_u6SyQJ3mEeWFr_oidmlDRQ"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_jQuo8J34EeWFr_oidmlDRQ" client="_wzOQYJ0CEeWhTeq8ShgRSA" supplier="_nXfIIJ3mEeWFr_oidmlDRQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_jg5iAJ3vEeWFr_oidmlDRQ" memberEnd="_jg6JEp3vEeWFr_oidmlDRQ _jg6JE53vEeWFr_oidmlDRQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jg6JEJ3vEeWFr_oidmlDRQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jg6JEZ3vEeWFr_oidmlDRQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_jg6JE53vEeWFr_oidmlDRQ" name="room" type="_kMkR4J0CEeWhTeq8ShgRSA" association="_jg5iAJ3vEeWFr_oidmlDRQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_kt784J3vEeWFr_oidmlDRQ" memberEnd="_kt8j8p3vEeWFr_oidmlDRQ _kt8j853vEeWFr_oidmlDRQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kt8j8J3vEeWFr_oidmlDRQ" source="org.eclipse.papyrus">

@@ -2,6 +2,7 @@
  */
 package RootElement.Service.impl;
 
+import RootElement.Account.StaffAccount;
 import RootElement.Service.ServicePackage;
 import RootElement.Service.ServiceType;
 import RootElement.Service.ServiceTypeManagment;
@@ -11,7 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -45,7 +46,7 @@ public class ServiceTypeManagmentImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ServiceType> serviceTypes;
+	protected EList<ServiceType> serviceTypes = new BasicEList<ServiceType>();
 
 	/**
 	 * The cached value of the '{@link #getServicetype() <em>Servicetype</em>}' reference.

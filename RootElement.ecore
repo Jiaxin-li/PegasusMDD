@@ -172,8 +172,6 @@
           lowerBound="1" eType="#//Room/RoomType"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="guestHasCheckedIn" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="roomtype" ordered="false"
-          lowerBound="1" eType="#//Room/RoomType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IRoom" abstract="true" interface="true">
       <eOperations name="getAvailiableRoom" ordered="false" lowerBound="1" eType="#//Room/Room">

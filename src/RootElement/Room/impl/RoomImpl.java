@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link RootElement.Room.impl.RoomImpl#getFloorNumber <em>Floor Number</em>}</li>
  *   <li>{@link RootElement.Room.impl.RoomImpl#getRoomType <em>Room Type</em>}</li>
  *   <li>{@link RootElement.Room.impl.RoomImpl#isGuestHasCheckedIn <em>Guest Has Checked In</em>}</li>
- *   <li>{@link RootElement.Room.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
  * </ul>
  *
  * @generated
@@ -122,16 +121,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected boolean guestHasCheckedIn = GUEST_HAS_CHECKED_IN_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRoomtype() <em>Roomtype</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomtype()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoomType roomtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -279,44 +268,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomType getRoomtype() {
-		if (roomtype != null && roomtype.eIsProxy()) {
-			InternalEObject oldRoomtype = (InternalEObject)roomtype;
-			roomtype = (RoomType)eResolveProxy(oldRoomtype);
-			if (roomtype != oldRoomtype) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RoomPackage.ROOM__ROOMTYPE, oldRoomtype, roomtype));
-			}
-		}
-		return roomtype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomType basicGetRoomtype() {
-		return roomtype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoomtype(RoomType newRoomtype) {
-		RoomType oldRoomtype = roomtype;
-		roomtype = newRoomtype;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RoomPackage.ROOM__ROOMTYPE, oldRoomtype, roomtype));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -331,9 +282,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return basicGetRoomType();
 			case RoomPackage.ROOM__GUEST_HAS_CHECKED_IN:
 				return isGuestHasCheckedIn();
-			case RoomPackage.ROOM__ROOMTYPE:
-				if (resolve) return getRoomtype();
-				return basicGetRoomtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -360,9 +308,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return;
 			case RoomPackage.ROOM__GUEST_HAS_CHECKED_IN:
 				setGuestHasCheckedIn((Boolean)newValue);
-				return;
-			case RoomPackage.ROOM__ROOMTYPE:
-				setRoomtype((RoomType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -391,9 +336,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case RoomPackage.ROOM__GUEST_HAS_CHECKED_IN:
 				setGuestHasCheckedIn(GUEST_HAS_CHECKED_IN_EDEFAULT);
 				return;
-			case RoomPackage.ROOM__ROOMTYPE:
-				setRoomtype((RoomType)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -416,8 +358,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return roomType != null;
 			case RoomPackage.ROOM__GUEST_HAS_CHECKED_IN:
 				return guestHasCheckedIn != GUEST_HAS_CHECKED_IN_EDEFAULT;
-			case RoomPackage.ROOM__ROOMTYPE:
-				return roomtype != null;
 		}
 		return super.eIsSet(featureID);
 	}
