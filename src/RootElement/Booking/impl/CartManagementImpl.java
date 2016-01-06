@@ -347,9 +347,37 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		Date currentDate = new Date();
+		if(roomTypeManagement.validateRoomType(roomTypeID)==false) {
+			return false;
+		} else if(checkInDate.compareTo(checkOutDate)>=0) {
+			return false;
+		} else if(checkInDate.compareTo(currentDate)<=0) {
+			return false;
+		} else if(checkOutDate.compareTo(currentDate)<=0) {
+			return false;
+		} else if(nrOfRooms>roomSchedule.checkAvailable(roomTypeID, checkInDate, checkOutDate)) {
+			return false;
+		} else if(nrOfRooms<0){
+			return false;
+		} else {
+			try {					
+				BookingFactoryImpl factory = new BookingFactoryImpl();
+				Booking booking = factory.createBooking();
+				booking.setCheckInDate(checkInDate);
+				booking.setCheckOutDate(checkOutDate);
+				booking.setIsPaid(false);
+				booking.setRoomTypeID(roomTypeID);
+				booking.setBookingID(getNrOfBookings());
+				roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, nrOfRooms);
+				nrOfBookings++;
+			} catch (Exception e) {
+				return false;
+			}
+			return true;
+		}
+
 	}
 
 	/**
