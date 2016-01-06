@@ -156,12 +156,17 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public boolean addCart(Cart cart) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int numberOfCarts = carts.size();
+		int cartID = numberOfCarts + 1;
+		cart.setCartID(cartID);
+		try {
+			carts.add(cart);	
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
 	}
 
 	/**
