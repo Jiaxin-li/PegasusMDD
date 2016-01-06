@@ -65,7 +65,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
           upperBound="-1" eType="#//Booking/Cart"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="currentCart" ordered="false"
-          eType="#//Booking/Cart"/>
+          lowerBound="1" eType="#//Booking/Cart"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Account" nsURI="http:///RootElement/Account.ecore" nsPrefix="RootElement.Account">

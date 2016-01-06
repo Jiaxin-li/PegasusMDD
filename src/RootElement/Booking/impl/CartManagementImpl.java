@@ -56,7 +56,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected Cart currentCart;
+	protected Cart currentCart = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,12 +151,13 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public Booking getBooking(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(currentCart == null){
+			throw new RuntimeException();
+		}
+		EList<Booking> bookings = currentCart.getBookings();
+		return bookings.get(bookingID);
 	}
 
 	/**

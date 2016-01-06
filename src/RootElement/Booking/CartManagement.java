@@ -49,7 +49,7 @@ public interface CartManagement extends IBooking {
 	 * @return the value of the '<em>Current Cart</em>' reference.
 	 * @see #setCurrentCart(Cart)
 	 * @see RootElement.Booking.BookingPackage#getCartManagement_CurrentCart()
-	 * @model ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Cart getCurrentCart();
