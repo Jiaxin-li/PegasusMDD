@@ -129,13 +129,21 @@ public class GuestAccountMangementImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public GuestAccount getGuest(int guestID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+		//throw new UnsupportedOperationException();
+		EList<GuestAccount> gl = getGuestAccounts();
+			for (GuestAccount g : gl){
+				if (g.getID() == guestID){
+					return g;
+				}
+			}
+			return null;
+		}
+	
 
 	/**
 	 * <!-- begin-user-doc -->

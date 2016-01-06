@@ -2,6 +2,7 @@
  */
 package RootElement.Service.impl;
 
+import RootElement.Room.RoomType;
 import RootElement.Service.ServicePackage;
 import RootElement.Service.ServiceType;
 import RootElement.Service.ServiceTypeManagment;
@@ -129,46 +130,74 @@ public class ServiceTypeManagmentImpl extends MinimalEObjectImpl.Container imple
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addServiceType(String ServiceTypeName, int price) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		ServiceType st = new ServiceTypeImpl();
+		st.setServiceTypeName(ServiceTypeName);
+		st.setPrice(price);
+		st.setServiceTypeID(serviceTypes.size());
+		serviceTypes.add(st);
+		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean deleteServiceType(int serviceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		EList<ServiceType> rtl = getServiceTypes();
+		int index =0;
+		for (ServiceType rt : rtl){
+			if(rt.getServiceTypeID() == serviceTypeID){
+				rtl.remove(index);
+				return true;
+			}
+			index ++;
+		}
+		return false;
 	}
+	
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editServiceType(int ServiceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean validateServiceType(int serviceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		
+		EList<ServiceType> rtl = getServiceTypes();
+		for (ServiceType rt : rtl){
+			if(rt.getServiceTypeID() == serviceTypeID){
+				return true;
+			}
+			
+		}
+		return false;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

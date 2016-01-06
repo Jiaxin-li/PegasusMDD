@@ -76,12 +76,19 @@ public class ServiceManagementImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Service getService(int ServiceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		EList<Service> sl = getServices();
+		for (Service s : sl ){
+			if (s.getServiceID() == ServiceTypeID){
+				return s;
+			}
+		}
+		return null;
 	}
 
 	/**
