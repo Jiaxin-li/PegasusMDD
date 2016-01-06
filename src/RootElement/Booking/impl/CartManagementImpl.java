@@ -344,7 +344,6 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
 		
