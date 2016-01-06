@@ -1,6 +1,6 @@
 /**
  */
-package RootElement.Schedule.impl;
+package org.eclipse.uml2.types.impl;
 
 import RootElement.Account.AccountPackage;
 
@@ -22,11 +22,9 @@ import RootElement.Room.RoomPackage;
 
 import RootElement.Room.impl.RoomPackageImpl;
 
-import RootElement.Schedule.AvailablityMap;
-import RootElement.Schedule.ISchedule;
-import RootElement.Schedule.RoomSchedule;
-import RootElement.Schedule.ScheduleFactory;
 import RootElement.Schedule.SchedulePackage;
+
+import RootElement.Schedule.impl.SchedulePackageImpl;
 
 import RootElement.Service.ServicePackage;
 
@@ -36,16 +34,13 @@ import RootElement.Task.TaskPackage;
 
 import RootElement.Task.impl.TaskPackageImpl;
 
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.uml2.types.TypesFactory;
 import org.eclipse.uml2.types.TypesPackage;
-import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,27 +48,41 @@ import org.eclipse.uml2.types.impl.TypesPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage {
+public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass availablityMapEClass = null;
+	private EDataType booleanEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass roomScheduleEClass = null;
+	private EDataType integerEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iScheduleEClass = null;
+	private EDataType realEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType unlimitedNaturalEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType stringEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -86,12 +95,12 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see RootElement.Schedule.SchedulePackage#eNS_URI
+	 * @see org.eclipse.uml2.types.TypesPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private SchedulePackageImpl() {
-		super(eNS_URI, ScheduleFactory.eINSTANCE);
+	private TypesPackageImpl() {
+		super(eNS_URI, TypesFactory.eINSTANCE);
 	}
 
 	/**
@@ -104,7 +113,7 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link SchedulePackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link TypesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,11 +122,11 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static SchedulePackage init() {
-		if (isInited) return (SchedulePackage)EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI);
+	public static TypesPackage init() {
+		if (isInited) return (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SchedulePackageImpl());
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TypesPackageImpl());
 
 		isInited = true;
 
@@ -129,10 +138,10 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 		ServicePackageImpl theServicePackage = (ServicePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ServicePackage.eNS_URI) instanceof ServicePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ServicePackage.eNS_URI) : ServicePackage.eINSTANCE);
 		TaskPackageImpl theTaskPackage = (TaskPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) instanceof TaskPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) : TaskPackage.eINSTANCE);
 		CheckIOPackageImpl theCheckIOPackage = (CheckIOPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) instanceof CheckIOPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) : CheckIOPackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
+		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theSchedulePackage.createPackageContents();
+		theTypesPackage.createPackageContents();
 		thePaymentPackage.createPackageContents();
 		theBookingPackage.createPackageContents();
 		theAccountPackage.createPackageContents();
@@ -140,10 +149,10 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 		theServicePackage.createPackageContents();
 		theTaskPackage.createPackageContents();
 		theCheckIOPackage.createPackageContents();
-		theTypesPackage.createPackageContents();
+		theSchedulePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theSchedulePackage.initializePackageContents();
+		theTypesPackage.initializePackageContents();
 		thePaymentPackage.initializePackageContents();
 		theBookingPackage.initializePackageContents();
 		theAccountPackage.initializePackageContents();
@@ -151,15 +160,15 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 		theServicePackage.initializePackageContents();
 		theTaskPackage.initializePackageContents();
 		theCheckIOPackage.initializePackageContents();
-		theTypesPackage.initializePackageContents();
+		theSchedulePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theSchedulePackage.freeze();
+		theTypesPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(SchedulePackage.eNS_URI, theSchedulePackage);
-		return theSchedulePackage;
+		EPackage.Registry.INSTANCE.put(TypesPackage.eNS_URI, theTypesPackage);
+		return theTypesPackage;
 	}
 
 	/**
@@ -167,8 +176,8 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAvailablityMap() {
-		return availablityMapEClass;
+	public EDataType getBoolean() {
+		return booleanEDataType;
 	}
 
 	/**
@@ -176,8 +185,8 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAvailablityMap_RoomType() {
-		return (EReference)availablityMapEClass.getEStructuralFeatures().get(0);
+	public EDataType getInteger() {
+		return integerEDataType;
 	}
 
 	/**
@@ -185,8 +194,8 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAvailablityMap_Available() {
-		return (EAttribute)availablityMapEClass.getEStructuralFeatures().get(1);
+	public EDataType getReal() {
+		return realEDataType;
 	}
 
 	/**
@@ -194,8 +203,8 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAvailablityMap_Date() {
-		return (EAttribute)availablityMapEClass.getEStructuralFeatures().get(2);
+	public EDataType getUnlimitedNatural() {
+		return unlimitedNaturalEDataType;
 	}
 
 	/**
@@ -203,8 +212,8 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRoomSchedule() {
-		return roomScheduleEClass;
+	public EDataType getString() {
+		return stringEDataType;
 	}
 
 	/**
@@ -212,44 +221,8 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoomSchedule_Schedule() {
-		return (EReference)roomScheduleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getISchedule() {
-		return iScheduleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getISchedule__CheckAvailable__int_Date_Date() {
-		return iScheduleEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getISchedule__UpdateAvailable__int_Date_Date_int() {
-		return iScheduleEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScheduleFactory getScheduleFactory() {
-		return (ScheduleFactory)getEFactoryInstance();
+	public TypesFactory getTypesFactory() {
+		return (TypesFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -270,18 +243,12 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 		if (isCreated) return;
 		isCreated = true;
 
-		// Create classes and their features
-		availablityMapEClass = createEClass(AVAILABLITY_MAP);
-		createEReference(availablityMapEClass, AVAILABLITY_MAP__ROOM_TYPE);
-		createEAttribute(availablityMapEClass, AVAILABLITY_MAP__AVAILABLE);
-		createEAttribute(availablityMapEClass, AVAILABLITY_MAP__DATE);
-
-		roomScheduleEClass = createEClass(ROOM_SCHEDULE);
-		createEReference(roomScheduleEClass, ROOM_SCHEDULE__SCHEDULE);
-
-		iScheduleEClass = createEClass(ISCHEDULE);
-		createEOperation(iScheduleEClass, ISCHEDULE___CHECK_AVAILABLE__INT_DATE_DATE);
-		createEOperation(iScheduleEClass, ISCHEDULE___UPDATE_AVAILABLE__INT_DATE_DATE_INT);
+		// Create data types
+		booleanEDataType = createEDataType(BOOLEAN);
+		integerEDataType = createEDataType(INTEGER);
+		realEDataType = createEDataType(REAL);
+		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
+		stringEDataType = createEDataType(STRING);
 	}
 
 	/**
@@ -307,40 +274,35 @@ public class SchedulePackageImpl extends EPackageImpl implements SchedulePackage
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		RoomPackage theRoomPackage = (RoomPackage)EPackage.Registry.INSTANCE.getEPackage(RoomPackage.eNS_URI);
-
-		// Create type parameters
-
-		// Set bounds for type parameters
-
-		// Add supertypes to classes
-		roomScheduleEClass.getESuperTypes().add(this.getISchedule());
-
-		// Initialize classes, features, and operations; add parameters
-		initEClass(availablityMapEClass, AvailablityMap.class, "AvailablityMap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAvailablityMap_RoomType(), theRoomPackage.getRoomType(), null, "roomType", null, 1, 1, AvailablityMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAvailablityMap_Available(), ecorePackage.getEInt(), "available", null, 1, 1, AvailablityMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAvailablityMap_Date(), ecorePackage.getEDate(), "Date", null, 1, 1, AvailablityMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(roomScheduleEClass, RoomSchedule.class, "RoomSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoomSchedule_Schedule(), this.getAvailablityMap(), null, "schedule", null, 0, -1, RoomSchedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(iScheduleEClass, ISchedule.class, "ISchedule", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		EOperation op = initEOperation(getISchedule__CheckAvailable__int_Date_Date(), ecorePackage.getEInt(), "checkAvailable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "checkInDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "checkOutDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getISchedule__UpdateAvailable__int_Date_Date_int(), ecorePackage.getEBoolean(), "updateAvailable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "checkInDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "checkOutDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "nrOfRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		// Initialize data types
+		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/uml2/2.0.0/UML
+		createUMLAnnotations();
 	}
 
-} //SchedulePackageImpl
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "originalName", "PrimitiveTypes"
+		   });
+	}
+
+} //TypesPackageImpl

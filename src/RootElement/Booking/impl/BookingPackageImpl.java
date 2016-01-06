@@ -46,6 +46,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -128,9 +129,6 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		TypesPackage.eINSTANCE.eClass();
-
 		// Obtain or create and register interdependencies
 		PaymentPackageImpl thePaymentPackage = (PaymentPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) instanceof PaymentPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PaymentPackage.eNS_URI) : PaymentPackage.eINSTANCE);
 		AccountPackageImpl theAccountPackage = (AccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) instanceof AccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AccountPackage.eNS_URI) : AccountPackage.eINSTANCE);
@@ -139,6 +137,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		TaskPackageImpl theTaskPackage = (TaskPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) instanceof TaskPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TaskPackage.eNS_URI) : TaskPackage.eINSTANCE);
 		CheckIOPackageImpl theCheckIOPackage = (CheckIOPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) instanceof CheckIOPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CheckIOPackage.eNS_URI) : CheckIOPackage.eINSTANCE);
 		SchedulePackageImpl theSchedulePackage = (SchedulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) instanceof SchedulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulePackage.eNS_URI) : SchedulePackage.eINSTANCE);
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBookingPackage.createPackageContents();
@@ -149,6 +148,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		theTaskPackage.createPackageContents();
 		theCheckIOPackage.createPackageContents();
 		theSchedulePackage.createPackageContents();
+		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBookingPackage.initializePackageContents();
@@ -159,6 +159,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 		theTaskPackage.initializePackageContents();
 		theCheckIOPackage.initializePackageContents();
 		theSchedulePackage.initializePackageContents();
+		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theBookingPackage.freeze();
@@ -354,7 +355,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCartManagement_Cart() {
+	public EReference getCartManagement_CurrentCart() {
 		return (EReference)cartManagementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -427,7 +428,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		cartManagementEClass = createEClass(CART_MANAGEMENT);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CARTS);
-		createEReference(cartManagementEClass, CART_MANAGEMENT__CART);
+		createEReference(cartManagementEClass, CART_MANAGEMENT__CURRENT_CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___ADD_CART__CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT_BOOLEAN);
 	}
@@ -505,7 +506,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		initEClass(cartManagementEClass, CartManagement.class, "CartManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCartManagement_Carts(), this.getCart(), null, "carts", null, 0, -1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCartManagement_Cart(), this.getCart(), null, "cart", null, 0, -1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCartManagement_CurrentCart(), this.getCart(), null, "currentCart", null, 1, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getCartManagement__AddCart__Cart(), ecorePackage.getEBoolean(), "addCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getCart(), "cart", 1, 1, IS_UNIQUE, !IS_ORDERED);

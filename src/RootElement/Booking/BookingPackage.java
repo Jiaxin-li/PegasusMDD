@@ -296,13 +296,13 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT__CARTS = IBOOKING_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Cart</b></em>' reference list.
+	 * The feature id for the '<em><b>Current Cart</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT__CART = IBOOKING_FEATURE_COUNT + 1;
+	int CART_MANAGEMENT__CURRENT_CART = IBOOKING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Cart Management</em>' class.
@@ -596,15 +596,15 @@ public interface BookingPackage extends EPackage {
 	EReference getCartManagement_Carts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link RootElement.Booking.CartManagement#getCart <em>Cart</em>}'.
+	 * Returns the meta object for the reference '{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Cart</em>'.
-	 * @see RootElement.Booking.CartManagement#getCart()
+	 * @return the meta object for the reference '<em>Current Cart</em>'.
+	 * @see RootElement.Booking.CartManagement#getCurrentCart()
 	 * @see #getCartManagement()
 	 * @generated
 	 */
-	EReference getCartManagement_Cart();
+	EReference getCartManagement_CurrentCart();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#addCart(RootElement.Booking.Cart) <em>Add Cart</em>}' operation.
@@ -818,12 +818,12 @@ public interface BookingPackage extends EPackage {
 		EReference CART_MANAGEMENT__CARTS = eINSTANCE.getCartManagement_Carts();
 
 		/**
-		 * The meta object literal for the '<em><b>Cart</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Current Cart</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CART_MANAGEMENT__CART = eINSTANCE.getCartManagement_Cart();
+		EReference CART_MANAGEMENT__CURRENT_CART = eINSTANCE.getCartManagement_CurrentCart();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Cart</b></em>' operation.

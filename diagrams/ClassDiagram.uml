@@ -99,14 +99,14 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_a8qWcJ33EeWFr_oidmlDRQ" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_8I-88J3tEeWFr_oidmlDRQ"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_98GqwKA6EeW2lvhfsni2Sw" name="CartManagement">
+    <packagedElement xmi:type="uml:Class" xmi:id="_98GqwKA6EeW2lvhfsni2Sw" name="CartManagement" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F6bzQKA7EeW2lvhfsni2Sw" name="carts" type="_jczMYJ0DEeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O0wC4KA7EeW2lvhfsni2Sw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O03-sKA7EeW2lvhfsni2Sw" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_voApUKBWEeW2lvhfsni2Sw" name="cart" type="_jczMYJ0DEeWhTeq8ShgRSA" association="_vn8-8KBWEeW2lvhfsni2Sw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egsbsKBZEeW2lvhfsni2Sw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egvfAKBZEeW2lvhfsni2Sw" value="*"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_voApUKBWEeW2lvhfsni2Sw" name="currentCart" type="_jczMYJ0DEeWhTeq8ShgRSA" association="_vn8-8KBWEeW2lvhfsni2Sw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egsbsKBZEeW2lvhfsni2Sw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egvfAKBZEeW2lvhfsni2Sw" value="1"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_v4ad0LPTEeWpV6Nm8aL7Kw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_U5aqUJ3mEeWFr_oidmlDRQ" contract="_U5aqUJ3mEeWFr_oidmlDRQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_jQuEELQAEeWIGvgV-A9CnQ" name="addCart" visibility="public">

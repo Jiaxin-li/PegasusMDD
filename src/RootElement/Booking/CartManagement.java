@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link RootElement.Booking.CartManagement#getCarts <em>Carts</em>}</li>
- *   <li>{@link RootElement.Booking.CartManagement#getCart <em>Cart</em>}</li>
+ *   <li>{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}</li>
  * </ul>
  *
  * @see RootElement.Booking.BookingPackage#getCartManagement()
@@ -39,20 +39,30 @@ public interface CartManagement extends IBooking {
 	EList<Cart> getCarts();
 
 	/**
-	 * Returns the value of the '<em><b>Cart</b></em>' reference list.
-	 * The list contents are of type {@link RootElement.Booking.Cart}.
+	 * Returns the value of the '<em><b>Current Cart</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cart</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Current Cart</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cart</em>' reference list.
-	 * @see RootElement.Booking.BookingPackage#getCartManagement_Cart()
-	 * @model ordered="false"
+	 * @return the value of the '<em>Current Cart</em>' reference.
+	 * @see #setCurrentCart(Cart)
+	 * @see RootElement.Booking.BookingPackage#getCartManagement_CurrentCart()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<Cart> getCart();
+	Cart getCurrentCart();
+
+	/**
+	 * Sets the value of the '{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Current Cart</em>' reference.
+	 * @see #getCurrentCart()
+	 * @generated
+	 */
+	void setCurrentCart(Cart value);
 
 	/**
 	 * <!-- begin-user-doc -->

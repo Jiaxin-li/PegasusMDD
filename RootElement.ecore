@@ -67,8 +67,8 @@
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
           upperBound="-1" eType="#//Booking/Cart"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="cart" ordered="false"
-          upperBound="-1" eType="#//Booking/Cart"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="currentCart" ordered="false"
+          lowerBound="1" eType="#//Booking/Cart"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Account" nsURI="http:///RootElement/Account.ecore" nsPrefix="RootElement.Account">
@@ -77,12 +77,12 @@
       <eOperations name="deleteAccount" ordered="false" lowerBound="1"/>
       <eOperations name="modifiedAccount" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StaffAccount" eSuperTypes="#//Account/UserAccounts">
-      <eOperations name="login" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String">
+      <eOperations name="login" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="access" ordered="false" lowerBound="1" eType="#//Account/AccessControl"/>
       </eOperations>
       <eOperations name="handleBooking" ordered="false" lowerBound="1"/>
@@ -93,16 +93,16 @@
       <eOperations name="handleCheckOut" ordered="false" lowerBound="1"/>
       <eOperations name="logOut" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="sessionToken" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AccessControl">
       <eOperations name="authenticate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-        <eParameters name="pswd" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+        <eParameters name="username" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="pswd" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="authorize" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String">
+      <eOperations name="authorize" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="userID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
     </eClassifiers>
@@ -129,13 +129,13 @@
           lowerBound="1" eType="#//Account/GuestAccount"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GuestAccount" eSuperTypes="#//Account/UserAccounts">
-      <eOperations name="getUserInfo" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eOperations name="getUserInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="personalNumber" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="phoneNumber" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="VIP" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eClassifiers>
@@ -143,7 +143,7 @@
   <eSubpackages name="Room" nsURI="http:///RootElement/Room.ecore" nsPrefix="RootElement.Room">
     <eClassifiers xsi:type="ecore:EClass" name="RoomType">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomTypeName" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfBeds" ordered="false"
@@ -221,7 +221,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceTypeName" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceTypeID" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
@@ -276,7 +276,7 @@
       <eOperations name="setDescription" ordered="false" lowerBound="1"/>
       <eOperations name="getID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
@@ -315,7 +315,7 @@
       <eOperations name="generateTotal" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="getPaymentResult" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String">
+      <eOperations name="getPaymentResult" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="response" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
       <eOperations name="CheckOut" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -339,7 +339,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Invoice">
       <eOperations name="printUserData" ordered="false" lowerBound="1">
-        <eParameters name="data" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+        <eParameters name="data" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
     </eClassifiers>
   </eSubpackages>
