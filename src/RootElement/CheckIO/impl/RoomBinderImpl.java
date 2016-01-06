@@ -10,6 +10,7 @@ import RootElement.CheckIO.RoomBinder;
 import RootElement.Room.Room;
 
 import RootElement.Service.Service;
+import RootElement.Service.impl.ServiceManagementImpl;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -204,7 +205,8 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 	public void addService(int serviceTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -215,7 +217,9 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 	public boolean bindRoom(Room room) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		this.setRoom(room);
+		return true;
 	}
 
 	/**
@@ -226,7 +230,7 @@ public class RoomBinderImpl extends MinimalEObjectImpl.Container implements Room
 	public void SetServiceStatus(int serviceID, boolean status) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
