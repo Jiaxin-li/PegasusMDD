@@ -92,14 +92,14 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_a8qWcJ33EeWFr_oidmlDRQ" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_8I-88J3tEeWFr_oidmlDRQ"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_98GqwKA6EeW2lvhfsni2Sw" name="CartManagement" visibility="private">
+    <packagedElement xmi:type="uml:Class" xmi:id="_98GqwKA6EeW2lvhfsni2Sw" name="CartManagement">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F6bzQKA7EeW2lvhfsni2Sw" name="carts" type="_jczMYJ0DEeWhTeq8ShgRSA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O0wC4KA7EeW2lvhfsni2Sw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O03-sKA7EeW2lvhfsni2Sw" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_voApUKBWEeW2lvhfsni2Sw" name="currentCart" type="_jczMYJ0DEeWhTeq8ShgRSA" association="_vn8-8KBWEeW2lvhfsni2Sw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egsbsKBZEeW2lvhfsni2Sw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egvfAKBZEeW2lvhfsni2Sw" value="1"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_voApUKBWEeW2lvhfsni2Sw" name="cart" type="_jczMYJ0DEeWhTeq8ShgRSA" association="_vn8-8KBWEeW2lvhfsni2Sw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egsbsKBZEeW2lvhfsni2Sw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egvfAKBZEeW2lvhfsni2Sw" value="*"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_v4ad0LPTEeWpV6Nm8aL7Kw" client="_98GqwKA6EeW2lvhfsni2Sw" supplier="_U5aqUJ3mEeWFr_oidmlDRQ" contract="_U5aqUJ3mEeWFr_oidmlDRQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_jQuEELQAEeWIGvgV-A9CnQ" name="addCart" visibility="public">
@@ -112,7 +112,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_2-E_gLQAEeWIGvgV-A9CnQ" name="CartID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6vDWwLQAEeWIGvgV-A9CnQ" name="result" direction="return">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6vDWwLQAEeWIGvgV-A9CnQ" name="result">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
@@ -376,6 +376,12 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_OnvJcJ6tEeWnJdV0_aSkJQ" name="result" type="_84q_QJ0CEeWhTeq8ShgRSA" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VpPt4LRlEeWKZ5XxIn7-9g" name="addService">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_f-LhYLRlEeWKZ5XxIn7-9g" name="service" type="_84q_QJ0CEeWhTeq8ShgRSA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kb9UQLRlEeWKZ5XxIn7-9g" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_1LbOUJ6EEeWavpVvTui59g" name="IServiceType">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_dFxP8J8TEeWXa8dgAQ47Zw" name="addServiceType">
@@ -481,10 +487,8 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_2CJ78LMSEeWHIvMzXHZtXw" name="bookingID">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_f49YkJ0LEeWhTeq8ShgRSA" name="addService" concurrency="concurrent">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pc1ikJ0LEeWhTeq8ShgRSA" name="serviceTypeID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </ownedParameter>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_f49YkJ0LEeWhTeq8ShgRSA" name="bindService" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pc1ikJ0LEeWhTeq8ShgRSA" name="service" type="_84q_QJ0CEeWhTeq8ShgRSA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_y2zioJ0LEeWhTeq8ShgRSA" name="bindRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_18kZsJ0LEeWhTeq8ShgRSA" name="room" type="_kMkR4J0CEeWhTeq8ShgRSA"/>
@@ -500,7 +504,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_q_q84KCxEeWrRaa7yVr5ew" name="setRoomAvailability"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_q_q84KCxEeWrRaa7yVr5ew" name="setRoomAvailability">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MUzY8LRjEeWKZ5XxIn7-9g" name="availiability">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WArrkLRnEeWKZ5XxIn7-9g" name="bindGuest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qHELALRnEeWKZ5XxIn7-9g" name="guest" type="_rDGPYJ0DEeWhTeq8ShgRSA"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hNOWcJ0DEeWhTeq8ShgRSA" name="CheckIO">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Wa3HUJ6IEeW1w6MQXj9WSw" name="roombinder" type="_wzOQYJ0CEeWhTeq8ShgRSA"/>
@@ -513,6 +524,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_916h0J_7EeWgGs4bImIp0A" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_IbI0EJ_8EeWgGs4bImIp0A" name="roombinder" type="_wzOQYJ0CEeWhTeq8ShgRSA" association="_IbFJsJ_8EeWgGs4bImIp0A"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_I0Z3gLRnEeWKZ5XxIn7-9g" name="cartManagement" type="_98GqwKA6EeW2lvhfsni2Sw"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_piQYoJ0MEeWhTeq8ShgRSA" name="payOrder">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_FKxz0J0NEeWhTeq8ShgRSA" name="res" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
