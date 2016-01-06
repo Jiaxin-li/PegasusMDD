@@ -159,7 +159,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public boolean addCart(Cart cart) {
 		int numberOfCarts = carts.size();
-		int cartID = numberOfCarts + 1;
+		int cartID = numberOfCarts - 1;
 		cart.setCartID(cartID);
 		try {
 			carts.add(cart);	
