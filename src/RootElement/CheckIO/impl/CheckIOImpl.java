@@ -4,14 +4,15 @@ package RootElement.CheckIO.impl;
 
 import RootElement.Account.GuestAccountMangement;
 import RootElement.Account.StaffAccount;
-
+import RootElement.Booking.Booking;
 import RootElement.Booking.CartManagement;
 
 import RootElement.CheckIO.CheckIO;
 import RootElement.CheckIO.CheckIOPackage;
 import RootElement.CheckIO.RoomBinder;
-
+import RootElement.Room.Room;
 import RootElement.Room.RoomManagement;
+import RootElement.Service.Service;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -306,12 +307,13 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean payOrder(int amount) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		return true;
 	}
 
 	/**
@@ -322,40 +324,72 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 	public int generateTotal(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int total = 0;
+		EList<RoomBinder> rbl = getBindedRooms();
+		for (RoomBinder rb : rbl ){
+			if(rb.getBookingID() == bookingID ){
+				int serviceTotal  = 0;
+				for (Service s : rb.getServices() ){
+					serviceTotal += s.getServicetype().getPrice();
+				}
+				total += rb.getRoom().getRoomType().getPrice()+ serviceTotal;
+			}			
+	}
+		return total;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public String getPaymentResult(int response) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		return "paid";
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean CheckOut(int bookingId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(cartManagement.validateBooking(bookingId)){
+			int total = this.generateTotal(bookingId);
+				if(this.payOrder(total)){
+					cartManagement.getBooking(bookingId).setIsPaid(true);
+					return true;
+				}
+			return false;
+		
+		}
+		else{
+			return false;
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	public boolean CheckIn(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(cartManagement.validateBooking(bookingID)){
+			Booking booking = cartManagement.getBooking(bookingID);
+			int tid = booking.getRoomTypeID();
+			Room r = roomManagement.getAvailiableRoom(tid);
+			roombinder = new RoomBinderImpl();
+			roombinder.setBookingID(bookingID);
+			roombinder.setRoom(r);
+			this.bindedRooms.add(roombinder);
+		}
+		return false;
 	}
 
 	/**
