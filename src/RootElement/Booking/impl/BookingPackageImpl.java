@@ -355,7 +355,7 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCartManagement_Cart() {
+	public EReference getCartManagement_CurrentCart() {
 		return (EReference)cartManagementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -375,15 +375,6 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 	 */
 	public EOperation getCartManagement__DeleteCart__int() {
 		return cartManagementEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCartManagement__SetCurrentCart__Cart() {
-		return cartManagementEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -437,10 +428,9 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		cartManagementEClass = createEClass(CART_MANAGEMENT);
 		createEReference(cartManagementEClass, CART_MANAGEMENT__CARTS);
-		createEReference(cartManagementEClass, CART_MANAGEMENT__CART);
+		createEReference(cartManagementEClass, CART_MANAGEMENT__CURRENT_CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___ADD_CART__CART);
 		createEOperation(cartManagementEClass, CART_MANAGEMENT___DELETE_CART__INT);
-		createEOperation(cartManagementEClass, CART_MANAGEMENT___SET_CURRENT_CART__CART);
 	}
 
 	/**
@@ -516,16 +506,13 @@ public class BookingPackageImpl extends EPackageImpl implements BookingPackage {
 
 		initEClass(cartManagementEClass, CartManagement.class, "CartManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCartManagement_Carts(), this.getCart(), null, "carts", null, 0, -1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCartManagement_Cart(), this.getCart(), null, "cart", null, 0, -1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCartManagement_CurrentCart(), this.getCart(), null, "currentCart", null, 0, 1, CartManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getCartManagement__AddCart__Cart(), ecorePackage.getEBoolean(), "addCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getCart(), "cart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getCartManagement__DeleteCart__int(), ecorePackage.getEBoolean(), "deleteCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "CartID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getCartManagement__SetCurrentCart__Cart(), null, "setCurrentCart", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCart(), "cart", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

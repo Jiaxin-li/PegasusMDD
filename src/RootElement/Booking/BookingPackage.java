@@ -296,13 +296,13 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT__CARTS = IBOOKING_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Cart</b></em>' reference list.
+	 * The feature id for the '<em><b>Current Cart</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT__CART = IBOOKING_FEATURE_COUNT + 1;
+	int CART_MANAGEMENT__CURRENT_CART = IBOOKING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Cart Management</em>' class.
@@ -377,22 +377,13 @@ public interface BookingPackage extends EPackage {
 	int CART_MANAGEMENT___DELETE_CART__INT = IBOOKING_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Set Current Cart</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_MANAGEMENT___SET_CURRENT_CART__CART = IBOOKING_OPERATION_COUNT + 2;
-
-	/**
 	 * The number of operations of the '<em>Cart Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 3;
+	int CART_MANAGEMENT_OPERATION_COUNT = IBOOKING_OPERATION_COUNT + 2;
 
 
 	/**
@@ -605,15 +596,15 @@ public interface BookingPackage extends EPackage {
 	EReference getCartManagement_Carts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link RootElement.Booking.CartManagement#getCart <em>Cart</em>}'.
+	 * Returns the meta object for the reference '{@link RootElement.Booking.CartManagement#getCurrentCart <em>Current Cart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Cart</em>'.
-	 * @see RootElement.Booking.CartManagement#getCart()
+	 * @return the meta object for the reference '<em>Current Cart</em>'.
+	 * @see RootElement.Booking.CartManagement#getCurrentCart()
 	 * @see #getCartManagement()
 	 * @generated
 	 */
-	EReference getCartManagement_Cart();
+	EReference getCartManagement_CurrentCart();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#addCart(RootElement.Booking.Cart) <em>Add Cart</em>}' operation.
@@ -634,16 +625,6 @@ public interface BookingPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCartManagement__DeleteCart__int();
-
-	/**
-	 * Returns the meta object for the '{@link RootElement.Booking.CartManagement#setCurrentCart(RootElement.Booking.Cart) <em>Set Current Cart</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Current Cart</em>' operation.
-	 * @see RootElement.Booking.CartManagement#setCurrentCart(RootElement.Booking.Cart)
-	 * @generated
-	 */
-	EOperation getCartManagement__SetCurrentCart__Cart();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -837,12 +818,12 @@ public interface BookingPackage extends EPackage {
 		EReference CART_MANAGEMENT__CARTS = eINSTANCE.getCartManagement_Carts();
 
 		/**
-		 * The meta object literal for the '<em><b>Cart</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Current Cart</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CART_MANAGEMENT__CART = eINSTANCE.getCartManagement_Cart();
+		EReference CART_MANAGEMENT__CURRENT_CART = eINSTANCE.getCartManagement_CurrentCart();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Cart</b></em>' operation.
@@ -859,14 +840,6 @@ public interface BookingPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CART_MANAGEMENT___DELETE_CART__INT = eINSTANCE.getCartManagement__DeleteCart__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Current Cart</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CART_MANAGEMENT___SET_CURRENT_CART__CART = eINSTANCE.getCartManagement__SetCurrentCart__Cart();
 
 	}
 

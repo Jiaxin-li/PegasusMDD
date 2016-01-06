@@ -12,10 +12,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -29,7 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getCarts <em>Carts</em>}</li>
- *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getCart <em>Cart</em>}</li>
+ *   <li>{@link RootElement.Booking.impl.CartManagementImpl#getCurrentCart <em>Current Cart</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,14 +49,14 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	protected EList<Cart> carts;
 
 	/**
-	 * The cached value of the '{@link #getCart() <em>Cart</em>}' reference list.
+	 * The cached value of the '{@link #getCurrentCart() <em>Current Cart</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCart()
+	 * @see #getCurrentCart()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Cart> cart;
+	protected Cart currentCart;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +94,25 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Cart> getCart() {
-		if (cart == null) {
-			cart = new EObjectResolvingEList<Cart>(Cart.class, this, BookingPackage.CART_MANAGEMENT__CART);
+	public Cart getCurrentCart() {
+		if (currentCart != null && currentCart.eIsProxy()) {
+			InternalEObject oldCurrentCart = (InternalEObject)currentCart;
+			currentCart = (Cart)eResolveProxy(oldCurrentCart);
+			if (currentCart != oldCurrentCart) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingPackage.CART_MANAGEMENT__CURRENT_CART, oldCurrentCart, currentCart));
+			}
 		}
-		return cart;
+		return currentCart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cart basicGetCurrentCart() {
+		return currentCart;
 	}
 
 	/**
@@ -187,10 +204,11 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentCart(Cart cart) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void setCurrentCart(Cart newCurrentCart) {
+		Cart oldCurrentCart = currentCart;
+		currentCart = newCurrentCart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingPackage.CART_MANAGEMENT__CURRENT_CART, oldCurrentCart, currentCart));
 	}
 
 	/**
@@ -203,8 +221,9 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingPackage.CART_MANAGEMENT__CARTS:
 				return getCarts();
-			case BookingPackage.CART_MANAGEMENT__CART:
-				return getCart();
+			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
+				if (resolve) return getCurrentCart();
+				return basicGetCurrentCart();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,9 +241,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				getCarts().clear();
 				getCarts().addAll((Collection<? extends Cart>)newValue);
 				return;
-			case BookingPackage.CART_MANAGEMENT__CART:
-				getCart().clear();
-				getCart().addAll((Collection<? extends Cart>)newValue);
+			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
+				setCurrentCart((Cart)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,8 +259,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			case BookingPackage.CART_MANAGEMENT__CARTS:
 				getCarts().clear();
 				return;
-			case BookingPackage.CART_MANAGEMENT__CART:
-				getCart().clear();
+			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
+				setCurrentCart((Cart)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -258,8 +276,8 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingPackage.CART_MANAGEMENT__CARTS:
 				return carts != null && !carts.isEmpty();
-			case BookingPackage.CART_MANAGEMENT__CART:
-				return cart != null && !cart.isEmpty();
+			case BookingPackage.CART_MANAGEMENT__CURRENT_CART:
+				return currentCart != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -286,9 +304,6 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				return addCart((Cart)arguments.get(0));
 			case BookingPackage.CART_MANAGEMENT___DELETE_CART__INT:
 				return deleteCart((Integer)arguments.get(0));
-			case BookingPackage.CART_MANAGEMENT___SET_CURRENT_CART__CART:
-				setCurrentCart((Cart)arguments.get(0));
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

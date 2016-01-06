@@ -62,13 +62,10 @@
       <eOperations name="deleteCart" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="CartID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="setCurrentCart" ordered="false" lowerBound="1">
-        <eParameters name="cart" ordered="false" lowerBound="1" eType="#//Booking/Cart"/>
-      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
           upperBound="-1" eType="#//Booking/Cart"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="cart" ordered="false"
-          upperBound="-1" eType="#//Booking/Cart"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="currentCart" ordered="false"
+          eType="#//Booking/Cart"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Account" nsURI="http:///RootElement/Account.ecore" nsPrefix="RootElement.Account">
