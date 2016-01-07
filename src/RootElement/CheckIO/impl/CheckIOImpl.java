@@ -356,7 +356,12 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 		if(cartManagement.validateBooking(bookingId)){
 			int total = this.generateTotal(bookingId);
 				if(this.payOrder(total)){
-					cartManagement.getBooking(bookingId).setIsPaid(true);
+					try {
+						cartManagement.getBooking(bookingId).setIsPaid(true);	
+					} catch (Exception e) {
+						return false;
+					}
+					
 					return true;
 				}
 			return false;
@@ -376,18 +381,18 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		if(cartManagement.validateBooking(bookingID)){
-			Booking booking = cartManagement.getBooking(bookingID);
-			int tid = booking.getRoomTypeID();
-			Room r = roomManagement.getAvailiableRoom(tid);
-			roombinder = new RoomBinderImpl();
-			roombinder.setBookingID(bookingID);
-			roombinder.setRoom(r);
-			
 			try {
+				Booking booking = cartManagement.getBooking(bookingID);	
+				int tid = booking.getRoomTypeID();
+				Room r = roomManagement.getAvailiableRoom(tid);
+				roombinder = new RoomBinderImpl();
+				roombinder.setBookingID(bookingID);
+				roombinder.setRoom(r);
+				
 				this.bindedRooms.add(roombinder);	
-			} catch(Exception e) {
+			} catch (Exception e) {
 				return false;
-			}	
+			}
 		}
 		
 		return true;
