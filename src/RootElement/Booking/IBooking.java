@@ -23,7 +23,7 @@ public interface IBooking extends EObject {
 	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" checkInDateRequired="true" checkInDateOrdered="false" checkOutDateRequired="true" checkOutDateOrdered="false" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
-	boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms);
+	int addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms);
 
 	/**
 	 * <!-- begin-user-doc -->

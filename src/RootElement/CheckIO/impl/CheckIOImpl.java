@@ -12,6 +12,8 @@ import RootElement.CheckIO.CheckIOPackage;
 import RootElement.CheckIO.RoomBinder;
 import RootElement.Room.Room;
 import RootElement.Room.RoomManagement;
+import RootElement.Service.Service;
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -315,12 +317,20 @@ public class CheckIOImpl extends MinimalEObjectImpl.Container implements CheckIO
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public int generateTotal(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int total = 0;
+		EList<RoomBinder> rbl = getBindedRooms();
+		for (RoomBinder rb : rbl ){
+			if(rb.getBookingID() == bookingID ){
+				int serviceTotal  = 0;
+				for (Service s : rb.getServices() ){
+					serviceTotal += s.getServicetype().getPrice();
+				}
+				total += rb.getRoom().getRoomType().getPrice()+ serviceTotal;
+			}			
+	}
+		return total;
 	}
 
 	/**

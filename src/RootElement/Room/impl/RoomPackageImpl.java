@@ -352,7 +352,7 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoomType__EditRoomType__int() {
+	public EOperation getIRoomType__EditRoomType__int_String_int_int() {
 		return iRoomTypeEClass.getEOperations().get(1);
 	}
 
@@ -372,6 +372,15 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 */
 	public EOperation getIRoomType__DeleteRoomType__int() {
 		return iRoomTypeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIRoomType__GetRoomType__int() {
+		return iRoomTypeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -408,15 +417,6 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 	 */
 	public EReference getRoomTypeManagment_Roomtypes() {
 		return (EReference)roomTypeManagmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomTypeManagment_Roomtype() {
-		return (EReference)roomTypeManagmentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -468,16 +468,16 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 
 		iRoomTypeEClass = createEClass(IROOM_TYPE);
 		createEOperation(iRoomTypeEClass, IROOM_TYPE___ADD_ROOM_TYPE__STRING_INT_INT);
-		createEOperation(iRoomTypeEClass, IROOM_TYPE___EDIT_ROOM_TYPE__INT);
+		createEOperation(iRoomTypeEClass, IROOM_TYPE___EDIT_ROOM_TYPE__INT_STRING_INT_INT);
 		createEOperation(iRoomTypeEClass, IROOM_TYPE___VALIDATE_ROOM_TYPE__INT);
 		createEOperation(iRoomTypeEClass, IROOM_TYPE___DELETE_ROOM_TYPE__INT);
+		createEOperation(iRoomTypeEClass, IROOM_TYPE___GET_ROOM_TYPE__INT);
 
 		roomManagementEClass = createEClass(ROOM_MANAGEMENT);
 		createEReference(roomManagementEClass, ROOM_MANAGEMENT__ROOMS);
 
 		roomTypeManagmentEClass = createEClass(ROOM_TYPE_MANAGMENT);
 		createEReference(roomTypeManagmentEClass, ROOM_TYPE_MANAGMENT__ROOMTYPES);
-		createEReference(roomTypeManagmentEClass, ROOM_TYPE_MANAGMENT__ROOMTYPE);
 	}
 
 	/**
@@ -544,13 +544,16 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 
 		initEClass(iRoomTypeEClass, IRoomType.class, "IRoomType", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIRoomType__AddRoomType__String_int_int(), ecorePackage.getEBoolean(), "addRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRoomType__AddRoomType__String_int_int(), ecorePackage.getEInt(), "addRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "RoomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "nrOfBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRoomType__EditRoomType__int(), ecorePackage.getEBoolean(), "editRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRoomType__EditRoomType__int_String_int_int(), ecorePackage.getEBoolean(), "editRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "RoomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "nrOfBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomType__ValidateRoomType__int(), ecorePackage.getEBoolean(), "validateRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "RoomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -558,15 +561,37 @@ public class RoomPackageImpl extends EPackageImpl implements RoomPackage {
 		op = initEOperation(getIRoomType__DeleteRoomType__int(), ecorePackage.getEBoolean(), "deleteRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getIRoomType__GetRoomType__int(), this.getRoomType(), "getRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "introomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(roomManagementEClass, RoomManagement.class, "RoomManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomManagement_Rooms(), this.getRoom(), null, "rooms", null, 0, -1, RoomManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(roomTypeManagmentEClass, RoomTypeManagment.class, "RoomTypeManagment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomTypeManagment_Roomtypes(), this.getRoomType(), null, "roomtypes", null, 0, -1, RoomTypeManagment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoomTypeManagment_Roomtype(), this.getRoomType(), null, "roomtype", null, 1, 1, RoomTypeManagment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/uml2/2.0.0/UML
+		createUMLAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
+		addAnnotation
+		  ((getIRoomType__GetRoomType__int()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "originalName", "int roomTypeID"
+		   });
 	}
 
 } //RoomPackageImpl

@@ -2,10 +2,9 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
     modelDirectory="/PegasusMDD/src" modelPluginID="PegasusMDD" modelName="Codegen"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testsDirectory="/MDD_testcase/PegasusMDD.tests/src"
-    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../org.eclipse.uml2.types/model/Types.genmodel#//types" operationReflection="true"
-    importOrganizing="true">
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../org.eclipse.uml2.types/model/Types.genmodel#//types"
+    operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
@@ -203,12 +202,18 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoomType/editRoomType">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/editRoomType/roomTypeID"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/editRoomType/RoomTypeName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/editRoomType/price"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/editRoomType/nrOfBeds"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoomType/validateRoomType">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/validateRoomType/RoomTypeID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoomType/deleteRoomType">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/deleteRoomType/roomTypeID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RootElement.ecore#//Room/IRoomType/getRoomType">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="RootElement.ecore#//Room/IRoomType/getRoomType/introomTypeID"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Room/RoomManagement">
@@ -218,8 +223,6 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//Room/RoomTypeManagment">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Room/RoomTypeManagment/roomtypes"/>
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference RootElement.ecore#//Room/RoomTypeManagment/roomtype"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Schedule" disposableProviderFactory="true"

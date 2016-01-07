@@ -2,7 +2,6 @@
  */
 package RootElement.Schedule.impl;
 
-import RootElement.Account.StaffAccount;
 import RootElement.Schedule.AvailablityMap;
 import RootElement.Schedule.RoomSchedule;
 import RootElement.Schedule.SchedulePackage;
@@ -11,8 +10,6 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
-
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -43,7 +40,7 @@ public class RoomScheduleImpl extends MinimalEObjectImpl.Container implements Ro
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AvailablityMap> schedule = new BasicEList<AvailablityMap>();
+	protected EList<AvailablityMap> schedule;
 
 	/**
 	 * <!-- begin-user-doc -->

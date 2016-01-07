@@ -21,15 +21,15 @@ public interface IRoomType extends EObject {
 	 * @model required="true" ordered="false" RoomTypeNameRequired="true" RoomTypeNameOrdered="false" priceRequired="true" priceOrdered="false" nrOfBedsRequired="true" nrOfBedsOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomType(String RoomTypeName, int price, int nrOfBeds);
+	int addRoomType(String RoomTypeName, int price, int nrOfBeds);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @model required="true" ordered="false" roomTypeIDRequired="true" roomTypeIDOrdered="false" RoomTypeNameRequired="true" RoomTypeNameOrdered="false" priceRequired="true" priceOrdered="false" nrOfBedsRequired="true" nrOfBedsOrdered="false"
 	 * @generated
 	 */
-	boolean editRoomType(int roomTypeID);
+	boolean editRoomType(int roomTypeID, String RoomTypeName, int price, int nrOfBeds);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,5 +46,14 @@ public interface IRoomType extends EObject {
 	 * @generated
 	 */
 	boolean deleteRoomType(int roomTypeID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" introomTypeIDRequired="true" introomTypeIDOrdered="false"
+	 *        introomTypeIDAnnotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='int roomTypeID'"
+	 * @generated
+	 */
+	RoomType getRoomType(int introomTypeID);
 
 } // IRoomType

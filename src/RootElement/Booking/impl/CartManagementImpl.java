@@ -2,7 +2,6 @@
  */
 package RootElement.Booking.impl;
 
-import RootElement.Account.StaffAccount;
 import RootElement.Booking.Booking;
 import RootElement.Booking.BookingPackage;
 import RootElement.Booking.Cart;
@@ -82,7 +81,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected Cart currentCart;
+	protected Cart currentCart = null;
 
 	/**
 	 * The default value of the '{@link #getNrOfBookings() <em>Nr Of Bookings</em>}' attribute.
@@ -260,10 +259,15 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking getBooking(int bookingID) {
 		if(currentCart == null){
-			throw new RuntimeException();
+			return null;
 		}
 		EList<Booking> bookings = currentCart.getBookings();
-		return bookings.get(bookingID);
+		try {
+			return bookings.get(bookingID);	
+		} catch (Exception e) {
+			return null;
+		}
+		
 	}
 
 	/**
@@ -346,21 +350,21 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public boolean addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
+	public int addBooking(int roomTypeID, Date checkInDate, Date checkOutDate, int nrOfRooms) {
 		
 		Date currentDate = new Date();
 		if(roomTypeManagement.validateRoomType(roomTypeID)==false) {
-			return false;
+			throw new RuntimeException();
 		} else if(checkInDate.compareTo(checkOutDate)>=0) {
-			return false;
+			throw new RuntimeException();
 		} else if(checkInDate.compareTo(currentDate)<=0) {
-			return false;
+			throw new RuntimeException();
 		} else if(checkOutDate.compareTo(currentDate)<=0) {
-			return false;
+			throw new RuntimeException();
 		} else if(nrOfRooms>roomSchedule.checkAvailable(roomTypeID, checkInDate, checkOutDate)) {
-			return false;
+			throw new RuntimeException();
 		} else if(nrOfRooms<0){
-			return false;
+			throw new RuntimeException();
 		} else {
 			try {					
 				BookingFactoryImpl factory = new BookingFactoryImpl();
@@ -370,6 +374,7 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				booking.setIsPaid(false);
 				booking.setNrOfRooms(nrOfRooms);
 				booking.setRoomTypeID(roomTypeID);
+				int bookingID = getNrOfBookings();
 				booking.setBookingID(getNrOfBookings());
 				
 				EList<Booking> bookings = currentCart.getBookings();
@@ -378,10 +383,11 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 				
 				roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, nrOfRooms);
 				nrOfBookings++;
+				
+				return bookingID;
 			} catch (Exception e) {
-				return false;
+				throw new RuntimeException();
 			}
-			return true;
 		}
 
 	}

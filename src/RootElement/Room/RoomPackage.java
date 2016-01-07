@@ -293,7 +293,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_TYPE___EDIT_ROOM_TYPE__INT = 1;
+	int IROOM_TYPE___EDIT_ROOM_TYPE__INT_STRING_INT_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Validate Room Type</em>' operation.
@@ -314,13 +314,22 @@ public interface RoomPackage extends EPackage {
 	int IROOM_TYPE___DELETE_ROOM_TYPE__INT = 3;
 
 	/**
+	 * The operation id for the '<em>Get Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_TYPE___GET_ROOM_TYPE__INT = 4;
+
+	/**
 	 * The number of operations of the '<em>IRoom Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_TYPE_OPERATION_COUNT = 4;
+	int IROOM_TYPE_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link RootElement.Room.impl.RoomManagementImpl <em>Management</em>}' class.
@@ -415,22 +424,13 @@ public interface RoomPackage extends EPackage {
 	int ROOM_TYPE_MANAGMENT__ROOMTYPES = IROOM_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE_MANAGMENT__ROOMTYPE = IROOM_TYPE_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Type Managment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGMENT_FEATURE_COUNT = IROOM_TYPE_FEATURE_COUNT + 2;
+	int ROOM_TYPE_MANAGMENT_FEATURE_COUNT = IROOM_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Room Type</em>' operation.
@@ -448,7 +448,7 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_MANAGMENT___EDIT_ROOM_TYPE__INT = IROOM_TYPE___EDIT_ROOM_TYPE__INT;
+	int ROOM_TYPE_MANAGMENT___EDIT_ROOM_TYPE__INT_STRING_INT_INT = IROOM_TYPE___EDIT_ROOM_TYPE__INT_STRING_INT_INT;
 
 	/**
 	 * The operation id for the '<em>Validate Room Type</em>' operation.
@@ -467,6 +467,15 @@ public interface RoomPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_TYPE_MANAGMENT___DELETE_ROOM_TYPE__INT = IROOM_TYPE___DELETE_ROOM_TYPE__INT;
+
+	/**
+	 * The operation id for the '<em>Get Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE_MANAGMENT___GET_ROOM_TYPE__INT = IROOM_TYPE___GET_ROOM_TYPE__INT;
 
 	/**
 	 * The number of operations of the '<em>Type Managment</em>' class.
@@ -668,14 +677,14 @@ public interface RoomPackage extends EPackage {
 	EOperation getIRoomType__AddRoomType__String_int_int();
 
 	/**
-	 * Returns the meta object for the '{@link RootElement.Room.IRoomType#editRoomType(int) <em>Edit Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link RootElement.Room.IRoomType#editRoomType(int, java.lang.String, int, int) <em>Edit Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Room Type</em>' operation.
-	 * @see RootElement.Room.IRoomType#editRoomType(int)
+	 * @see RootElement.Room.IRoomType#editRoomType(int, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getIRoomType__EditRoomType__int();
+	EOperation getIRoomType__EditRoomType__int_String_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link RootElement.Room.IRoomType#validateRoomType(int) <em>Validate Room Type</em>}' operation.
@@ -696,6 +705,16 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRoomType__DeleteRoomType__int();
+
+	/**
+	 * Returns the meta object for the '{@link RootElement.Room.IRoomType#getRoomType(int) <em>Get Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Type</em>' operation.
+	 * @see RootElement.Room.IRoomType#getRoomType(int)
+	 * @generated
+	 */
+	EOperation getIRoomType__GetRoomType__int();
 
 	/**
 	 * Returns the meta object for class '{@link RootElement.Room.RoomManagement <em>Management</em>}'.
@@ -738,17 +757,6 @@ public interface RoomPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoomTypeManagment_Roomtypes();
-
-	/**
-	 * Returns the meta object for the reference '{@link RootElement.Room.RoomTypeManagment#getRoomtype <em>Roomtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roomtype</em>'.
-	 * @see RootElement.Room.RoomTypeManagment#getRoomtype()
-	 * @see #getRoomTypeManagment()
-	 * @generated
-	 */
-	EReference getRoomTypeManagment_Roomtype();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -931,7 +939,7 @@ public interface RoomPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_TYPE___EDIT_ROOM_TYPE__INT = eINSTANCE.getIRoomType__EditRoomType__int();
+		EOperation IROOM_TYPE___EDIT_ROOM_TYPE__INT_STRING_INT_INT = eINSTANCE.getIRoomType__EditRoomType__int_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Validate Room Type</b></em>' operation.
@@ -948,6 +956,14 @@ public interface RoomPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_TYPE___DELETE_ROOM_TYPE__INT = eINSTANCE.getIRoomType__DeleteRoomType__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_TYPE___GET_ROOM_TYPE__INT = eINSTANCE.getIRoomType__GetRoomType__int();
 
 		/**
 		 * The meta object literal for the '{@link RootElement.Room.impl.RoomManagementImpl <em>Management</em>}' class.
@@ -984,14 +1000,6 @@ public interface RoomPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_TYPE_MANAGMENT__ROOMTYPES = eINSTANCE.getRoomTypeManagment_Roomtypes();
-
-		/**
-		 * The meta object literal for the '<em><b>Roomtype</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_TYPE_MANAGMENT__ROOMTYPE = eINSTANCE.getRoomTypeManagment_Roomtype();
 
 	}
 

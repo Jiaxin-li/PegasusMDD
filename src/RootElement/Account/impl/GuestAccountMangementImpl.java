@@ -5,14 +5,11 @@ package RootElement.Account.impl;
 import RootElement.Account.AccountPackage;
 import RootElement.Account.GuestAccount;
 import RootElement.Account.GuestAccountMangement;
-import RootElement.Account.StaffAccount;
-
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -46,7 +43,7 @@ public class GuestAccountMangementImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GuestAccount> guestAccounts = new BasicEList<GuestAccount>();
+	protected EList<GuestAccount> guestAccounts;
 
 	/**
 	 * The cached value of the '{@link #getGuestaccount() <em>Guestaccount</em>}' reference.

@@ -11,7 +11,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -45,7 +44,7 @@ public class StaffAccountManagementImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<StaffAccount> staffAccounts = new BasicEList<StaffAccount>();
+	protected EList<StaffAccount> staffAccounts;
 
 	/**
 	 * The cached value of the '{@link #getStaffaccount() <em>Staffaccount</em>}' reference.

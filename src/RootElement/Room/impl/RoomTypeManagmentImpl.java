@@ -2,7 +2,6 @@
  */
 package RootElement.Room.impl;
 
-import RootElement.Account.StaffAccount;
 import RootElement.Room.RoomPackage;
 import RootElement.Room.RoomType;
 import RootElement.Room.RoomTypeManagment;
@@ -10,15 +9,10 @@ import RootElement.Room.RoomTypeManagment;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -32,7 +26,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link RootElement.Room.impl.RoomTypeManagmentImpl#getRoomtypes <em>Roomtypes</em>}</li>
- *   <li>{@link RootElement.Room.impl.RoomTypeManagmentImpl#getRoomtype <em>Roomtype</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,16 +39,6 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<RoomType> roomtypes = new BasicEList<RoomType>();
-
-	/**
-	 * The cached value of the '{@link #getRoomtype() <em>Roomtype</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomtype()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoomType roomtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,56 +74,30 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomType getRoomtype() {
-		if (roomtype != null && roomtype.eIsProxy()) {
-			InternalEObject oldRoomtype = (InternalEObject)roomtype;
-			roomtype = (RoomType)eResolveProxy(oldRoomtype);
-			if (roomtype != oldRoomtype) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPE, oldRoomtype, roomtype));
-			}
-		}
-		return roomtype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomType basicGetRoomtype() {
-		return roomtype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoomtype(RoomType newRoomtype) {
-		RoomType oldRoomtype = roomtype;
-		roomtype = newRoomtype;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPE, oldRoomtype, roomtype));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * 
 	 */
-	public boolean addRoomType(String RoomTypeName, int price, int nrOfBeds) {
+	public int addRoomType(String RoomTypeName, int price, int nrOfBeds) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		RoomType rt = new RoomTypeImpl();
 		rt.setRoomTypeName(RoomTypeName);
 		rt.setPrice(price);
 		rt.setNumberOfBeds(nrOfBeds);
-		rt.setRoomTypeID(roomtypes.size());
+		int roomTypeID = roomtypes.size();
+		rt.setRoomTypeID(roomTypeID);
 		roomtypes.add(rt);
-		return true;
+		return roomTypeID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean editRoomType(int roomTypeID, String RoomTypeName, int price, int nrOfBeds) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -195,6 +152,14 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public RoomType getRoomType(int introomTypeID) {
+		return roomtypes.get(introomTypeID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -202,9 +167,6 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPES:
 				return getRoomtypes();
-			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPE:
-				if (resolve) return getRoomtype();
-				return basicGetRoomtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,9 +184,6 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 				getRoomtypes().clear();
 				getRoomtypes().addAll((Collection<? extends RoomType>)newValue);
 				return;
-			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPE:
-				setRoomtype((RoomType)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -240,9 +199,6 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPES:
 				getRoomtypes().clear();
 				return;
-			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPE:
-				setRoomtype((RoomType)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -257,8 +213,6 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPES:
 				return roomtypes != null && !roomtypes.isEmpty();
-			case RoomPackage.ROOM_TYPE_MANAGMENT__ROOMTYPE:
-				return roomtype != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -273,12 +227,14 @@ public class RoomTypeManagmentImpl extends MinimalEObjectImpl.Container implemen
 		switch (operationID) {
 			case RoomPackage.ROOM_TYPE_MANAGMENT___ADD_ROOM_TYPE__STRING_INT_INT:
 				return addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
-			case RoomPackage.ROOM_TYPE_MANAGMENT___EDIT_ROOM_TYPE__INT:
-				return editRoomType((Integer)arguments.get(0));
+			case RoomPackage.ROOM_TYPE_MANAGMENT___EDIT_ROOM_TYPE__INT_STRING_INT_INT:
+				return editRoomType((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
 			case RoomPackage.ROOM_TYPE_MANAGMENT___VALIDATE_ROOM_TYPE__INT:
 				return validateRoomType((Integer)arguments.get(0));
 			case RoomPackage.ROOM_TYPE_MANAGMENT___DELETE_ROOM_TYPE__INT:
 				return deleteRoomType((Integer)arguments.get(0));
+			case RoomPackage.ROOM_TYPE_MANAGMENT___GET_ROOM_TYPE__INT:
+				return getRoomType((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
