@@ -415,6 +415,11 @@ public class CartManagementImpl extends MinimalEObjectImpl.Container implements 
 			
 		if (! roomSchedule.updateAvailable(roomTypeID, checkInDate, checkOutDate, nrOfRooms)) return false;
 		
+		booking.setNrOfRooms(nrOfRooms);
+		booking.setCheckInDate(checkInDate);
+		booking.setCheckOutDate(checkOutDate);
+		booking.setNrOfRooms(nrOfRooms);
+		
 		return true;
 	}
 
